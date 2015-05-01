@@ -6,28 +6,28 @@ blogApp.factory("blogPostsFactory", ["POSTS_ROOT", function(POSTS_ROOT) {
 			'seriesTitle': "How to become a web developer in 10 days",
 			'seriesIndex': 0,
 			'title':"Helicopter view",
-			'bodyTemplate': POSTS_ROOT + "helicopterView.html"
+			'routeParam': "helicopterView"
 		},
 		{
 			'partOfSeries': true,
 			'seriesTitle': "How to become a web developer in 10 days",
 			'seriesIndex': 1,
 			'title':"Structure",
-			'bodyTemplate': POSTS_ROOT + "structure.html"
+			'routeParam': "structure"
 		},
 		{
 			'partOfSeries': true,
 			'seriesTitle': "How to become a web developer in 10 days",
 			'seriesIndex': 2,
 			'title':"Layout",
-			'bodyTemplate': POSTS_ROOT + "layout.html"
+			'routeParam': "layout"
 		},
 		{
 			'partOfSeries': true,
 			'seriesTitle': "How to become a web developer in 10 days",
 			'seriesIndex': 3,
 			'title':"Behavior",
-			'bodyTemplate': POSTS_ROOT + "behavior.html"
+			'routeParam': "behavior"
 		}];
 
    return function() {

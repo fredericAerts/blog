@@ -1,7 +1,11 @@
 <!-- blog posts list -->
 <div ng-controller="blogPostsCtrl as blogPostsCtrl">
 	<article ng-repeat="blogpost in blogPosts">
-		<h1>{{blogpost.title}}</h1>
-		<div ng-include="blogpost.bodyTemplate"></div>
+		<a href="#/writing/{{blogpost.routeParam}}">
+			<h1>{{blogpost.title}}</h1>
+			<p>Series: {{blogpost.seriesTitle}}</p>
+		</a>
+		<br>
+		<!-- <div ng-include="blogpost.bodyTemplate"></div> -->
 	</article>
 </div>

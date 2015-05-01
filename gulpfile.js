@@ -58,8 +58,10 @@ var paths = {
     ],  
   },
   livereload: [
-    'web/styles/*.css', 
-    'web/scripts/*.js', 
+    'web/styles/*', 
+    'web/scripts/*',
+    'web/views/*', 
+    'web/blogposts/*', 
     'web/img/*', 
     '*.html'
   ],
@@ -185,7 +187,7 @@ gulp.task('moveViews', function(){
   .pipe(gulp.dest('web/views'));
 });
 
-//move views
+//move blog posts
 gulp.task('moveBlogPosts', function(){
   gulp.src(paths.src.blogPosts)
   .pipe(gulp.dest('web/blogposts'));
@@ -201,7 +203,12 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.all.scss, ['styles']);
   // Watch .js files
   gulp.watch(paths.src.all.js, ['scripts']);
-  gulp.watch(paths.src.all.angularTemplates, ['scripts']);
+  // Watch templates
+  gulp.watch(paths.src.angularTemplates, ['moveTemplates']);
+  // Watch blog posts
+  gulp.watch(paths.src.blogPosts, ['moveBlogPosts']);
+  // Watch views
+  gulp.watch(paths.src.views, ['moveViews']);
   // jsHint 
   gulp.watch(paths.src.custom.js, ['jshint']);
   // Watch image files
