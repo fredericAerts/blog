@@ -10,13 +10,7 @@
 <body ng-app="blogApp">
 	<navbar></navbar>
 
-	<!-- blog posts list -->
-	<div ng-controller="blogPostsCtrl as blogPostsCtrl">
-		<article ng-repeat="blogpost in blogPosts">
-			<h1>{{blogpost.title}}</h1>
-			<div ng-include="blogpost.bodyTemplate"></div>
-		</article>
-	</div>
+	<ng-view></ng-view>
 	
 	<footer></footer>
 

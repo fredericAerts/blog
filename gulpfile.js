@@ -23,6 +23,7 @@ var paths = {
       ],
       js: [
         'bower_components/angular/angular.js',
+        'bower_components/angular-route/angular-route.js',
         'src/scripts/app/app.js',
         'src/scripts/app/app.routes.js',
         'src/scripts/app/app.analytics.js',
@@ -33,7 +34,7 @@ var paths = {
         'src/scripts/helpers/**/*.js',
         'src/scripts/services/**/*.js',
         'src/scripts/views/**/*.js'
-      ], 
+      ],
       img: [
         'src/img/**/*'
       ]  
@@ -45,7 +46,16 @@ var paths = {
       js: [
       'src/scripts/**/*.js'
       ]
-    }  
+    },
+    angularTemplates: [
+      'src/scripts/templates/**/*.html'
+    ],
+    blogPosts: [
+      'src/blogPosts/**/*.html'
+    ],
+    views: [
+      'views/**/*.html'
+    ],  
   },
   livereload: [
     'web/styles/*.css', 
@@ -163,6 +173,23 @@ gulp.task('images', function() {
     .pipe(gulp.dest('web/img'));
 });
 
+//move templates
+gulp.task('moveTemplates', function(){
+  gulp.src(paths.src.angularTemplates)
+  .pipe(gulp.dest('web/scripts/templates'));
+});
+
+//move views
+gulp.task('moveViews', function(){
+  gulp.src(paths.src.views)
+  .pipe(gulp.dest('web/views'));
+});
+
+//move views
+gulp.task('moveBlogPosts', function(){
+  gulp.src(paths.src.blogPosts)
+  .pipe(gulp.dest('web/blogposts'));
+});
 
 // clean web folder
 gulp.task('clean', function(cb) {
@@ -174,6 +201,7 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.all.scss, ['styles']);
   // Watch .js files
   gulp.watch(paths.src.all.js, ['scripts']);
+  gulp.watch(paths.src.all.angularTemplates, ['scripts']);
   // jsHint 
   gulp.watch(paths.src.custom.js, ['jshint']);
   // Watch image files
@@ -188,5 +216,5 @@ gulp.task('default', ['build'], function() {
 });
 
 gulp.task('build', ['clean'], function() {
-    gulp.start('styles', 'scripts', 'images');
+    gulp.start('moveTemplates', 'moveBlogPosts', 'moveViews', 'styles', 'scripts', 'images');
 });
