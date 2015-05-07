@@ -1,36 +1,19 @@
-blogApp.factory("blogPostsFactory", ["POSTS_ROOT", function(POSTS_ROOT) {
+blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", function($http, $q, POSTS_ROOT) {
+	
+	var blogposts = [];
 
-	var blogPosts = 
-		[{
-			'partOfSeries': true,
-			'seriesTitle': "How to become a web developer in 10 days",
-			'seriesIndex': 0,
-			'title':"Helicopter view",
-			'routeParam': "helicopterView"
-		},
-		{
-			'partOfSeries': true,
-			'seriesTitle': "How to become a web developer in 10 days",
-			'seriesIndex': 1,
-			'title':"Structure",
-			'routeParam': "structure"
-		},
-		{
-			'partOfSeries': true,
-			'seriesTitle': "How to become a web developer in 10 days",
-			'seriesIndex': 2,
-			'title':"Layout",
-			'routeParam': "layout"
-		},
-		{
-			'partOfSeries': true,
-			'seriesTitle': "How to become a web developer in 10 days",
-			'seriesIndex': 3,
-			'title':"Behavior",
-			'routeParam': "behavior"
-		}];
+	// TODO: defer returning this function untill $http.get success
+   	return function() {
+   		var defer = $q.defer();
 
-   return function() {
-     return blogPosts;
-   };
+   		$http.get("http://localhost:8080/blogposts/blogposts.json")
+		.success(function(data) {
+			defer.resolve(data);
+		})
+		.error(function(data, status, headers, config) {
+			console.log("blogposts json http request failed in blogPostsFactory \nError: " + data);
+		});
+
+		return defer.promise;
+   	};
  }]);

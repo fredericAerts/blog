@@ -181,18 +181,6 @@ gulp.task('moveTemplates', function(){
   .pipe(gulp.dest('web/scripts/templates'));
 });
 
-//move views
-gulp.task('moveViews', function(){
-  gulp.src(paths.src.views)
-  .pipe(gulp.dest('web/views'));
-});
-
-//move blog posts
-gulp.task('moveBlogPosts', function(){
-  gulp.src(paths.src.blogPosts)
-  .pipe(gulp.dest('web/blogposts'));
-});
-
 // clean web folder
 gulp.task('clean', function(cb) {
     del(['web'], cb)
@@ -223,5 +211,5 @@ gulp.task('default', ['build'], function() {
 });
 
 gulp.task('build', ['clean'], function() {
-    gulp.start('moveTemplates', 'moveBlogPosts', 'moveViews', 'styles', 'scripts', 'images');
+    gulp.start('moveTemplates', 'styles', 'scripts', 'images');
 });
