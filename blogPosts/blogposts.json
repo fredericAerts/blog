@@ -4,6 +4,7 @@
 		"seriesTitle": "How to become a web developer in 10 days",
 		"seriesIndex": 0,
 		"title":"Helicopter view",
+		"date": "2015,05,20",
 		"routeParam": "helicopterView"
 	},
 	{
@@ -11,6 +12,7 @@
 		"seriesTitle": "How to become a web developer in 10 days",
 		"seriesIndex": 1,
 		"title":"Structure",
+		"date": "2015,05,21",
 		"routeParam": "structure"
 	},
 	{
@@ -18,6 +20,7 @@
 		"seriesTitle": "How to become a web developer in 10 days",
 		"seriesIndex": 2,
 		"title":"Layout",
+		"date": "2015,05,18",
 		"routeParam": "layout"
 	},
 	{
@@ -25,6 +28,7 @@
 		"seriesTitle": "How to become a web developer in 10 days",
 		"seriesIndex": 3,
 		"title":"Behavior",
+		"date": "2015,05,19",
 		"routeParam": "behavior"
 	}
 ]}

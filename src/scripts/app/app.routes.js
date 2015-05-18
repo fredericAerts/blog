@@ -5,16 +5,6 @@ blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routePro
 			templateUrl:VIEWS_ROOT + "home.html"
 		}
 	)
-	.when('/work',
-		{
-			templateUrl:VIEWS_ROOT + "work.html"
-		}
-	)
-	.when('/about',
-		{
-			templateUrl:VIEWS_ROOT + "about.html"
-		}
-	)
 	.when('/writing',
 		{
 			templateUrl:VIEWS_ROOT + "writing.html"

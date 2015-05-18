@@ -60,8 +60,8 @@ var paths = {
   livereload: [
     'web/styles/*', 
     'web/scripts/*',
-    'web/views/*', 
-    'web/blogposts/*', 
+    'views/*', 
+    'blogposts/*', 
     'web/img/*', 
     '*.html'
   ],
@@ -117,7 +117,7 @@ gulp.task('livereload', function() {
 
 // styles
 gulp.task('styles', function() {
-  return gulp.src( paths.src.all.scss )
+  return gulp.src( ['src/scss/main.scss'] )
     .pipe(plugins.plumber({
         handleError: errorHandler
     }))
@@ -193,10 +193,6 @@ gulp.task('watch', function() {
   gulp.watch(paths.src.all.js, ['scripts']);
   // Watch templates
   gulp.watch(paths.src.angularTemplates, ['moveTemplates']);
-  // Watch blog posts
-  gulp.watch(paths.src.blogPosts, ['moveBlogPosts']);
-  // Watch views
-  gulp.watch(paths.src.views, ['moveViews']);
   // jsHint 
   gulp.watch(paths.src.custom.js, ['jshint']);
   // Watch image files

@@ -5,15 +5,27 @@
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<title></title>
 	<!-- <link rel="icon" type="image/png" href="web/img/favicon.png"> -->
+	<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/web/styles/style.min.css">
 </head>
 <body ng-app="blogApp">
-	<navbar></navbar>
+	<div class="container">
+		<navbar></navbar>
 
-	<ng-view></ng-view>
+		<ng-view></ng-view>
+	</div>
 	
-	<footer></footer>
+	<footer>
+		<a href="https://twitter.com/fredericAerts" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @fredericAerts</a>
+		<p>
+			Copyright &copy; Frederic Aerts 2015. All rights reserved.
+		</p>
+	</footer>
+
 
 	<script type="text/javascript" src="/web/scripts/script.min.js"></script>
+	<script>
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	</script>
 </body>
 </html>
