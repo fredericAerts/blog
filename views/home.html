@@ -1,24 +1,24 @@
-<h1>
-	Hello.
-</h1>
-<p>
-	I’m Frederic — a freelance front-end web developer — focusing on HTML5, CSS, and JavaScript.
-</p>
-<p>
-	This is my online home, where you’ll find links to my articles and where you can get in touch via the contact page.
-</p>
-<!-- blog posts list -->
-<div ng-controller="blogPostsCtrl as blogPostsCtrl">
-	<article ng-repeat="blogpost in blogPosts | orderBy: '-date' | limitTo: 3">
-		<a href="#/writing/{{blogpost.routeParam}}">
-			<h1>{{blogpost.title}}</h1>
-			<p>Series: {{blogpost.seriesTitle}}</p>
-		</a>
-		<br>
-		<!-- <div ng-include="blogpost.bodyTemplate"></div> -->
-	</article>
+<div class="container">
+	<h1>
+		Hello.
+	</h1>
+	<p>
+		I’m Frederic — a freelance front-end web developer — focusing on HTML5, CSS, and JavaScript.
+	</p>
+	<p>
+		This is my online home, where you’ll find links to my articles and where you can get in touch via the contact page.
+	</p>
+
+	<!-- blog posts list -->
+	<h1>Latest articles</h1>
+	<div ng-controller="blogPostsCtrl as blogPostsCtrl">
+		<article ng-repeat="blogpost in blogPosts | orderBy: '-date' | limitTo: 3">
+			<a href="#/writing/{{blogpost.routeParam}}">
+				<h1>{{blogpost.title}}</h1>
+				<p>Series: {{blogpost.seriesTitle}}</p>
+			</a>
+		</article>
+	</div>
 </div>
-<p>
-	Have a cool project in mind, and think I can help you with it?
-	Let’s get in touch. For work inquiries, please feel free to drop me a line at <a href="mailto:fredericaerts@hotmail.com" target="_top">fredericaerts@hotmail.com</a>, and I'll get back to you as soon as possible.
-</p>
+
+<contactbox></contactbox>

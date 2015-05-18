@@ -1,1 +1,7 @@
-contact body
+<ul ng-controller="availabilityCtrl as availabilityCtrl">
+	<li ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'current': availability.current }">
+		{{availability.month}} 
+		<small>{{availability.year}}</small>
+		<span>{{availability.availability}} </span>
+	</li>
+</ul>

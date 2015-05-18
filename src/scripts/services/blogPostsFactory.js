@@ -1,8 +1,5 @@
 blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", function($http, $q, POSTS_ROOT) {
-	
-	var blogposts = [];
 
-	// TODO: defer returning this function untill $http.get success
    	return function() {
    		var defer = $q.defer();
 
