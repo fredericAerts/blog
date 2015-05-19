@@ -1,27 +1,53 @@
 .navbar {
-}
+	position: relative;
+	margin: 0 auto;
+	max-width: 1500px;
+	padding: 0 .6em;
+}	
 
 .navbar__brand, .navbar__link {
+	padding: 1em .6em .8em;
 
+	text-decoration: none;
 }
 
 .navbar__brand {
 	float: left;
 }
 
-.navbar__brand__meta {
-}
-
 .navbar__link {
+	position: relative;
 	display: block;
+
+	&:first-child {
+
+		&:after {
+			display: none;
+		}
+	}
+
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 50%;
+
+		display: inline-block;
+		width: 50px;
+		margin-left: -25px;
+
+		border-bottom: 1px solid #eee;
+
+		content: "";
+	}
 
 	@media (min-width: $screen-xs-min) {
 		display: inline-block;
 	}
 	
 
-	&--active {
+	&.active {
 		color: $red;
+		font-weight: 700;
 	}
 }
 
@@ -55,7 +81,19 @@
 .navbar-toggle--close {
 
 	& + .navbar__links {
+		position: absolute;
+		top: 100%;
+		right: .6em;
+
 		display: block;
+		padding: 0 1em;
+
+		text-align: center;
+
+		border-bottom: 1px solid #eee;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.075);
+
+		background: $white;
 	}
 
 	& .navbar-toggle__lines {

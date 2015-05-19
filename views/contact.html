@@ -1,7 +1,12 @@
-<ul ng-controller="availabilityCtrl as availabilityCtrl">
-	<li ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'current': availability.current }">
-		{{availability.month}} 
-		<small>{{availability.year}}</small>
-		<span>{{availability.availability}} </span>
+<div class="container">
+	<h1>Front-End Development Work Inquiries</h1>
+</div>
+<ul class="availability-list clearfix" ng-controller="availabilityCtrl as availabilityCtrl">
+	<li class="availability-list__item" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+		<div class="availability-list__item__wrapper">
+			{{ availability.month }}
+			<span class="availability-list__year">{{ availability.year }}</span>
+			<span class="availability-list__status">{{ availability.availability }}</span>
+		</div>
 	</li>
 </ul>
