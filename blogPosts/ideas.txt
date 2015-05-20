@@ -1,0 +1,18 @@
+CONCEPT
+Berners Lee made the internet easy for everyone to make websites. These articles commemorate this priniple
+
+DAY 1
+- Overview: structure, style & behavior
+- Structure -> html
+
+DAY 2
+- Style -> css
+- Advanced 	-> scss
+			-> bootstrap?
+
+DAY 3
+- Behavior -> javascript
+- Advanced 	-> jQuery
+			-> bootstrap?
+
+
