@@ -1,7 +1,7 @@
 .navbar {
 	position: relative;
 	margin: 0 auto;
-	max-width: 1500px;
+	max-width: 1300px;
 	padding: 0 .6em;
 }	
 
@@ -30,6 +30,7 @@
 		}
 	}
 
+	// line above navlink on mobile
 	&:after {
 		position: absolute;
 		top: 0;
@@ -42,6 +43,10 @@
 		border-bottom: 1px solid #eee;
 
 		content: "";
+
+		@media (min-width: $screen-xs-min) {
+			display: none;
+		}
 	}
 
 	@media (min-width: $screen-xs-min) {

@@ -2,6 +2,11 @@ blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routePro
 	$routeProvider
 	.when('/',
 		{
+			redirectTo:"/home"
+		}
+	)
+	.when('/home',
+		{
 			templateUrl:VIEWS_ROOT + "home.html"
 		}
 	)

@@ -1,13 +1,11 @@
-blogApp.factory("availabilityFactory", ["$http", "$q", "AVAILABILITY_ROOT", function($http, $q, AVAILABILITY_ROOT) {
+blogApp.factory("availabilityFactory", ["$http", "$q", "AVAILABILITY_ROOT", "monthNamesFactory", function($http, $q, AVAILABILITY_ROOT, monthNamesFactory) {
 
    	return function() {
    		var defer = $q.defer();
 
    		$http.get("http://localhost:8080/availability/availabilities.json")
 		.success(function(data) {
-			var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-			  "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"
-			];
+			var monthNames = monthNamesFactory();
 			
 			for (var i = 0; i < data.availabilities.length; i++) {
 				var availabilityDate = new Date(data.availabilities[i].date);

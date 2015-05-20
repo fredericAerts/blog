@@ -6,19 +6,15 @@
 		I’m Frederic — a freelance front-end web developer — focusing on HTML5, CSS, and JavaScript.
 	</p>
 	<p>
-		This is my online home, where you’ll find links to my articles and where you can get in touch via the contact page.
+		This is my online home, where you’ll find my articles and where you can get in touch via the contact page.
 	</p>
 
 	<!-- blog posts list -->
 	<h1>Latest articles</h1>
 	<div ng-controller="blogPostsCtrl as blogPostsCtrl">
-		<article ng-repeat="blogpost in blogPosts | orderBy: '-date' | limitTo: 3">
-			<a href="#/writing/{{blogpost.routeParam}}">
-				<h1>{{blogpost.title}}</h1>
-				<p>Series: {{blogpost.seriesTitle}}</p>
-			</a>
-		</article>
+		<blogpostintros></blogpostintros>
 	</div>
+	<a class="button" href="#/writing">See All Articles</a>
 </div>
 
 <contactbox></contactbox>

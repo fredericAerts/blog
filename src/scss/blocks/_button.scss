@@ -1,0 +1,16 @@
+.button {
+	display: inline-block;
+	margin: 1.3rem 0;
+	padding: .8em 1.2em .6em ;
+
+	color: $white;
+	font-weight: 700;
+
+	background: red;
+
+	text-decoration: none;
+
+	&:active, &:focus, &:visited, &:hover {
+		color: $white;
+	}
+}

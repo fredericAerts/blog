@@ -1,0 +1,11 @@
+<article class="blogpost-intros" ng-repeat="blogpost in blogPosts | orderBy: '-date' | limitTo: 3">
+	<a class="blogpost-intro block-link clearfix" href="#/writing/{{blogpost.routeParam}}">
+		<div ng-if="blogpost.partOfSeries" class="blogpost-intro__series">
+			Part of series:  
+			<span class="blogpost-intro__series__title">{{blogpost.seriesTitle}}</span>
+		</div>
+		<h2>{{blogpost.title}}</h2>
+		<span class="blogpost-intro__date">{{blogpost.dateFormatted}}</span>
+		<span class="blogpost-intro__cta">Read article &raquo;</span>
+	</a>
+</article>

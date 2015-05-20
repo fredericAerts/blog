@@ -1,34 +1,34 @@
 { "blogPosts": [
 	{
-		"partOfSeries": true,
-		"seriesTitle": "How to become a web developer in 10 days",
+		"partOfSeries": false,
+		"seriesTitle": "How to become a web developer in 3 days",
 		"seriesIndex": 0,
-		"title":"Helicopter view",
-		"date": "2015,05,20",
+		"title":"Day 1: Helicopter view Helicopter view Helicopter view Helicopter view Helicopter view",
+		"date": "2015/05/20",
 		"routeParam": "helicopterView"
 	},
 	{
 		"partOfSeries": true,
-		"seriesTitle": "How to become a web developer in 10 days",
+		"seriesTitle": "How to become a web developer in 3 days",
 		"seriesIndex": 1,
-		"title":"Structure",
-		"date": "2015,05,21",
+		"title":"Day 2: Structure",
+		"date": "2015/05/21",
 		"routeParam": "structure"
 	},
 	{
 		"partOfSeries": true,
-		"seriesTitle": "How to become a web developer in 10 days",
+		"seriesTitle": "How to become a web developer in 3 days",
 		"seriesIndex": 2,
-		"title":"Layout",
-		"date": "2015,05,18",
+		"title":"Day 3: Layout",
+		"date": "2015/05/18",
 		"routeParam": "layout"
 	},
 	{
 		"partOfSeries": true,
-		"seriesTitle": "How to become a web developer in 10 days",
+		"seriesTitle": "How to become a web developer in 3 days",
 		"seriesIndex": 3,
 		"title":"Behavior",
-		"date": "2015,05,19",
+		"date": "2015/05/19",
 		"routeParam": "behavior"
 	}
 ]}

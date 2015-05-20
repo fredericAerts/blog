@@ -6,6 +6,6 @@ blogApp.controller("navbarCtrl", ["$scope", "$location", function DefaultCtrl($s
 	};
 
 	$scope.isActiveNav = function (viewLocation) { 
-        return viewLocation === $location.path();
+        return viewLocation === $location.path().substring(0, viewLocation.length);
     };
 }]);

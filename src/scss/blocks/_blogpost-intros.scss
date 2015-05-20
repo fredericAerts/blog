@@ -1,0 +1,52 @@
+.blogpost-intros {
+	margin-bottom: 0.55555555555556rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.blogpost-intro {
+	padding: 15px;
+
+	background: $grey--lightest;
+
+	text-decoration: none;
+
+	@include transition(background .3s);
+
+	&:hover {
+		background: $grey--lighter;
+	}
+}
+
+.blogpost-intro__series {
+	margin-bottom: 1rem;
+
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.blogpost-intro__series__title {
+	font-weight: 400;
+}
+
+.blogpost-intro__date {
+	font-size: 14px;
+}
+
+.blogpost-intro__cta {
+	position: relative;
+	top: 15px;
+	left: 10px;
+	float: right;
+
+	font-size: 14px;
+
+	@media (min-width: $screen-xs-min) {
+		top: 7px;
+		left: 5px;
+
+		font-size: 18px;
+	}
+}
