@@ -1,9 +1,9 @@
 { "blogPosts": [
 	{
 		"partOfSeries": false,
-		"seriesTitle": "How to become a web developer in 3 days",
-		"seriesIndex": 0,
-		"title":"Day 1: Helicopter view Helicopter view Helicopter view Helicopter view Helicopter view",
+		"seriesTitle": "",
+		"seriesIndex": -1,
+		"title":"Day 1: Helicopter view Helicopter view Helicopter view Helicopter view Helicopter",
 		"date": "2015/05/20",
 		"routeParam": "helicopterView"
 	},

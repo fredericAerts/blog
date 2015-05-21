@@ -15,10 +15,22 @@ blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routePro
 			templateUrl:VIEWS_ROOT + "writing.html"
 		}
 	)
-	.when('/writing/:name',
+	.when('/writing/post/:postTitle',
 		{
 			templateUrl: function(routeParam) {
-                return POSTS_ROOT + routeParam.name + ".html ";
+                return POSTS_ROOT + routeParam.postTitle + ".html ";
+            }
+		}
+	)
+	.when('/writing/series/:seriesTitle',
+		{
+			templateUrl: "series.html"
+		}
+	)
+	.when('/writing/series/:seriesTitle/:postTitle',
+		{
+			templateUrl: function(routeParam) {
+                return POSTS_ROOT + routeParam.postTitle + ".html ";
             }
 		}
 	)

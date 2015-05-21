@@ -1,4 +1,5 @@
 .blogpost-intros {
+	position: relative;
 	margin-bottom: 0.55555555555556rem;
 
 	&:last-child {
@@ -36,17 +37,14 @@
 }
 
 .blogpost-intro__cta {
-	position: relative;
-	top: 15px;
-	left: 10px;
+	position: absolute;
+	bottom: 7px;
+	right: 10px;
 	float: right;
 
 	font-size: 14px;
 
 	@media (min-width: $screen-xs-min) {
-		top: 7px;
-		left: 5px;
-
 		font-size: 18px;
 	}
 }

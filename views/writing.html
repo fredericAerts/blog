@@ -1,11 +1,12 @@
-<!-- blog posts list -->
-<div ng-controller="blogPostsCtrl as blogPostsCtrl">
-	<article ng-repeat="blogpost in blogPosts | orderBy: '-date'">
-		<a href="#/writing/{{blogpost.routeParam}}">
-			<h1>{{blogpost.title}}</h1>
-			<p>Series: {{blogpost.seriesTitle}}</p>
-		</a>
-		<br>
-		<!-- <div ng-include="blogpost.bodyTemplate"></div> -->
-	</article>
+<div class="container">
+	<div ng-controller="blogPostsCtrl as blogPostsCtrl">
+		<div class="search-wrapper">
+			<input class="search" type="text" ng-model="query" placeholder="Search Article">
+		</div>
+		<div class="title-flanked">
+			<h1>{{ query ? 'Search Results' : 'All Articles' }}</h1>
+			<a class="title-flanked__flank title-flanked__flank--link" href="">See All Series &raquo;</a>
+			</div>
+		<blogpostintros></blogpostintros>
+	</div>
 </div>

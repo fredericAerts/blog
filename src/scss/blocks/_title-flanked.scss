@@ -1,0 +1,22 @@
+.title-flanked {
+	position: relative;
+}
+
+.title-flanked__flank {
+	position: absolute;
+	bottom: 4px;
+	right: 10px;
+
+	font-size: 16px;
+
+	@media (min-width: $screen-xs-min) {
+		bottom:0;
+
+		font-size: 18px;
+	}
+} 
+
+.title-flanked__flank--link {
+	color: $red;
+	text-decoration: none;
+}
