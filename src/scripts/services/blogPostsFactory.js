@@ -22,7 +22,7 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 		.success(function(data) {
 			var monthNames = monthNamesFactory();
 
-			// parse date properties
+			// parse and add properties
 			for (var i = 0; i < data.blogPosts.length; i++) {
 				data.blogPosts[i].date = new Date(data.blogPosts[i].date);
 				
@@ -34,6 +34,10 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 				if(data.blogPosts[i].partOfSeries) {
 					data.blogPosts[i].seriesTitle = getSeriesTitle(data.series, data.blogPosts[i]);
 				}
+
+				// TODO: properly encode routeparams
+				// data.blogPosts[i].routeParam = encodeURIComponent(data.blogPosts[i].title);
+				data.blogPosts[i].routeParam = data.blogPosts[i].title.replace(/\s/g, "-").toLowerCase();
 			}
 
 			defer.resolve(data);

@@ -18,16 +18,14 @@
 			"seriesIndex": 0,
 			"title": "Day 1: Helicopter view & structure",
 			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
-			"date": "2015/05/20",
-			"routeParam": "helicopterView"
+			"date": "2015/05/20"
 		},
 		{
 			"partOfSeries": true,
 			"seriesId": 0,
 			"seriesIndex": 1,
 			"title": "Day 2: Layout",
-			"date": "2015/05/21",
-			"routeParam": "layout"
+			"date": "2015/05/21"
 		},
 		{
 			"partOfSeries": true,
@@ -35,15 +33,13 @@
 			"seriesIndex": 2,
 			"title": "Day 3: Behavior",
 			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
-			"date": "2015/05/22",
-			"routeParam": "behavior"
+			"date": "2015/05/22"
 		},
 		{
 			"partOfSeries": false,
 			"title": "Gulp file development",
 			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
-			"date": "2015/05/23",
-			"routeParam": "gulp"
+			"date": "2015/05/23"
 		},
 		{
 			"partOfSeries": true,
@@ -51,8 +47,7 @@
 			"seriesIndex": 0,
 			"title": "Templating wordpress",
 			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
-			"date": "2015/05/24",
-			"routeParam": "templatingWordpress"
+			"date": "2015/05/24"
 		},
 		{
 			"partOfSeries": true,
@@ -60,8 +55,7 @@
 			"seriesIndex": 1,
 			"title": "Theming wordpress",
 			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
-			"date": "2015/05/25",
-			"routeParam": "themingWordpress"
+			"date": "2015/05/25"
 		}
 	]
 }

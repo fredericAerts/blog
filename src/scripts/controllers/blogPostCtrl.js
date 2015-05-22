@@ -1,13 +1,20 @@
 blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", function DefaultCtrl($scope, blogPostsFactory) {
 	'use strict';
 
+	var setupPromisedScope;
+
 	var promise = blogPostsFactory().then(function(data) {
-		$scope.blogPosts = data.blogPosts;
-		$scope.seriesArray = data.series;
+		setupPromisedScope(data);
 	}, function(error) {
 		console.log("promise for blogposts json http request failed to resolve in blogPostCtrl \nError: " + error);
 	});
 
+	setupPromisedScope = function(data) {
+		$scope.blogPosts = data.blogPosts;
+		$scope.seriesArray = data.series;
+	};
+
+	/* search functions */
 	$scope.searchArticle = function (article) {
 		/* get lowercase strings for comparing */
 		var articleTitle = article.title ? article.title.toLowerCase() : undefined;
