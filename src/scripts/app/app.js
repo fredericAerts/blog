@@ -2,7 +2,7 @@ var blogApp = angular.module('blogApp', ['ngRoute']);
 
 //paths
 blogApp.paths = {
-    postsRoot: "/blogposts/",
+    postsRoot: "/blogposts/post/",
     templatesRoot: "/web/scripts/templates/",
     viewsRoot: "/views/",
 };

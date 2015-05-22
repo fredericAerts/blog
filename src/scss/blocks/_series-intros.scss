@@ -1,4 +1,4 @@
-.blogpost-intros {
+.series-intros {
 	position: relative;
 	margin-bottom: 0.55555555555556rem;
 
@@ -7,7 +7,7 @@
 	}
 }
 
-.blogpost-intro {
+.series-intro {
 	padding: 1.5rem 1.5rem 2rem;
 
 	background: $grey--lightest;
@@ -21,33 +21,15 @@
 	}
 }
 
-.blogpost-intro__series {
-	margin-bottom: 1rem;
-
-	font-size: 16px;
-	font-weight: 700;
+.series-intro__title {
+	margin: 0 0 .6rem;
 }
 
-.blogpost-intro__series__title {
-	font-weight: 400;
-}
-
-.blogpost-intro__title {
+.series-intro__intro {
 	margin: 0;
 }
 
-.blogpost-intro__date {
-	display: inline-block;
-	margin-bottom: .6rem;
-
-	font-size: 14px;
-}
-
-.blogpost-intro__intro {
-	margin: 0;
-}
-
-.blogpost-intro__cta {
+.series-intro__cta {
 	position: absolute;
 	bottom: 7px;
 	right: 10px;

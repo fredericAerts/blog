@@ -10,6 +10,8 @@
 
 	text-decoration: none;
 
+	@include user-select(none);
+
 	&:active, &:focus, &:visited, &:hover {
 		color: $white;
 	}

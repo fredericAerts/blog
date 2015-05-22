@@ -16,7 +16,8 @@
 			"partOfSeries": true,
 			"seriesId": 0,
 			"seriesIndex": 0,
-			"title":"Day 1: Helicopter view & structure",
+			"title": "Day 1: Helicopter view & structure",
+			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
 			"date": "2015/05/20",
 			"routeParam": "helicopterView"
 		},
@@ -24,7 +25,7 @@
 			"partOfSeries": true,
 			"seriesId": 0,
 			"seriesIndex": 1,
-			"title":"Day 2: Layout",
+			"title": "Day 2: Layout",
 			"date": "2015/05/21",
 			"routeParam": "layout"
 		},
@@ -32,13 +33,15 @@
 			"partOfSeries": true,
 			"seriesId": 0,
 			"seriesIndex": 2,
-			"title":"Day 3: Behavior",
+			"title": "Day 3: Behavior",
+			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
 			"date": "2015/05/22",
 			"routeParam": "behavior"
 		},
 		{
 			"partOfSeries": false,
-			"title":"Gulp file development",
+			"title": "Gulp file development",
+			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
 			"date": "2015/05/23",
 			"routeParam": "gulp"
 		},
@@ -46,7 +49,8 @@
 			"partOfSeries": true,
 			"seriesId": 1,
 			"seriesIndex": 0,
-			"title":"Templating wordpress",
+			"title": "Templating wordpress",
+			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
 			"date": "2015/05/24",
 			"routeParam": "templatingWordpress"
 		},
@@ -54,7 +58,8 @@
 			"partOfSeries": true,
 			"seriesId": 1,
 			"seriesIndex": 1,
-			"title":"Theming wordpress",
+			"title": "Theming wordpress",
+			"intro": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper.",
 			"date": "2015/05/25",
 			"routeParam": "themingWordpress"
 		}

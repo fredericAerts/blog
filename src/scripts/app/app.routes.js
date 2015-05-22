@@ -17,21 +17,8 @@ blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routePro
 	)
 	.when('/writing/post/:postTitle',
 		{
-			templateUrl: function(routeParam) {
-                return POSTS_ROOT + routeParam.postTitle + ".html ";
-            }
-		}
-	)
-	.when('/writing/series',
-		{
-			templateUrl: VIEWS_ROOT +  "series.html"
-		}
-	)
-	.when('/writing/series/:seriesTitle/:postTitle',
-		{
-			templateUrl: function(routeParam) {
-                return POSTS_ROOT + routeParam.postTitle + ".html ";
-            }
+			templateUrl: VIEWS_ROOT + "post.html",
+            controller: "postRouteCtrl"
 		}
 	)
 	.when('/contact',
