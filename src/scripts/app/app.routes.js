@@ -22,9 +22,9 @@ blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routePro
             }
 		}
 	)
-	.when('/writing/series/:seriesTitle',
+	.when('/writing/series',
 		{
-			templateUrl: "series.html"
+			templateUrl: VIEWS_ROOT +  "series.html"
 		}
 	)
 	.when('/writing/series/:seriesTitle/:postTitle',

@@ -1,12 +1,12 @@
 <div class="container">
 	<div ng-controller="blogPostsCtrl as blogPostsCtrl">
 		<div class="search-wrapper">
-			<input class="search" type="text" ng-model="query" placeholder="Search Article">
+			<input class="search" type="text" ng-model="query" placeholder="Search Series">
 		</div>
 		<div class="title-flanked">
-			<h1>All Articles</h1>
+			<h1>All Series</h1>
 			<span class="search-subtitle" ng-show="query">Search results for {{ query }}...</span>
-			<a class="title-flanked__flank title-flanked__flank--link" href="#/writing/series">See All Series &raquo;</a>
+			<a class="title-flanked__flank title-flanked__flank--link" href="#/writing">See All Articles &raquo;</a>
 		</div>
 		<blogpostintros></blogpostintros>
 	</div>

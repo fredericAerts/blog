@@ -1,34 +1,62 @@
-{ "blogPosts": [
-	{
-		"partOfSeries": false,
-		"seriesTitle": "",
-		"seriesIndex": -1,
-		"title":"Day 1: Helicopter view Helicopter view Helicopter view Helicopter view Helicopter",
-		"date": "2015/05/20",
-		"routeParam": "helicopterView"
-	},
-	{
-		"partOfSeries": true,
-		"seriesTitle": "How to become a web developer in 3 days",
-		"seriesIndex": 1,
-		"title":"Day 2: Structure",
-		"date": "2015/05/21",
-		"routeParam": "structure"
-	},
-	{
-		"partOfSeries": true,
-		"seriesTitle": "How to become a web developer in 3 days",
-		"seriesIndex": 2,
-		"title":"Day 3: Layout",
-		"date": "2015/05/18",
-		"routeParam": "layout"
-	},
-	{
-		"partOfSeries": true,
-		"seriesTitle": "How to become a web developer in 3 days",
-		"seriesIndex": 3,
-		"title":"Behavior",
-		"date": "2015/05/19",
-		"routeParam": "behavior"
-	}
-]}
+{ 
+	"series": [
+		{
+			"id": 0,
+			"title": "How to become a web developer in 3 days",
+			"intro": "Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam quis risus eget urna mollis ornare vel eu leo."
+		},
+		{
+			"id": 1,
+			"title": "The inner workings of Wordpress",
+			"intro": "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit."
+		}
+	],
+	"blogPosts": [
+		{
+			"partOfSeries": true,
+			"seriesId": 0,
+			"seriesIndex": 0,
+			"title":"Day 1: Helicopter view & structure",
+			"date": "2015/05/20",
+			"routeParam": "helicopterView"
+		},
+		{
+			"partOfSeries": true,
+			"seriesId": 0,
+			"seriesIndex": 1,
+			"title":"Day 2: Layout",
+			"date": "2015/05/21",
+			"routeParam": "layout"
+		},
+		{
+			"partOfSeries": true,
+			"seriesId": 0,
+			"seriesIndex": 2,
+			"title":"Day 3: Behavior",
+			"date": "2015/05/22",
+			"routeParam": "behavior"
+		},
+		{
+			"partOfSeries": false,
+			"title":"Gulp file development",
+			"date": "2015/05/23",
+			"routeParam": "gulp"
+		},
+		{
+			"partOfSeries": true,
+			"seriesId": 1,
+			"seriesIndex": 0,
+			"title":"Templating wordpress",
+			"date": "2015/05/24",
+			"routeParam": "templatingWordpress"
+		},
+		{
+			"partOfSeries": true,
+			"seriesId": 1,
+			"seriesIndex": 1,
+			"title":"Theming wordpress",
+			"date": "2015/05/25",
+			"routeParam": "themingWordpress"
+		}
+	]
+}
