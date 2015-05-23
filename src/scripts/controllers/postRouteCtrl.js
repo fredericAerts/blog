@@ -1,4 +1,4 @@
-blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "blogPostsFactory", function DefaultCtrl($scope, $routeParams, blogPostsFactory) {
+blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "blogPostsFactory", "POSTS_ROOT", function DefaultCtrl($scope, $routeParams, blogPostsFactory, POSTS_ROOT) {
 	'use strict';
 
 	var setupPromisedScope, getArticleData;
@@ -22,6 +22,7 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "blogPostsFactory
 		for (var i = 0; i < data.blogPosts.length; i++) {
 			if(data.blogPosts[i].routeParam === routeParam) {
 				article = data.blogPosts[i];
+				article.includeUrl = POSTS_ROOT + article.routeParam + '.html';
 				break;
 			}
 		}

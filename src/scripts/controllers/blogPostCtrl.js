@@ -14,11 +14,12 @@ blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", function Defa
 		$scope.seriesArray = data.series;
 	};
 
+	/* TODO: search multiple words */
 	/* search functions */
 	$scope.searchArticle = function (article) {
 		/* get lowercase strings for comparing */
 		var articleTitle = article.title ? article.title.toLowerCase() : undefined;
-		var articleSeriesTitle = article.partOfSeries ? article.seriesTitle.toLowerCase() : undefined;
+		var articleSeriesTitle = article.partOfSeries ? article.series.title.toLowerCase() : undefined;
 		var articleIntro = article.intro ? article.intro.toLowerCase() : undefined;
 		var queryString = $scope.query ? $scope.query.toLowerCase() : "";
 

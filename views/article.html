@@ -1,7 +1,10 @@
 <div class="container">
 	<div ng-controller="postRouteCtrl as postRouteCtrl">
 		<p>title: {{ article.title }}</p>
-		<p>partOfSeries: {{ article.partOfSeries }}</p>
+		<p>url: {{ article.includeUrl }}</p>
+		<p>seriesTitle: {{ article.series.title }}</p>
+		<p>seriesArticles: {{ article.series.numberOfArticles }}</p>
 		<p>date: {{ article.date }}</p>
+		<div ng-include="article.includeUrl"></div>
 	</div>
 </div>
