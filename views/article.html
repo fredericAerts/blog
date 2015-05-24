@@ -10,13 +10,13 @@
 
 		<ul ng-if="currentArticle.partOfSeries">
 			<li ng-class="prevPageDisabled()">
-				<a href ng-click="prevPage()">« Prev</a>
+				<a href ng-click="prevPage()">&laquo; Prev</a>
 			</li>
-			<li ng-repeat="n in range()" ng-class="{active: n == currentArticle.seriesIndex}" ng-click="setPage(n)">
-				<a href="#">{{n+1}}</a>
+			<li ng-repeat="n in range()" ng-class="{ active: n == currentArticle.seriesIndex }">
+				<a href ng-click="setPage(n)">{{ n+1 }}</a>
 			</li>
 			<li ng-class="nextPageDisabled()">
-				<a href ng-click="nextPage()">Next »</a>
+				<a href ng-click="nextPage()">Next &raquo;</a>
 			</li>
 		</ul>
 
