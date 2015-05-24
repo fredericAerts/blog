@@ -1,10 +1,25 @@
 <div class="container">
 	<div ng-controller="postRouteCtrl as postRouteCtrl">
-		<p>title: {{ article.title }}</p>
-		<p>url: {{ article.includeUrl }}</p>
-		<p>seriesTitle: {{ article.series.title }}</p>
-		<p>seriesArticles: {{ article.series.numberOfArticles }}</p>
-		<p>date: {{ article.date }}</p>
-		<div ng-include="article.includeUrl"></div>
+		<p>title: {{ currentArticle.title }}</p>
+		<p>url: {{ currentArticle.includeUrl }}</p>
+		<p>seriesTitle: {{ currentArticle.series.title }}</p>
+		<p>seriesIndex: {{ currentArticle.seriesIndex }}</p>
+		<p>seriesArticles: {{ currentArticle.series.numberOfArticles }}</p>
+		<p>date: {{ currentArticle.date }}</p>
+		
+
+		<ul ng-if="currentArticle.partOfSeries">
+			<li ng-class="prevPageDisabled()">
+				<a href ng-click="prevPage()">« Prev</a>
+			</li>
+			<li ng-repeat="n in range()" ng-class="{active: n == currentArticle.seriesIndex}" ng-click="setPage(n)">
+				<a href="#">{{n+1}}</a>
+			</li>
+			<li ng-class="nextPageDisabled()">
+				<a href ng-click="nextPage()">Next »</a>
+			</li>
+		</ul>
+
+		<div ng-include="currentArticle.includeUrl"></div>
 	</div>
 </div>

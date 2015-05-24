@@ -54,6 +54,8 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 				// TODO: properly encode routeparams
 				// data.blogPosts[i].routeParam = encodeURIComponent(data.blogPosts[i].title);
 				data.blogPosts[i].routeParam = data.blogPosts[i].title.replace(/\s/g, "-").toLowerCase();
+
+				data.blogPosts[i].includeUrl = POSTS_ROOT + data.blogPosts[i].routeParam + '.html';
 			}
 
 			defer.resolve(data);
