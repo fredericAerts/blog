@@ -8,6 +8,12 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 		for (var i = 0; i < data.series.length; i++) {
 			if(data.series[i].id === post.seriesId) {
 				series = data.series[i];
+
+				// set series first article: put in this method for performance reasons
+				if(post.seriesIndex === 0) {
+					data.series[i].firstArticle = post;
+				}
+
 				break;
 			}
 		}
@@ -15,19 +21,19 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 	};
 
 	/* create object with series id properties holding number of articles in respective series */
-	getNumberOfArticlesPerSeries = function(data) {
-		var numberOfArticlesPerSeries = {};
+	// getNumberOfArticlesPerSeries = function(data) {
+	// 	var numberOfArticlesPerSeries = {};
 
-		for (var i = 0; i < data.series.length; i++) {
-			numberOfArticlesPerSeries[data.series[i].id] = 0;
-			for (var j = 0; j < data.blogPosts.length; j++) {
-				if(data.series[i].id === data.blogPosts[j].seriesId) {
-					numberOfArticlesPerSeries[data.series[i].id]++;
-				}
-			}
-		}
-		return numberOfArticlesPerSeries;
-	};
+	// 	for (var i = 0; i < data.series.length; i++) {
+	// 		numberOfArticlesPerSeries[data.series[i].id] = 0;
+	// 		for (var j = 0; j < data.blogPosts.length; j++) {
+	// 			if(data.series[i].id === data.blogPosts[j].seriesId) {
+	// 				numberOfArticlesPerSeries[data.series[i].id]++;
+	// 			}
+	// 		}
+	// 	}
+	// 	return numberOfArticlesPerSeries;
+	// };
 
    	return function() {
    		var defer = $q.defer();
@@ -35,7 +41,6 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
    		$http.get("http://localhost:8080/blogposts/blogposts.json")
 		.success(function(data) {
 			var monthNames = monthNamesFactory();
-			var numberOfArticlesPerSeries = getNumberOfArticlesPerSeries(data);
 
 			// parse and add properties
 			for (var i = 0; i < data.blogPosts.length; i++) {
@@ -48,8 +53,8 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 				
 				if(data.blogPosts[i].partOfSeries) {
 					data.blogPosts[i].series = getSeriesData(data, data.blogPosts[i]);
-					data.blogPosts[i].series.numberOfArticles = numberOfArticlesPerSeries[data.blogPosts[i].seriesId];
 				}
+
 
 				// TODO: properly encode routeparams
 				// data.blogPosts[i].routeParam = encodeURIComponent(data.blogPosts[i].title);

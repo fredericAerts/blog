@@ -2,7 +2,7 @@
 	<a class="blogpost-intro block-link clearfix" href="#/writing/article/{{ blogpost.routeParam }}">
 		<div ng-if="blogpost.partOfSeries" class="blogpost-intro__series">
 			Part of series:
-			<span class="blogpost-intro__series__title">{{ blogpost.seriesTitle }}</span>
+			<span class="blogpost-intro__series__title">{{ blogpost.series.title }}</span>
 		</div>
 		<h2 class="blogpost-intro__title">{{ blogpost.title }}</h2>
 		<span class="blogpost-intro__date">{{ blogpost.dateFormatted }}</span>

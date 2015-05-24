@@ -10,6 +10,7 @@ blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", function Defa
 	});
 
 	setupPromisedScope = function(data) {
+		// get ng-repeat arrays for writing series pages
 		$scope.blogPosts = data.blogPosts;
 		$scope.seriesArray = data.series;
 	};
