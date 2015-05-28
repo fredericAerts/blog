@@ -1,4 +1,4 @@
-blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "blogPostsFactory", function DefaultCtrl($scope, $routeParams, blogPostsFactory) {
+blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory) {
 	'use strict';
 
 	var getCurrentArticle, getSeriesArticles, setupSeriesPagination;
@@ -50,12 +50,16 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "blogPostsFactory
 			if ($scope.currentArticle.seriesIndex > 0) {
 				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex - 1];
 			}
+			// TODO: prevent pagereload by using search param (?) in url
+			$location.path('/writing/article/' + $scope.currentArticle.routeParam);
 		};
 
 		$scope.nextPage = function() {
 			if ($scope.currentArticle.seriesIndex < numberOfArticles - 1) {
 				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex + 1];
 			}
+			// TODO: prevent pagereload by using search param (?) in url
+			$location.path('/writing/article/' + $scope.currentArticle.routeParam);
 		};
 
 		$scope.prevPageDisabled = function() {
