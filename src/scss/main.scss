@@ -17,6 +17,7 @@
 /*	Structures
 	=============================== */
 @import 'structures/header',
+		'structures/article',
 		'structures/footer';
 
 /*	Blocks
@@ -24,6 +25,7 @@
 @import 'blocks/navbar',
 		'blocks/title-flanked',
 		'blocks/search',
+		'blocks/nav-series',
 		'blocks/blogpost-intros',
 		'blocks/series-intros',
 		'blocks/button',

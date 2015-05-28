@@ -65,18 +65,5 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "blogPostsFactory
 		$scope.nextPageDisabled = function() {
 			return $scope.currentArticle.seriesIndex === numberOfArticles - 1 ? "disabled" : "";
 		};
-
-		$scope.range = function() {
-			var rangeArray = [];
-
-			for (var i = 0; i < numberOfArticles; i++) {
-				rangeArray.push(i);
-			}
-			return rangeArray;
-		};
-
-		$scope.setPage = function(n) {
-			$scope.currentArticle = seriesArticles[n];
-		};
 	};
 }]);

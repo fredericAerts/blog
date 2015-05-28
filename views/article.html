@@ -1,26 +1,32 @@
 <div class="container">
 	<div ng-controller="postRouteCtrl as postRouteCtrl">
-		<h1>{{ currentArticle.title }}</h1>
-		<p>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></p>
-
-		<div ng-if="currentArticle.partOfSeries">
-			<p>
-				This article is part of series <strong>"{{ currentArticle.series.title }}"</strong>
-				(article {{ currentArticle.seriesIndex + 1 }} of {{ currentArticle.series.numberOfArticles }})
-			</p>
-			<ul>
-				<li ng-class="prevPageDisabled()">
-					<a href ng-click="prevPage()">&laquo; Prev</a>
-				</li>
-				<li ng-repeat="n in range()" ng-class="{ active: n == currentArticle.seriesIndex }">
-					<a href ng-click="setPage(n)">{{ n+1 }}</a>
-				</li>
-				<li ng-class="nextPageDisabled()">
-					<a href ng-click="nextPage()">Next &raquo;</a>
-				</li>
-			</ul>
+		<div class="series-nav" ng-if="currentArticle.partOfSeries">
+			<div class="series-nav__wrapper">
+				<p class="series-nav__intro">
+					 <strong>{{ currentArticle.series.title }}</strong>
+					<span class="series-nav__intro__count">
+					- article {{ currentArticle.seriesIndex + 1 }} of {{ currentArticle.series.numberOfArticles }}
+					</span>
+				</p>
+				<ul class="series-nav_navs clearfix">
+					<li class="series-nav_navs__item" ng-class="prevPageDisabled()">
+						<a class="series-nav_navs__item__link" href ng-click="prevPage()">&laquo; Prev</a>
+					</li>
+					<li class="series-nav_navs__item" ng-class="nextPageDisabled()">
+						<a class="series-nav_navs__item__link" href ng-click="nextPage()">Next &raquo;</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 
-		<div ng-include="currentArticle.includeUrl"></div>
+		<article>
+			<h1 ng-class="{ 'article__title--series': currentArticle.partOfSeries }">{{ currentArticle.title }}</h1>
+			<p>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></p>
+			<p ng-if="currentArticle.partOfSeries">
+				This article is part of series "{{ currentArticle.series.title }}"
+			</p>
+
+			<div ng-include="currentArticle.includeUrl"></div>
+		</article>
 	</div>
 </div>
