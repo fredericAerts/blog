@@ -1,0 +1,31 @@
+// TODO: what's the min-height of ngView -> for footer not jumping up on ngView animation
+.ngView {
+	min-height: 500px;
+}
+
+.ngView.ng-enter {
+	transition: .3s linear opacity;
+	opacity: 0;
+}
+
+.ngView.ng-enter.ng-enter-active {
+ 	opacity: 1;
+}
+
+.blogpost-intros.ng-leave, .series-intros.ng-leave {
+	transition: .3s linear opacity;
+	opacity: 1;
+}
+
+.blogpost-intros.ng-leave.ng-leave-active, .series-intros.ng-leave.ng-leave-active {
+	opacity: 0;
+}
+
+.blogpost-intros.ng-enter, .series-intros.ng-enter {
+	transition: .3s linear opacity;
+	opacity: 0;
+}
+
+.blogpost-intros.ng-enter.ng-enter-active, .series-intros.ng-enter.ng-enter-active {
+	opacity: 1;
+}

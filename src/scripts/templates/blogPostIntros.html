@@ -1,4 +1,4 @@
-<article class="blogpost-intros" ng-repeat="blogpost in blogPosts | orderBy: orderBy | limitTo: limitTo | filter: searchArticle">
+<article class="blogpost-intros" ng-repeat="blogpost in blogPostsFiltered =  (blogPosts | orderBy: orderBy | limitTo: limitTo | filter: searchArticle)">
 	<a class="blogpost-intro block-link clearfix" href="" ng-click="routeToArticle(blogpost)">
 		<div ng-if="blogpost.partOfSeries" class="blogpost-intro__series">
 			Part of series:
