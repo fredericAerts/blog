@@ -1,0 +1,32 @@
+<div class="container">
+	<div ng-controller="seriesRouteCtrl as seriesRouteCtrl">
+		<div class="series-nav">
+			<div class="series-nav__wrapper">
+				<p class="series-nav__intro">
+					 <strong>{{ currentSeries.title }}</strong>
+					<span class="series-nav__intro__count">
+						Article {{ currentArticle.seriesIndex + 1 }} of {{ currentSeries.numberOfArticles }}
+					</span>
+				</p>
+				<ul class="series-nav_navs clearfix">
+					<li class="series-nav_navs__item" ng-class="prevPageDisabled()">
+						<a class="series-nav_navs__item__link" href ng-click="prevPage()">&laquo; Prev</a>
+					</li>
+					<li class="series-nav_navs__item" ng-class="nextPageDisabled()">
+						<a class="series-nav_navs__item__link" href ng-click="nextPage()">Next &raquo;</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<article>
+			<h1 class="article__title--series">{{ currentArticle.title }}</h1>
+			<p>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></p>
+			<p>
+				This article is part of series "{{ currentSeries.title }}"
+			</p>
+
+			<div ng-include="currentArticle.includeUrl"></div>
+		</article>
+	</div>
+</div>

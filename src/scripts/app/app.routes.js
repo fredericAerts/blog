@@ -20,6 +20,12 @@ blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routePro
 			templateUrl:VIEWS_ROOT + "series.html"
 		}
 	)
+	.when('/writing/series/:seriesRouteParam',
+		{
+			templateUrl: VIEWS_ROOT + "seriesArticle.html",
+            controller: "seriesRouteCtrl"
+		}
+	)
 	.when('/writing/article/:articleRouteParam',
 		{
 			templateUrl: VIEWS_ROOT + "article.html",

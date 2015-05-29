@@ -1,14 +1,16 @@
 blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory) {
 	'use strict';
 
-	var getCurrentArticle, getSeriesArticles, setupSeriesPagination;
+	var getCurrentArticle;
 
 	var promise = blogPostsFactory().then(function(data) {
-		$scope.currentArticle = getCurrentArticle(data.blogPosts, $routeParams.articleRouteParam);
+		var currentArticle = getCurrentArticle(data.blogPosts, $routeParams.articleRouteParam);
 
-		if($scope.currentArticle.partOfSeries) {
-			var seriesArticles = getSeriesArticles(data.blogPosts, $scope.currentArticle.seriesId);
-			setupSeriesPagination(seriesArticles);
+		if (currentArticle.partOfSeries) {
+			$location.path("/writing/series/" + currentArticle.series.routeParam).search('article', currentArticle.routeParam);
+		}
+		else {
+			$scope.currentArticle = currentArticle;
 		}
 
 	}, function(error) {
@@ -26,48 +28,5 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blo
 		}
 
 		return article;
-	};
-
-	getSeriesArticles = function (blogPosts, seriesId) {
-		var seriesArticles = [];
-
-		for (var i = 0; i < blogPosts.length; i++) {
-			if(blogPosts[i].seriesId === seriesId) {
-				seriesArticles.push(blogPosts[i]);
-			}
-		}
-		
-		seriesArticles.sort(function(a,b) { 
-			return (a.seriesIndex - b.seriesIndex); 
-		});
-		return seriesArticles;
-	};
-
-	setupSeriesPagination = function(seriesArticles) {
-		var numberOfArticles = seriesArticles.length;
-
-		$scope.prevPage = function() {
-			if ($scope.currentArticle.seriesIndex > 0) {
-				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex - 1];
-			}
-			// TODO: prevent pagereload by using search param (?) in url
-			$location.path('/writing/article/' + $scope.currentArticle.routeParam);
-		};
-
-		$scope.nextPage = function() {
-			if ($scope.currentArticle.seriesIndex < numberOfArticles - 1) {
-				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex + 1];
-			}
-			// TODO: prevent pagereload by using search param (?) in url
-			$location.path('/writing/article/' + $scope.currentArticle.routeParam);
-		};
-
-		$scope.prevPageDisabled = function() {
-			return $scope.currentArticle.seriesIndex === 0 ? "disabled" : "";
-		};
-
-		$scope.nextPageDisabled = function() {
-			return $scope.currentArticle.seriesIndex === numberOfArticles - 1 ? "disabled" : "";
-		};
 	};
 }]);

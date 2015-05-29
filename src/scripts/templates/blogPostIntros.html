@@ -1,5 +1,5 @@
 <article class="blogpost-intros" ng-repeat="blogpost in blogPosts | orderBy: orderBy | limitTo: limitTo | filter: searchArticle">
-	<a class="blogpost-intro block-link clearfix" href="#/writing/article/{{ blogpost.routeParam }}">
+	<a class="blogpost-intro block-link clearfix" href="" ng-click="routeToArticle(blogpost)">
 		<div ng-if="blogpost.partOfSeries" class="blogpost-intro__series">
 			Part of series:
 			<span class="blogpost-intro__series__title">{{ blogpost.series.title }}</span>

@@ -43,7 +43,7 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 			var monthNames = monthNamesFactory();
 			var numberOfArticlesPerSeries = getNumberOfArticlesPerSeries(data);
 
-			// parse and add properties
+			// parse and add properties to blogPosts
 			for (var i = 0; i < data.blogPosts.length; i++) {
 				data.blogPosts[i].date = new Date(data.blogPosts[i].date);
 				
@@ -51,18 +51,22 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 				var month = monthNames[data.blogPosts[i].date.getMonth()];
 				var year = data.blogPosts[i].date.getFullYear();
 				data.blogPosts[i].dateFormatted = month + " " + dayOfMonth + ", " + year;
-				
-				if(data.blogPosts[i].partOfSeries) {
-					data.blogPosts[i].series = getSeriesData(data, data.blogPosts[i]);
-					data.blogPosts[i].series.numberOfArticles = numberOfArticlesPerSeries[data.blogPosts[i].seriesId];
-				}
-
 
 				// TODO: properly encode routeparams
 				// data.blogPosts[i].routeParam = encodeURIComponent(data.blogPosts[i].title);
 				data.blogPosts[i].routeParam = data.blogPosts[i].title.replace(/\s/g, "-").toLowerCase();
 
 				data.blogPosts[i].includeUrl = POSTS_ROOT + data.blogPosts[i].routeParam + '.html';
+
+				if(data.blogPosts[i].partOfSeries) {
+					data.blogPosts[i].series = getSeriesData(data, data.blogPosts[i]); 
+				}
+			}
+
+			// parse and add properties to series
+			for (var j = 0; j < data.series.length; j++) {
+				data.series[j].numberOfArticles = numberOfArticlesPerSeries[data.series[j].id];
+				data.series[j].routeParam = data.series[j].title.replace(/\s/g, "-").toLowerCase();
 			}
 
 			defer.resolve(data);

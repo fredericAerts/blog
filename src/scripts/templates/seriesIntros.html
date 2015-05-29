@@ -1,5 +1,5 @@
 <article class="series-intros" ng-repeat="series in seriesArray | orderBy: orderBy | limitTo: limitTo | filter: searchSeries">
-	<a class="series-intro block-link clearfix" href="#/writing/article/{{ series.firstArticle.routeParam }}">
+	<a class="series-intro block-link clearfix" href="" ng-click="routeToArticle(series.firstArticle)">
 		<h2 class="series-intro__title">{{ series.title }}</h2>
 		<p class="series-intro__intro">{{ series.intro }}</p>
 		<span class="series-intro__cta">Start reading &raquo;</span>

@@ -1,4 +1,4 @@
-blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", function DefaultCtrl($scope, blogPostsFactory) {
+blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", function DefaultCtrl($scope, blogPostsFactory, $location) {
 	'use strict';
 
 	var setupPromisedScope;
@@ -13,6 +13,15 @@ blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", function Defa
 		// get ng-repeat arrays for writing series pages
 		$scope.blogPosts = data.blogPosts;
 		$scope.seriesArray = data.series;
+	};
+
+	$scope.routeToArticle = function(article) {
+		if (article.partOfSeries) {
+			$location.path("/writing/series/" + article.series.routeParam).search('article', article.routeParam);
+		}
+		else {
+			$location.path("/writing/article/" + article.routeParam);
+		}
 	};
 
 	/* TODO: search multiple words */
