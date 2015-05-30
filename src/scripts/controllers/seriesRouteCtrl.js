@@ -3,17 +3,22 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 
 	var getCurrentSeries, getCurrentArticle, getSeriesArticles, setupSeriesPagination;
 
+	var allArticles;
+
 	var promise = blogPostsFactory().then(function(data) {
+		allArticles = data.blogPosts;
+		// TODO: redirect to 404.html when series or article doesn't exist
 		$scope.currentSeries = getCurrentSeries(data.series, $routeParams.seriesRouteParam);
+
 		if($routeParams.article) {
-			$scope.currentArticle = getCurrentArticle(data.blogPosts, $routeParams.article);
+			$scope.currentArticle = getCurrentArticle(allArticles, $routeParams.article);
 		}
 		else {
 			$scope.currentArticle = $scope.currentSeries.firstArticle;
 			$location.search('article', $scope.currentArticle.routeParam);
 		}
 
-		var seriesArticles = getSeriesArticles(data.blogPosts, $scope.currentArticle.seriesId);
+		var seriesArticles = getSeriesArticles(allArticles, $scope.currentArticle.seriesId);
 		setupSeriesPagination(seriesArticles);
 
 	}, function(error) {
@@ -21,7 +26,7 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 	});
 
 	getCurrentSeries = function(series, routeParam) {
-		var currentSeries = {};
+		var currentSeries;
 
 		for (var i = 0; i < series.length; i++) {
 			if(series[i].routeParam === routeParam) {
@@ -34,7 +39,7 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 	};
 
 	getCurrentArticle = function(blogPosts, routeParam) {
-		var article = {};
+		var article;
 
 		for (var i = 0; i < blogPosts.length; i++) {
 			if(blogPosts[i].routeParam === routeParam) {
@@ -63,19 +68,18 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 
 	setupSeriesPagination = function(seriesArticles) {
 		var numberOfArticles = seriesArticles.length;
-		var targetArticle = {};
 
 		$scope.prevPage = function() {
 			if ($scope.currentArticle.seriesIndex > 0) {
-				targetArticle = seriesArticles[$scope.currentArticle.seriesIndex - 1];
-				$location.search('article', targetArticle.routeParam);
+				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex - 1];
+				$location.search('article', $scope.currentArticle.routeParam);
 			}
 		};
 
 		$scope.nextPage = function() {
 			if ($scope.currentArticle.seriesIndex < numberOfArticles - 1) {
-				targetArticle = seriesArticles[$scope.currentArticle.seriesIndex + 1];
-				$location.search('article', targetArticle.routeParam);
+				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex + 1];
+				$location.search('article', $scope.currentArticle.routeParam);
 			}
 		};
 
@@ -86,5 +90,12 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 		$scope.nextPageDisabled = function() {
 			return $scope.currentArticle.seriesIndex === numberOfArticles - 1 ? "disabled" : "";
 		};
+
+		$scope.$on('$routeUpdate', function () {
+			// account for browser back and forward buttons
+			if($routeParams.article !== $scope.currentArticle.routeParam) {
+				$scope.currentArticle = getCurrentArticle(allArticles, $routeParams.article);
+			}
+	    });
 	};
 }]);

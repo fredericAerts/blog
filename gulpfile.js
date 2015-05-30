@@ -148,7 +148,7 @@ gulp.task('scripts', function() {
     .pipe(plugins.concat('script.js'))
     .pipe(gulp.dest('web/.temp/scripts'))
     .pipe(plugins.rename({suffix: '.min'}))
-    .pipe(plugins.uglify())
+    // .pipe(plugins.uglify())
     .pipe(gulp.dest('web/scripts'));
 });
 

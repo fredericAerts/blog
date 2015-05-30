@@ -6,6 +6,7 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blo
 	var promise = blogPostsFactory().then(function(data) {
 		var currentArticle = getCurrentArticle(data.blogPosts, $routeParams.articleRouteParam);
 
+		// TODO: redirect to 404.html when series or article doesn't exist
 		if (currentArticle.partOfSeries) {
 			$location.path("/writing/series/" + currentArticle.series.routeParam).search('article', currentArticle.routeParam);
 		}
@@ -18,7 +19,7 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blo
 	});
 
 	getCurrentArticle = function(blogPosts, routeParam) {
-		var article = {};
+		var article;
 
 		for (var i = 0; i < blogPosts.length; i++) {
 			if(blogPosts[i].routeParam === routeParam) {

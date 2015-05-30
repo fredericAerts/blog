@@ -23,7 +23,8 @@ blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routePro
 	.when('/writing/series/:seriesRouteParam',
 		{
 			templateUrl: VIEWS_ROOT + "seriesArticle.html",
-            controller: "seriesRouteCtrl"
+            controller: "seriesRouteCtrl",
+            reloadOnSearch: false
 		}
 	)
 	.when('/writing/article/:articleRouteParam',
