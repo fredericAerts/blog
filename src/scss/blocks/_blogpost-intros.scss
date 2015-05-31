@@ -2,8 +2,6 @@
 	position: relative;
 	margin-bottom: 0.55555555555556rem;
 
-	box-shadow: 0 2px 3px rgba(0,0,0,0.075);
-
 	&:last-child {
 		margin-bottom: 0;
 	}
@@ -16,10 +14,11 @@
 
 	text-decoration: none;
 
-	@include transition(background .3s);
+	@include transition(all .3s);
 
 	&:hover {
 		background: $grey--lighter;
+		box-shadow: 0 2px 3px rgba(0,0,0,0.075);
 	}
 }
 
