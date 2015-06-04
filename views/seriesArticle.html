@@ -21,10 +21,11 @@
 
 		<article>
 			<h1 class="article__title--series">{{ currentArticle.title }}</h1>
-			<p>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></p>
-			<p>
+			<span>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></span>
+			<br>
+			<span>
 				This article is part of series "{{ currentSeries.title }}"
-			</p>
+			</span>
 
 			<div ng-include="currentArticle.includeUrl"></div>
 		</article>

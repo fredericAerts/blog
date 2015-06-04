@@ -22,6 +22,22 @@ h2 {
 	font-weight: 700;
 }
 
+
+p {	
+	line-height: 1.4em;
+	
+	.blogpost-intros &, .series-intros &, article & {
+		font-family: $secondaryFont;
+		font-size: 16px;
+		line-height: 1.5em;
+		font-weight: 300;
+	}
+
+	article & {
+		margin-bottom: 30px;
+	}
+}
+
 a {
 	color: inherit;
 }

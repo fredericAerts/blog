@@ -8,7 +8,7 @@
 }
 
 .blogpost-intro {
-	padding: 1.5rem 1.5rem 2rem;
+	padding: 1.5rem 1.5rem 3rem;
 
 	background: $grey--lightest;
 
@@ -39,7 +39,7 @@
 
 .blogpost-intro__date {
 	display: inline-block;
-	margin-bottom: .6rem;
+	margin-bottom: 1rem;
 
 	font-size: 14px;
 }
@@ -50,7 +50,7 @@
 
 .blogpost-intro__cta {
 	position: absolute;
-	bottom: 7px;
+	bottom: 10px;
 	right: 10px;
 	float: right;
 

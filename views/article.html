@@ -2,7 +2,7 @@
 	<div ng-controller="postRouteCtrl as postRouteCtrl">
 		<article>
 			<h1>{{ currentArticle.title }}</h1>
-			<p>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></p>
+			<span>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></span>
 
 			<div ng-include="currentArticle.includeUrl"></div>
 		</article>
