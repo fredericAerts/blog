@@ -24,6 +24,8 @@ h2 {
 
 
 p {	
+	margin-bottom: 15px;
+
 	line-height: 1.4em;
 	
 	.blogpost-intros &, .series-intros &, article & {
@@ -33,8 +35,8 @@ p {
 		font-weight: 300;
 	}
 
-	article & {
-		margin-bottom: 30px;
+	.blogpost-intros &, .series-intros & {
+		margin-bottom: 0;
 	}
 }
 
