@@ -1,6 +1,10 @@
 <div class="container">
 	<div class="greeting clearfix">
-		<img class="greeting__image" sizes="100vw" srcset="/web/img/frederic-aerts@2x.jpg 2x, /web/img/frederic-aerts.jpg" alt="Frederic Aerts">
+		<span picture-fill data-alt="Frederic Aerts" class="greeting__image">
+		  <span pf-src="/web/img/frederic-aerts.jpg"></span>
+		  <span pf-src="/web/img/frederic-aerts@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
+		</span>
+		<!-- <img class="greeting__image" sizes="100vw" srcset="/web/img/frederic-aerts@2x.jpg 2x, /web/img/frederic-aerts.jpg" alt="Frederic Aerts"> -->
 		<div class="greeting__content">
 			<h1 class="greeting__title">
 				Hello.
