@@ -27,6 +27,7 @@ var paths = {
         'bower_components/angular-animate/angular-animate.js',
         'bower_components/angular-picturefill/angular-picturefill.js',
         'bower_components/picturefill/picturefill.js',
+        'bower_components/angular-gist/angular-gist.js',
         'src/scripts/app/app.js',
         'src/scripts/app/app.routes.js',
         'src/scripts/app/app.analytics.js',

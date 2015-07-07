@@ -40,6 +40,14 @@ p {
 	}
 }
 
+code {
+	padding: 0 5px; 
+	font-size: 14px;
+	font-family: $codeFont;
+
+	background: $grey--lightest;
+}
+
 a {
 	color: inherit;
 }

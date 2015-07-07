@@ -1,4 +1,4 @@
-var blogApp = angular.module('blogApp', ['ngRoute', 'ngAnimate', 'ng.picturefill']);
+var blogApp = angular.module('blogApp', ['ngRoute', 'ngAnimate', 'ng.picturefill', 'gist']);
 
 //paths
 blogApp.paths = {
