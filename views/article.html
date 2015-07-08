@@ -2,13 +2,16 @@
 	<div ng-controller="postRouteCtrl as postRouteCtrl">
 		<article class="blogpost">
 			<h1>{{ currentArticle.title }}</h1>
-			<div class="blogpost__meta">
+			<div class="blogpost__meta blogpost__meta--top">
 				<div class="blogpost__meta__item">
 					posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></span>
 				</div>
 			</div>
 
 			<div ng-include="currentArticle.includeUrl"></div>
+
+			<div class="blogpost__meta blogpost__meta--bottom">
+			</div>
 		</article>
 	</div>
 </div>

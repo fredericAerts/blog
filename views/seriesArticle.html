@@ -1,36 +1,41 @@
 <div class="container container--padded">
 	<div ng-controller="seriesRouteCtrl as seriesRouteCtrl">
-		<!-- <div class="series-nav">
-			<div class="series-nav__wrapper">
-				<p class="series-nav__intro">
-					 <strong>{{ currentSeries.title }}</strong>
-					<span class="series-nav__intro__count">
-						Article {{ currentArticle.seriesIndex + 1 }} of {{ currentSeries.numberOfArticles }}
-					</span>
-				</p>
-				<ul class="series-nav_navs clearfix">
-					<li class="series-nav_navs__item" ng-class="prevPageDisabled()">
-						<a class="series-nav_navs__item__link" href ng-click="prevPage()">&laquo; Prev</a>
-					</li>
-					<li class="series-nav_navs__item" ng-class="nextPageDisabled()">
-						<a class="series-nav_navs__item__link" href ng-click="nextPage()">Next &raquo;</a>
-					</li>
-				</ul>
-			</div>
-		</div> -->
 
 		<article class="blogpost">
 			<h1>{{ currentArticle.title }}</h1>
-			<div class="blogpost__meta">
+			<div class="blogpost__meta blogpost__meta--top">
 				<div class="blogpost__meta__item">
 					posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a>
 				</div>
 				<div class="blogpost__meta__item">
 					Part of series: <span class="blogpost__meta__seriesTitle">{{ currentSeries.title }}</span>
 				</div>
+				<div class="blogpost__meta__item blogpost__meta__item--nav clearfix">
+					Article {{ currentArticle.seriesIndex + 1 }} of {{ currentSeries.numberOfArticles }}
+					<div class="blogpost__series-nav">
+						<a class="blogpost__series-nav__item" ng-class="prevPageDisabled()" href ng-click="prevPage()">
+							Previous
+						</a>
+						<a class="blogpost__series-nav__item" ng-class="nextPageDisabled()" href ng-click="nextPage()">
+							Next
+						</a>
+					</div>
+				</div>
 			</div>
 
 			<div ng-include="currentArticle.includeUrl"></div>
+
+			<div class="blogpost__meta blogpost__meta--bottom">
+				<div class="blogpost__series-nav">
+					<a class="blogpost__series-nav__item" ng-class="prevPageDisabled()" href ng-click="prevPage()">
+						Previous
+					</a>
+					<a class="blogpost__series-nav__item" ng-class="nextPageDisabled()" href ng-click="nextPage()">
+						Next
+					</a>
+				</div>
+			</div>
+
 		</article>
 	</div>
 </div>

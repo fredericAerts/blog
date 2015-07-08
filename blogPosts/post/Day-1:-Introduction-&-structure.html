@@ -1,17 +1,17 @@
 <p class="blogpost__intro">
-	I don’t have to tell you that the ability to build websites is an incredible empowering skill. The idea of building things - especially things of your own design - that could potentially reach millions of people is exhilarating. When you get started building your first website though, it’s easy to get overwhelmed by all the information out there. Before you get caught in tutorial paralysis, let us get one thing straight: you don’t have to be a genius to build websites, you just need to be determined. In the end, it’s all just a matter of breaking down problems into smaller problems. So for this series, the problem we’ll solve is… how can we, without any prior knowledge in web development, build this website in 5 days time. When you’ve finished this series, you’re gonna look like you have magic powers compared to everyone else. So let’s get cracking..
+	I don’t have to tell you that the ability to build websites is an incredibly empowering skill. The idea of building things - especially things of your own design - that could potentially reach millions of people is an exhilarating one. When you get started building your first website though, it’s easy to get overwhelmed by all the information out there. Before you get caught in tutorial paralysis, let's get one thing straight: you don’t have to be a genius to build websites, you just need to be determined. In the end, it’s all just a matter of breaking down problems into smaller problems. So for this series, the problem we’ll solve is… how can we, without any prior knowledge in web development, build this website in 5 days time. When you’ve finished this series, you’re gonna look like you have magic powers compared to everyone else. So let’s get cracking..
 </p>
 <h2>Browsers talk HTML</h2>
 <p>
 	When you visit a website, basically what happens is that your browser fetches a HTML file from a server and renders the information in this file for your eyes to see. Which HTML file gets fetched from which server depends on the url you’ve entered in your browser’s address bar. Thus, the first step to building a website is creating such a HTML file;
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	Open your text editor (notepad on Windows, textEdit on Mac), type <code>Hello world. This is my first website</code> and save it as “index.html” (in textEdit, select the Format menu before saving and choose “Make Plain Text”). Be sure to save it in the web page file format, which means it should have a .html extension and not the default .txt extension. Now, using your favourite browser (Internet Explorer, Safari, Chrome, Firefox, …), choose “Open file” from the File menu and navigate to your “index.html” file. Select it and click Open. Or even easier, just drag the “index.html” file in your browser window. Your browser should now say “Hello world. This is my first website”. Congratulations, you’ve created your first website!
 </p>
 <p>
 	You might not realise it yet, but you’ve just written some HTML (HyperText Markup Language). HTML is a human readable language that tells the browser all about the <strong>content</strong> and <strong>structure</strong> of the web page. In the website you’ve just built, “Hello world. This is my first website” is the content of the web page. Now, with the help of some HTML tags, let’s give the browser some cues about the structure and meaning of this content;
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	In your “index.html”, surround your existing text with HTML tags like so;
 	code: <code>&lt;h1&gt;Hello World&lt;/h1&gt;&lt;p&gt;This is my first website&lt;/p&gt;</code>
 	Be sure to get the specific HTML tag syntax correct! The closing HTML tags have an additional forward slash in them.
@@ -23,7 +23,7 @@
 <p>
 	Ok, so what we have so far is a HTML file with some markup. Does that make it a valid web page? Not quite. Before we’re going to add style to our page, let’s get the proper HTML template in place used for any professional web page. 
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	Replace the content in your current “index.html” file with the following;
 	<!-- html: web developer in 5 days - v1 -->
 	<gist id="dc165cb1077a1e2b2310"></gist>
@@ -61,19 +61,19 @@
 <p>
 	Now that we have this formal stuff out of the way, it’s time to tell the browser where to find the CSS (Cascading StyleSheet) that styles our web page. The logical place to add this information is in the head tag, and that’s exactly where we’ll put it;
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	<!-- html: web developer in 5 days - v2 -->
 	<gist id="efb659e1af6eaf2a0b9f"></gist>
 <p>
 	Note that the link tag has no closing tag. It’s what we call a self enclosing HTML tag. There’s no reason for it to have a closing tag since there’s no content to be contained within it. Like any HTML tag though (more on this later), the link tag can contain information about itself in it’s attributes. Our link tag uses the attributes href and rel to explain to the browser that it should fetch a file named style.css and use it as the stylesheet for our web page. Let’s create that CSS file;
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	In your text editor, create a new file, type <code>h1{color:red;}</code>  and save it as “style.css” (in textEdit again, select the Format menu before saving and choose “Make Plain Text”) in the same directory as your “index.html” file. Be sure to save it in stylesheet format, which means it should have a .css extension and not the default .txt extension. Now, refresh your browser. The header “Hello world” has a red color now.
 </p>
 <p>
 	It’s quite possible that the header in your browser doesn’t have a red color yet. It’s quite possible that creating your “index.html” and getting it to display as a web page in your browser wasn’t smooth sailing either. If so, than I respect you for still hanging in there. And let me seize this opportunity to share with you this brutal truth: <strong>the beginning stages of learning to become a web developer can sometimes really suck</strong>. You’ll feel overwhelmed, you’ll feel like throwing your computer out of a window, and you’ll feel like there’s no way you’re ever going to learn this shit and be good enough. My advice would be to keep your cool and approach these obstacles as opportunities to learn. These are the moments where the wheat gets separated from the chaff, and it’s on you to decide where you stand. It also helps to know there’s a huge developer community out there that faced similar problems, and were kind enough to share their solutions on a multitude of blogs, forums, Q&amp;A sites, … across the internet. So whenever you run out of ideas for solving a problem, just google it! To get back to our “my header isn’t red” problem, here are some possible solutions;
 </p>
-<ul>
+<ul class="blogpost__indented">
 	<li>
 		Double check special characters in your HTML and CSS files. Eg. in <code>h1{color:red;}</code> Are you using colons and semicolons correctly?
 	</li>
@@ -102,7 +102,7 @@
 <p>
 	As it stands now, if we’d have multiple h1 headers in our web page, they would all be coloured red. Now suppose we want only a specific type of header coloured red, namely the headers marked as “highlighted”. Seems like a reasonable requirement right? Are we supposed to invent a new HTML tag for highlighted h1 headers now? No way man, that would lead us to a HTML tag soup we can’t possibly expect the browser to make sense of. Instead, we’ll decorate HTML tags with attributes, and target these attributes using specific CSS selectors. The attribute predominantly used as a hook for CSS selectors is the class attribute. Let’s look at an example;
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	In your “index.html” file, add a class to the current h1 header like so; <code>&lt;h1 class=“highlighted”&gt;Hello world&lt;/h1&gt;</code>. In your “style.css” file, target this header by replacing the current CSS rule with <code>.highlighted {color: red;}</code>.
 </p>
 <p>
@@ -111,7 +111,7 @@
 <p>
 	Now what if we added a second rule to our CSS file <code>h1{color:brown;}</code>? Will our header colour brown or red? Indeed, we now have two categories of CSS selectors (type selector vs class selector) in our CSS file, both targeting our h1 header. And by the way, are there any other categories of CSS selectors I should now of? Yes sir, there are! And you’d probably like to know that you can combine multiple CSS selectors too, like for instance <code>h1.highlighted{}</code> targeting only h1 headers with a class highlighted. And you should also know that… Hold it right there! This neither the time nor place to learn about complex CSS selector patterns. Keeping our CSS code simple is not only convenient for us now, it’s also best practice. Let’s focus on what we need to build our website, and what we need is a notion of the concept CSS specificity. Here’s a definition;
 </p>
-<p class="blogpost__definition">
+<p class="blogpost__indented">
 	<strong>CSS specificity</strong> is the means by which a browser decides which CSS property values are the most relevant to an element and therefore will be applied. CSS specificity is based on the matching rules which are composed of CSS selectors of different sorts.
 </p>
 <p>
@@ -120,7 +120,7 @@
 <p>
 	Let’s look at some examples of CSS selectors, ordered by increasing specificity. Grasping these will suffice for now;
 </p>
-<ul>
+<ul class="blogpost__indented">
 	<li>
 		<strong>Tag selector</strong><br>
 		example: <code>h1{}</code><br>
@@ -153,7 +153,7 @@
 <p>
 	Et voila, that’s all you need to know about CSS for now. I agree that the styles we’ve applied to our header and paragraph so far have been all but spectacular, so let’s end this section by showing off what CSS is really capable of. 
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	Replace the current CSS rules in our CSS file with the following;
 	<!-- css: web developer in 5 days - v1 -->
 	<gist id="1361d1670013ac0e6976"></gist>
@@ -173,12 +173,10 @@
 <p>
 	One thing you need to understand is that, since we’re writing JavaScript that’s to be executed in a browser environment, we are able to interact with objects provided to us by this browser. This interaction enables us to control the behaviour of our browser. Let’s create a JavaScript file that will prompt our browser to display a popup message box;
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	In your text editor, create a new file, type <code>window.alert(‘Hello, I’m a popup’);</code> and save it as “script.js” in the same directory as your “index.html” file. Be sure to save it in JavaScript format, which means it should have a .js extension and not the default .txt extension. Now, instruct the browser to fetch this file by adding a script tag in the head of your “index.html” like so;  
 	<!-- html: web developer in 5 days - v3 -->
 	<gist id="98e0730bbde81f93b9db"></gist>
-</p>
-<p>
 	Note that although no content is enclosed by the script tag, you should not omit the closing tag here. Let’s just accept this nuance of HTML grammar with the stoicism of a cow standing in the rain. 
 	Now refresh your browser. A popup is prompted by the browser on pageload.
 </p>
@@ -197,7 +195,7 @@
 <p>
 	This DOM tree gets created by the browser on pageload, and is based on the HTML file we provided to it. Via the window.document object, we can now thus iterate over this DOM tree, access and manipulate our existing HTML elements, and even create or delete HTML elements on the fly. An important gotcha we have to take into account is that the browser is only able to construct the DOM after it has processed our HTML file in its entirety. Execution of our JavaScript file can thus start before DOM availability, resulting in errors when it’s trying to interact with our non-existing DOM. Luckily for us, the browser keeps us in the know on the myriad of events occurring in it, one of which is DOM content loading. DOM manipulating code should be wrapped in a function that’s executed only when this ‘DOMContentLoaded’ event is triggered. Let’s illustrate this;
 </p>
-<p class="blogpost__intructions">
+<p class="blogpost__intructions blogpost__indented">
 	Copy the following piece of code in our “script.js” file;
 	<!-- js: web developer in 5 days - v1 -->
 	<gist id="b1f15a19c258320fe66c"></gist>
