@@ -1,0 +1,110 @@
+// TODO: make mixin for grey padded indented pieces of text
+
+.blogpost {
+
+	& h1 {
+		margin-bottom: .6rem;
+
+		font-size: 35px;
+
+		@media (min-width: $screen-xs-min) {
+			font-size: 40px;
+		}
+	}
+
+	& h2 {
+		margin-bottom: 1rem;
+	}
+
+	& p {
+		margin-bottom: 2rem;
+
+		font-family: $secondaryFont;
+		font-size: 16px;
+		line-height: 1.8em;
+		font-weight: 300;
+
+		@media (min-width: $screen-xs-min) {
+			font-size: 18px;
+		}
+
+		&.blogpost__intro {
+			font-weight: 400;
+		}
+
+		&.blogpost__intructions {
+			font-family: $primaryFont;
+			
+			padding-left: 1em;
+			border-left: 10px solid $grey--lightest;
+
+			@media (min-width: $screen-sm-min) {
+				margin-left: 2rem;
+			}
+		}
+
+		&.blogpost__definition {
+			padding-left: 1em;
+			border-left: 10px solid $grey--lightest;
+
+			@media (min-width: $screen-sm-min) {
+				margin-left: 2rem;
+			}
+		}
+	}
+
+	& ul {
+		margin-bottom: 2rem;
+		padding-left: 1em;
+		border-left: 10px solid $grey--lightest;
+
+		font-family: $secondaryFont;
+		font-size: 16px;
+		line-height: 1.8em;
+		font-weight: 300;
+
+		@media (min-width: $screen-sm-min) {
+			margin-left: 2rem;
+		}
+
+		& li {
+			margin-bottom: 1rem;
+
+			line-height: 1.2em;
+		}
+	}
+
+	& strong {
+		font-weight: 400;
+	}
+}
+
+.blogpost__meta {
+	margin-bottom: 2rem;
+	padding-bottom: 1em;
+
+	border-bottom: 1px solid $grey--lighter;
+}
+
+.blogpost__meta__item {
+	margin-bottom: .4rem;
+}
+
+.blogpost__meta__seriesTitle {
+	// color: $red;
+	font-weight: 700;
+}
+
+.gist {
+	width: 100%;
+}
+
+.blogpost__image-wrapper {
+	margin-bottom: 2rem;
+
+	text-align: center;
+
+	img {
+		max-width: 100%;
+	}
+}

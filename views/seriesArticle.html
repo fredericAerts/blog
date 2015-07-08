@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container container--padded">
 	<div ng-controller="seriesRouteCtrl as seriesRouteCtrl">
-		<div class="series-nav">
+		<!-- <div class="series-nav">
 			<div class="series-nav__wrapper">
 				<p class="series-nav__intro">
 					 <strong>{{ currentSeries.title }}</strong>
@@ -17,15 +17,18 @@
 					</li>
 				</ul>
 			</div>
-		</div>
+		</div> -->
 
-		<article>
-			<h1 class="article__title--series">{{ currentArticle.title }}</h1>
-			<span>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></span>
-			<br>
-			<span>
-				This article is part of series "{{ currentSeries.title }}"
-			</span>
+		<article class="blogpost">
+			<h1>{{ currentArticle.title }}</h1>
+			<div class="blogpost__meta">
+				<div class="blogpost__meta__item">
+					posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a>
+				</div>
+				<div class="blogpost__meta__item">
+					Part of series: <span class="blogpost__meta__seriesTitle">{{ currentSeries.title }}</span>
+				</div>
+			</div>
 
 			<div ng-include="currentArticle.includeUrl"></div>
 		</article>

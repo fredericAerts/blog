@@ -1,8 +1,12 @@
-<div class="container">
+<div class="container container--padded">
 	<div ng-controller="postRouteCtrl as postRouteCtrl">
-		<article>
+		<article class="blogpost">
 			<h1>{{ currentArticle.title }}</h1>
-			<span>posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></span>
+			<div class="blogpost__meta">
+				<div class="blogpost__meta__item">
+					posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a></span>
+				</div>
+			</div>
 
 			<div ng-include="currentArticle.includeUrl"></div>
 		</article>

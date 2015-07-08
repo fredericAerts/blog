@@ -1,0 +1,6 @@
+.container--padded {
+
+	@media (min-width: $screen-lg-min) {
+		padding: 0 6em;
+	}
+}

@@ -5,10 +5,21 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	& p {
+		font-family: $secondaryFont;
+		font-size: 16px;
+		line-height: 1.5em;
+		font-weight: 300;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .blogpost-intro {
-	padding: 1.5rem 1.5rem 3rem;
+	padding: 2rem 2rem 3rem;
 
 	background: $grey--lightest;
 
@@ -34,12 +45,12 @@
 }
 
 .blogpost-intro__title {
-	margin: 0;
+	margin-top: .6rem;
 }
 
 .blogpost-intro__date {
 	display: inline-block;
-	margin-bottom: 1rem;
+	margin: .4rem 0 1rem;
 
 	font-size: 14px;
 }

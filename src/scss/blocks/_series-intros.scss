@@ -7,10 +7,21 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
+
+	& p {
+		font-family: $secondaryFont;
+		font-size: 16px;
+		line-height: 1.5em;
+		font-weight: 300;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .series-intro {
-	padding: 1.5rem 1.5rem 3rem;
+	padding: 2rem 2rem 3rem;
 
 	background: $grey--lightest;
 
@@ -24,7 +35,7 @@
 }
 
 .series-intro__title {
-	margin: 0 0 1rem;
+	margin: .6rem 0 1rem;
 }
 
 .series-intro__intro {

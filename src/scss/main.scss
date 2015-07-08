@@ -13,12 +13,12 @@
 /*	General
 	=============================== */
 @import 'general/base',
+		'general/grid',
 		'general/animations';
 
 /*	Structures
 	=============================== */
 @import 'structures/header',
-		'structures/article',
 		'structures/footer';
 
 /*	Blocks
@@ -30,6 +30,7 @@
 		'blocks/nav-series',
 		'blocks/blogpost-intros',
 		'blocks/series-intros',
+		'blocks/blogpost',
 		'blocks/button',
 		'blocks/availability-list';
 
