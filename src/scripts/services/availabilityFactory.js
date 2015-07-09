@@ -12,11 +12,22 @@ blogApp.factory("availabilityFactory", ["$http", "$q", "AVAILABILITY_ROOT", "mon
 
 				data.availabilities[i].month = monthNames[availabilityDate.getMonth()];
 				data.availabilities[i].year = availabilityDate.getFullYear();
-				data.availabilities[i].past = (availabilityDate.getMonth() < new Date().getMonth() 
-												&& availabilityDate.getFullYear() <= new Date().getFullYear());
+				data.availabilities[i].past = dateInPast(availabilityDate);
 			}
 
 			defer.resolve(data.availabilities);
+
+			function dateInPast(date) {
+				if (date.getFullYear() === new Date().getFullYear()) {
+					return (date.getMonth() < new Date().getMonth());
+				}
+				else if (date.getFullYear() < new Date().getFullYear()){
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
 		})
 		.error(function(data, status, headers, config) {
 			console.log("availability json http request failed in availabilityFactory \nError: " + data);
