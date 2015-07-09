@@ -19,7 +19,7 @@ blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", 
 		alert("r");
 		$anchorScroll();
 		$location.path("/writing/");
-	}
+	};
 
 	$scope.routeToArticle = function(article) {
 		$anchorScroll();
@@ -38,24 +38,48 @@ blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", 
 		var articleTitle = article.title ? article.title.toLowerCase() : undefined;
 		var articleSeriesTitle = article.partOfSeries ? article.series.title.toLowerCase() : undefined;
 		var articleIntro = article.intro ? article.intro.toLowerCase() : undefined;
-		var queryString = $scope.query ? $scope.query.toLowerCase() : "";
+		var queryWords = $scope.query ? $scope.query.toLowerCase().split(" ") : [];
+		var queryMatch = true;
 
-		var matchTitle = articleTitle ? articleTitle.indexOf(queryString) !== -1 : false;
-		var matchSeriesTitle = articleSeriesTitle ? articleSeriesTitle.indexOf(queryString) !== -1 : false;
-		var matchIntro = articleIntro ? articleIntro.indexOf(queryString) !== -1 : false;
+		for (var i = 0; i < queryWords.length; i++) {
+			queryMatch = matchWord(queryWords[i]);
+			if (!queryMatch) {
+				break;
+			}
+		}
 
-		return matchTitle || matchSeriesTitle || matchIntro;
+		return queryMatch;
+
+		function matchWord(queryWord) {
+			var matchTitle = articleTitle ? articleTitle.indexOf(queryWord) !== -1 : false;
+			var matchSeriesTitle = articleSeriesTitle ? articleSeriesTitle.indexOf(queryWord) !== -1 : false;
+			var matchIntro = articleIntro ? articleIntro.indexOf(queryWord) !== -1 : false;
+
+			return matchTitle || matchSeriesTitle || matchIntro;
+		}
 	};
 
 	$scope.searchSeries = function (series) {
 		/* get lowercase strings for comparing */
 		var seriesTitle = series.title ? series.title.toLowerCase() : undefined;
 		var seriesIntro = series.intro ? series.intro.toLowerCase() : undefined;
-		var queryString = $scope.query ? $scope.query.toLowerCase() : "";
+		var queryWords = $scope.query ? $scope.query.toLowerCase().split(" ") : [];
+		var queryMatch = true;
 
-		var matchTitle = seriesTitle ? seriesTitle.indexOf(queryString) !== -1 : false;
-		var matchIntro = seriesIntro ? seriesIntro.indexOf(queryString) !== -1 : false;
+		for (var i = 0; i < queryWords.length; i++) {
+			queryMatch = matchWord(queryWords[i]);
+			if (!queryMatch) {
+				break;
+			}
+		}
 
-		return matchTitle || matchIntro;
+		return queryMatch;
+
+		function matchWord(queryWord) {
+			var matchTitle = seriesTitle ? seriesTitle.indexOf(queryWord) !== -1 : false;
+			var matchIntro = seriesIntro ? seriesIntro.indexOf(queryWord) !== -1 : false;
+
+			return matchTitle || matchIntro;
+		}
 	};
 }]);
