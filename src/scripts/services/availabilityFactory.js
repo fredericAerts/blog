@@ -12,7 +12,8 @@ blogApp.factory("availabilityFactory", ["$http", "$q", "AVAILABILITY_ROOT", "mon
 
 				data.availabilities[i].month = monthNames[availabilityDate.getMonth()];
 				data.availabilities[i].year = availabilityDate.getFullYear();
-				data.availabilities[i].past = availabilityDate.getMonth() < new Date().getMonth();
+				data.availabilities[i].past = (availabilityDate.getMonth() < new Date().getMonth() 
+												&& availabilityDate.getFullYear() <= new Date().getFullYear());
 			}
 
 			defer.resolve(data.availabilities);

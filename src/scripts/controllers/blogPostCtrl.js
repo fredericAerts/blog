@@ -1,4 +1,4 @@
-blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", function DefaultCtrl($scope, blogPostsFactory, $location) {
+blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", "$anchorScroll", function DefaultCtrl($scope, blogPostsFactory, $location, $anchorScroll) {
 	'use strict';
 
 	var setupPromisedScope;
@@ -15,7 +15,14 @@ blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", 
 		$scope.seriesArray = data.series;
 	};
 
+	$scope.routeToArticles = function() {
+		alert("r");
+		$anchorScroll();
+		$location.path("/writing/");
+	}
+
 	$scope.routeToArticle = function(article) {
+		$anchorScroll();
 		if (article.partOfSeries) {
 			$location.path("/writing/series/" + article.series.routeParam).search('article', article.routeParam);
 		}

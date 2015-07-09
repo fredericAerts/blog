@@ -1,4 +1,4 @@
-blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory) {
+blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
 	'use strict';
 
 	var getCurrentSeries, getCurrentArticle, getSeriesArticles, setupSeriesPagination;
@@ -66,11 +66,16 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 		return seriesArticles;
 	};
 
+	$scope.toTop = function() {
+		$anchorScroll();
+	};
+
 	setupSeriesPagination = function(seriesArticles) {
 		var numberOfArticles = seriesArticles.length;
 
 		$scope.prevPage = function() {
 			if ($scope.currentArticle.seriesIndex > 0) {
+				$anchorScroll();
 				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex - 1];
 				$location.search('article', $scope.currentArticle.routeParam);
 			}
@@ -78,6 +83,7 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 
 		$scope.nextPage = function() {
 			if ($scope.currentArticle.seriesIndex < numberOfArticles - 1) {
+				$anchorScroll();
 				$scope.currentArticle = seriesArticles[$scope.currentArticle.seriesIndex + 1];
 				$location.search('article', $scope.currentArticle.routeParam);
 			}

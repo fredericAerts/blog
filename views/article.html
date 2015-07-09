@@ -8,9 +8,14 @@
 				</div>
 			</div>
 
-			<div ng-include="currentArticle.includeUrl"></div>
+			<div ng-include="currentArticle.includeUrl" class="animateInclude"></div>
 
 			<div class="blogpost__meta blogpost__meta--bottom">
+				<div class="blogpost__navblock blogpost__navblock--bottom clearfix">
+					<span class="blogpost__to-top-nav" ng-click="toTop()">
+						To top
+					</span>
+				</div>
 			</div>
 		</article>
 	</div>

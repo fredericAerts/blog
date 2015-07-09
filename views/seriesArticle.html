@@ -10,8 +10,10 @@
 				<div class="blogpost__meta__item">
 					Part of series: <span class="blogpost__meta__seriesTitle">{{ currentSeries.title }}</span>
 				</div>
-				<div class="blogpost__meta__item blogpost__meta__item--nav clearfix">
-					Article {{ currentArticle.seriesIndex + 1 }} of {{ currentSeries.numberOfArticles }}
+				<div class="blogpost__navblock blogpost__navblock--top clearfix">
+					<span>
+						Article {{ currentArticle.seriesIndex + 1 }} of {{ currentSeries.numberOfArticles }}
+					</span>
 					<div class="blogpost__series-nav">
 						<a class="blogpost__series-nav__item" ng-class="prevPageDisabled()" href ng-click="prevPage()">
 							Previous
@@ -23,16 +25,21 @@
 				</div>
 			</div>
 
-			<div ng-include="currentArticle.includeUrl"></div>
+			<div ng-include="currentArticle.includeUrl" class="animateInclude"></div>
 
 			<div class="blogpost__meta blogpost__meta--bottom">
-				<div class="blogpost__series-nav">
-					<a class="blogpost__series-nav__item" ng-class="prevPageDisabled()" href ng-click="prevPage()">
-						Previous
-					</a>
-					<a class="blogpost__series-nav__item" ng-class="nextPageDisabled()" href ng-click="nextPage()">
-						Next
-					</a>
+				<div class="blogpost__navblock blogpost__navblock--bottom clearfix">
+					<span class="blogpost__to-top-nav" ng-click="toTop()">
+						To top
+					</span>
+					<div class="blogpost__series-nav">
+						<a class="blogpost__series-nav__item" ng-class="prevPageDisabled()" href ng-click="prevPage()">
+							Previous
+						</a>
+						<a class="blogpost__series-nav__item" ng-class="nextPageDisabled()" href ng-click="nextPage()">
+							Next
+						</a>
+					</div>
 				</div>
 			</div>
 

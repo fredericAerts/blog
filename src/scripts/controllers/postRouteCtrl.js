@@ -1,4 +1,4 @@
-blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory) {
+blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
 	'use strict';
 
 	var getCurrentArticle;
@@ -29,5 +29,9 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blo
 		}
 
 		return article;
+	};
+
+	$scope.toTop = function() {
+		$anchorScroll();
 	};
 }]);
