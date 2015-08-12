@@ -1,5 +1,4 @@
 .blogpost {
-	text-align: justify;
 
 	& h1 {
 		margin-bottom: .6rem;
@@ -22,6 +21,7 @@
 		font-size: 16px;
 		line-height: 1.8em;
 		font-weight: 300;
+		text-align: justify;
 
 		@media (min-width: $screen-xs-min) {
 			font-size: 18px;
@@ -61,7 +61,11 @@
 	}
 }
 
+/*	Meta
+	===================== */
+
 .blogpost__meta {
+	position: relative;
 
 	&--top {
 		margin-bottom: 2rem;
@@ -78,12 +82,42 @@
 
 .blogpost__meta__item {
 	margin-bottom: .4rem;
+
+	&:last-child {
+		margin-bottom: 1rem; // only has effect on non series articles
+	}
+}
+
+.blogpost__share {
+	position: absolute;
+	right: -10px;
+
+	padding: 10px;
+
+	text-decoration: none;
+
+	&--series {
+		right: 50%;
+	}
+
+	.blogpost__meta--top & {
+		bottom: -9px;
+	}
+
+	.blogpost__meta--bottom & {
+		top: -4px;
+	}
+}
+
+.blogpost__share__image {
+	height: 20px;
+	width: 25px;
 }
 
 .blogpost__navblock {
 
 	&--top {
-		margin-top: 1.4rem;
+		margin-top: 2.5rem;
 		margin-bottom: -.8rem;
 	}
 
@@ -136,6 +170,8 @@
 	font-weight: 700;
 }
 
+/*	Miscellaneous
+	===================== */
 .gist {
 	width: 100%;
 }

@@ -4,6 +4,9 @@
 		<article class="blogpost">
 			<h1>{{ currentArticle.title }}</h1>
 			<div class="blogpost__meta blogpost__meta--top">
+				<a class="blogpost__share blogpost__share--series" href>
+					<img class="blogpost__share__image" src="/web/img/twitter-logo.svg">
+				</a>
 				<div class="blogpost__meta__item">
 					posted on {{ currentArticle.dateFormatted }} by <a href="http://twitter.com/fredericAerts" target="_blank">@fredericAerts</a>
 				</div>
@@ -28,6 +31,9 @@
 			<div ng-include="currentArticle.includeUrl" class="animateInclude"></div>
 
 			<div class="blogpost__meta blogpost__meta--bottom">
+				<a class="blogpost__share blogpost__share--series" href>
+					<img class="blogpost__share__image" src="/web/img/twitter-logo.svg">
+				</a>
 				<div class="blogpost__navblock blogpost__navblock--bottom clearfix">
 					<span class="blogpost__to-top-nav" ng-click="toTop()">
 						To top
