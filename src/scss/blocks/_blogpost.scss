@@ -38,6 +38,34 @@
 		}
 	}
 
+	& blockquote {
+		width: 95%;
+		margin-top: -.5rem;
+		margin-bottom: 1.5rem; 
+
+		@media (min-width: $screen-sm-min) {
+			width: 80%;
+			padding-left: 1.5em;
+		}
+
+		& p {
+			margin-bottom: .8em;
+
+			font-size: .9em;
+			line-height: 1.5em;
+			text-align: left;
+		}
+
+		& footer {
+			margin: 0;
+			padding: 0;
+
+			color: $grey--dark;
+			// font-size: .9em;
+			text-align: left;
+		}
+	}
+
 	& ul {
 		@extend .blogpost__indented;
 

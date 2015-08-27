@@ -11,10 +11,16 @@
 	<gist id="5211413b3624482c89af"></gist>
 	Now create your CSS files in accordance with the paths specified in the href attribute of your link tags. This means creating a subfolder named ‘styles’ in you workspace, in which you place eight (empty) css files with names matching those in the link tags. Likewise, create an empty JavaScript file named “script.js” in a subfolder named ‘scripts’. Finally, add an empty subfolder named ‘images’  in your workspace. This is where you will house your images later on. Your workspace directory should thus look like this;
 </p>
-<div class="blogpost__image-wrapper">
-	<span picture-fill data-alt="Frederic Aerts">
-		<span pf-src="http://lorempixel.com/400/200/"></span>
-		<span pf-src="http://lorempixel.com/400/200/" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
+<style>
+	.blogpost__image--workspace img {
+		width: 650px;
+		height: 348px;
+	}
+</style>
+<div class="blogpost__image-wrapper blogpost__image--workspace">
+	<span picture-fill data-alt="Workspace folder structure">
+		<span pf-src="/web/img/blog-posts/dev-in-3-days/workspace.jpg"></span>
+		<span pf-src="/web/img/blog-posts/dev-in-3-days/workspace@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
 	</span>
 </div>
 <p class="blogpost__intructions blogpost__indented">
@@ -42,10 +48,16 @@
 <p>
 	Now before we go ahead and build up our website, there’s just one more concept you need to familiarize yourself with, and that is that <strong>every HTML element is a rectangular box</strong>. We can represent this box like so;
 </p>
-<div class="blogpost__image-wrapper">
-	<span picture-fill data-alt="Frederic Aerts">
-		<span pf-src="http://lorempixel.com/600/400/"></span>
-		<span pf-src="http://lorempixel.com/600/400/" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
+<style>
+	.blogpost__image--box-model img {
+		width: 600px;
+		height: 338px;
+	}
+</style>
+<div class="blogpost__image-wrapper blogpost__image--box-model">
+	<span picture-fill data-alt="CSS Box Model">
+		<span pf-src="/web/img/blog-posts/dev-in-3-days/box-model.jpg"></span>
+		<span pf-src="/web/img/blog-posts/dev-in-3-days/box-model@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
 	</span>
 </div>
 <p>
@@ -165,7 +177,7 @@
 	Note that the button in our hero is actually linking to another website, which is why a <code>&lt;a&gt;</code> tag is semantically more correct here than the perhaps more obvious <code>&lt;button&gt;</code> tag.
 </p>
 <p>
-	Looking at the rendered hero markup in your browser, the first thing you’ll notice is the missing image. As specified in the <code><&lt;img&gt;</code>’s src attribute, the browser is desperately looking for an image named ‘logo.png’ in the images folder. You can help out the browser by downloading the image [download link]here, and then placing this (correctly named) image in the images folder of your workspace. If you’d like to use your own image instead, then that’s just fine by me. Just make sure that it is no bigger than needed, because images take up an awful lot of bandwidth.
+	Looking at the rendered hero markup in your browser, the first thing you’ll notice is the missing image. As specified in the <code>&lt;img&gt;</code>’s src attribute, the browser is desperately looking for an image named ‘logo.png’ in the images folder. You can help out the browser by downloading the image [download link]here, and then placing this (correctly named) image in the images folder of your workspace. If you’d like to use your own image instead, then that’s just fine by me. Just make sure that it is no bigger than needed, because images take up an awful lot of bandwidth.
 </p>
 <p>
 	Assuming that the h1 header will have the same font properties on all our webpages, it”s best to define these in our “base.css” file. 
