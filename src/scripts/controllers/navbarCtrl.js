@@ -1,4 +1,4 @@
-blogApp.controller("navbarCtrl", ["$scope", "$location", function DefaultCtrl($scope, $location) {
+blogApp.controller("navbarCtrl", ["$scope", "$location", function navbarCtrl($scope, $location) {
 	'use strict';
 
 	$scope.closeNav = function() {

@@ -1,9 +1,9 @@
-blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", "$anchorScroll", function DefaultCtrl($scope, blogPostsFactory, $location, $anchorScroll) {
+blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", "$anchorScroll", function blogPostsCtrl($scope, blogPostsFactory, $location, $anchorScroll) {
 	'use strict';
 
 	var setupPromisedScope;
 
-	var promise = blogPostsFactory().then(function(data) {
+	blogPostsFactory().then(function(data) {
 		setupPromisedScope(data);
 	}, function(error) {
 		console.log("promise for blogposts json http request failed to resolve in blogPostCtrl \nError: " + error);

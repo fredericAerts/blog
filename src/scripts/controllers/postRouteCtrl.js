@@ -1,4 +1,4 @@
-blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
+blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function postRouteCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
 	'use strict';
 
 	var getCurrentArticle;

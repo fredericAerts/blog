@@ -1,11 +1,11 @@
-blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function DefaultCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
+blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function seriesRouteCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
 	'use strict';
 
 	var getCurrentSeries, getCurrentArticle, getSeriesArticles, setupSeriesPagination;
 
 	var allArticles;
 
-	var promise = blogPostsFactory().then(function(data) {
+	blogPostsFactory().then(function(data) {
 		allArticles = data.blogPosts;
 		// TODO: redirect to 404.html when series or article doesn't exist
 		$scope.currentSeries = getCurrentSeries(data.series, $routeParams.seriesRouteParam);

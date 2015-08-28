@@ -1,7 +1,7 @@
-blogApp.controller("availabilityCtrl", ["$scope", "availabilityFactory", function availabilityCtrl($scope, availabilityFactory) {
+blogApp.controller("metaDataCtrl", ["$scope", "availabilityFactory", function metaDataCtrl($scope, availabilityFactory) {
 	'use strict';
 
-	availabilityFactory().then(function(availabilities) {
+	var promise = availabilityFactory().then(function(availabilities) {
 		$scope.availabilities = availabilities;
 	}, function(error) {
 		console.log("promise for availabilities json http request failed to resolve in availabilityCtrl \nError: " + error);
