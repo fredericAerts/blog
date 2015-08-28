@@ -2,8 +2,8 @@
 	"series": [
 		{
 			"id": 0,
-			"title": "How to become a web developer in 5 days (to be continued)",
-			"intro": "In a 5 day tutorial, we'll be travelling back to the future of web development. That's right! Using only our brain and a simple text editor, we're going to concoct a beautiful website, leaving you with a strong foundation to build upon during your future web development adventures. No prior web development knowledge is required for completing this tutorial successfully."
+			"title": "How to become a web developer in 3 days (to be continued)",
+			"intro": "In a 3 day tutorial, we'll be travelling back to the future of web development. That's right! Using only our brain and a simple text editor, we're going to concoct a beautiful website, leaving you with a strong foundation to build upon during your future web development adventures. No prior web development knowledge is required for completing this tutorial successfully."
 		}
 	],
 	"blogPosts": [
@@ -13,7 +13,7 @@
 			"seriesIndex": 0,
 			"title": "Day 1: What websites are made from",
 			"intro": "We'll take a helicopter view on how websites are made. You'll learn that virtually all websites are built using three languages: HTML, CSS & JavaScript. We'll end the day by diving deep into HTML.",
-			"date": "2015/07/01"
+			"date": "2015/09/01"
 		},
 		{
 			"partOfSeries": true,
@@ -21,21 +21,7 @@
 			"seriesIndex": 1,
 			"title": "Day 2: Structure and styling",
 			"intro": "Today you'll get acquainted with CSS. This language will enable you to transform the HTML skeleton we constructed on day 1, into a full blown website. You'll also learn how Bootstrap can turbo boost website development.",
-			"date": "2015/07/15"
-		},
-		{
-			"partOfSeries": true,
-			"seriesId": 0,
-			"seriesIndex": 2,
-			"title": "Day 3: Adding behavior & going live",
-			"intro": "You'll learn the basics of JavaScript and subsequently use it to add tab functionality to your website. You'll also find out how jQuery can make your live easier when adding behavior to a website. We'll conclude the day by putting your website on a server for the whole world to see...",
-			"date": "2015/08/01"
-		},
-		{
-			"partOfSeries": false,
-			"title": "Why I love web development",
-			"intro": "Making websites is this & that...",
-			"date": "2015/05/23"
+			"date": "2015/09/15"
 		}
 	]
 }

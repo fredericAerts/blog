@@ -1,9 +1,5 @@
 { "availabilities": [
 	{
-		"date": "2015/05/01",
-		"availability": "Partially Available*"
-	},
-	{
 		"date": "2015/06/01",
 		"availability": "Partially Available*"
 	}
@@ -20,12 +16,12 @@
 	,
 	{
 		"date": "2015/09/01",
-		"availability": "Available"
+		"availability": "Partially Available*"
 	}
 	,
 	{
 		"date": "2015/10/01",
-		"availability": "Available"
+		"availability": "Partially Available*"
 	}
 	,
 	{
@@ -55,6 +51,11 @@
 	,
 	{
 		"date": "2016/04/01",
+		"availability": "Available"
+	}
+	,
+	{
+		"date": "2016/05/01",
 		"availability": "Available"
 	}
 ]}

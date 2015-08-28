@@ -2,7 +2,7 @@ var blogApp = angular.module('blogApp', ['ngRoute', 'ngAnimate', 'ng.picturefill
 
 //paths
 blogApp.paths = {
-    postsRoot: "/blogposts/post/",
+    postsRoot: "/blogPosts/post/",
     templatesRoot: "/web/scripts/templates/",
     viewsRoot: "/views/",
 };
