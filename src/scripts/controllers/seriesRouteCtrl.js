@@ -5,6 +5,8 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 
 	var allArticles;
 
+	$scope.currentUrl = "http://www.fredericaerts.com/%23" + $location.url();
+
 	blogPostsFactory().then(function(data) {
 		allArticles = data.blogPosts;
 		// TODO: redirect to 404.html when series or article doesn't exist

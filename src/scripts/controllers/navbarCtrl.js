@@ -6,6 +6,11 @@ blogApp.controller("navbarCtrl", ["$scope", "$location", function navbarCtrl($sc
 	};
 
 	$scope.isActiveNav = function (viewLocation) { 
-        return viewLocation === $location.path().substring(0, viewLocation.length);
-    };
+		if(viewLocation === "/") {
+			return viewLocation === $location.path();
+		}
+		else {
+			return viewLocation === $location.path().substring(0, viewLocation.length);
+		}
+	};
 }]);

@@ -10,15 +10,15 @@
 		</li>
 	</ul>
 </div>
-<div class="container container--padded">
+<div class="container container--padded" ng-show="availabilitiesLoaded">
 	<p>
-		For front-end development work inquiries, please feel free to send me an email at <a class="text--red" href="mailto:fredericaerts@hotmail.com" target="_top">fredericaerts@hotmail.com</a> and I’ll get back to you as soon as possible — usually within three working days.
+		For front-end development work inquiries, please feel free to send me an email at <a class="text--red" ng-href="mailto:fredericaerts@hotmail.com" target="_top">fredericaerts@hotmail.com</a> and I’ll get back to you as soon as possible — usually within three working days.
 	</p>
 	<h1>References</h1>
 	<p>Here are some of the companies I worked for;</p>
 	<ul class="references">
 		<li class="references__item references__item--wavecast">
-			<a class="block-link" href="http://wavecast.co/" target="_blank">
+			<a class="block-link" ng-href="http://wavecast.co/" target="_blank">
 				<span picture-fill data-alt="logo Wavecast" class="references__logo">
 				  <span pf-src="/web/img/grey/logo_wavecast.jpg"></span>
 				  <span pf-src="/web/img/grey/logo_wavecast@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
@@ -26,7 +26,7 @@
 			</a>
 		</li>
 		<li class="references__item">
-			<a class="block-link" href="https://www.thinkful.com/" target="_blank">
+			<a class="block-link" ng-href="https://www.thinkful.com/" target="_blank">
 				<span picture-fill data-alt="logo Thinkful" class="references__logo">
 				  <span pf-src="/web/img/grey/logo_thinkful.jpg"></span>
 				  <span pf-src="/web/img/grey/logo_thinkful@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
@@ -34,7 +34,7 @@
 			</a>
 		</li>
 		<li class="references__item references__item--kunstmaan">
-			<a class="block-link" href="http://www.kunstmaan.be/" target="_blank">
+			<a class="block-link" ng-href="http://www.kunstmaan.be/" target="_blank">
 				<span picture-fill data-alt="logo Kunstmaan" class="references__logo">
 				  <span pf-src="/web/img/grey/logo_kunstmaan.jpg"></span>
 				  <span pf-src="/web/img/grey/logo_kunstmaan@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
@@ -42,7 +42,7 @@
 			</a>
 		</li>
 		<li class="references__item references__item--pwc">
-			<a class="block-link" href="http://www.pwc.be/" target="_blank">
+			<a class="block-link" ng-href="http://www.pwc.be/" target="_blank">
 				<span picture-fill data-alt="logo PwC" class="references__logo">
 				  <span pf-src="/web/img/grey/logo_pwc.jpg"></span>
 				  <span pf-src="/web/img/grey/logo_pwc@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)"></span>
@@ -52,6 +52,6 @@
 	</ul>
 	<p>
 		<strong>Wanna see some code?</strong><br> 
-		Take a peek at this website's code right <a href="https://github.com/fredericJos/blog" target="_black">here</a>.
+		Take a peek at this website's code right <a ng-href="https://github.com/fredericJos/blog" target="_black" ng-click="trackSeeSomecode()">here</a>.
 	</p>
 </div>

@@ -28,6 +28,7 @@ var paths = {
         'bower_components/angular-picturefill/angular-picturefill.js',
         'bower_components/picturefill/picturefill.js',
         'bower_components/angular-gist/angular-gist.js',
+        'bower_components/angularytics/dist/angularytics.js',
         'src/scripts/app/app.js',
         'src/scripts/app/app.routes.js',
         'src/scripts/app/app.analytics.js',
@@ -151,7 +152,7 @@ gulp.task('scripts', function() {
     .pipe(plugins.concat('script.js'))
     .pipe(gulp.dest('web/.temp/scripts'))
     .pipe(plugins.rename({suffix: '.min'}))
-    // .pipe(plugins.uglify())
+    .pipe(plugins.uglify())
     .pipe(gulp.dest('web/scripts'));
 });
 

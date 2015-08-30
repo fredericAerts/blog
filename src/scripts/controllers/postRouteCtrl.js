@@ -3,6 +3,8 @@ blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blo
 
 	var getCurrentArticle;
 
+	$scope.currentUrl = "http://www.fredericaerts.com/%23" + $location.url();
+
 	var promise = blogPostsFactory().then(function(data) {
 		var currentArticle = getCurrentArticle(data.blogPosts, $routeParams.articleRouteParam);
 
