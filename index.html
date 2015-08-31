@@ -30,8 +30,11 @@
 	</header>
 
 	<div class="ngView" autoscroll="true" ngCloak></div>
-	
-	<footer class="footer" ng-show="viewContentLoaded">
+
+	<!-- placeholder to push down footer until website content is rendered -->
+	<div class="placeholder" style="height:3000px" ng-hide="footerVisible"></div>
+
+	<footer class="footer" ng-show="footerVisible">
 		<a href="https://twitter.com/fredericAerts" class="footer__twitter-button twitter-follow-button" data-show-count="false" data-size="large">Follow @fredericAerts</a>
 		<p>
 			Copyright &copy; Frederic Aerts 2015. All rights reserved.

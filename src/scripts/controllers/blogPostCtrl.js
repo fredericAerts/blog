@@ -1,15 +1,13 @@
-blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", "$anchorScroll", "$timeout", function blogPostsCtrl($scope, blogPostsFactory, $location, $anchorScroll, $timeout) {
+blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", "$timeout", function blogPostsCtrl($scope, blogPostsFactory, $location, $timeout) {
 	'use strict';
 
 	var setupPromisedScope;
 
 	blogPostsFactory().then(function(data) {
 		setupPromisedScope(data);
-		if(!$scope.blogPostIntrosLoaded) {
-			$timeout(function() {
-				$scope.$emit('blogPostIntrosLoaded');
-			}, 0);
-		}
+		$timeout(function() {
+			$scope.$emit('blogPostIntrosLoaded');
+		}, 0);
 	}, function(error) {
 		console.log("promise for blogposts json http request failed to resolve in blogPostCtrl \nError: " + error);
 	});
@@ -21,12 +19,10 @@ blogApp.controller("blogPostsCtrl", ["$scope", "blogPostsFactory", "$location", 
 	};
 
 	$scope.routeToArticles = function() {
-		$anchorScroll();
 		$location.path("/writing/");
 	};
 
 	$scope.routeToArticle = function(article) {
-		$anchorScroll();
 		if (article.partOfSeries) {
 			$location.path("/writing/series/" + article.series.routeParam).search('article', article.routeParam);
 		}

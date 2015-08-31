@@ -12,9 +12,9 @@
 				</div>
 			</div>
 
-			<div ng-include="currentArticle.includeUrl" class="animateInclude"></div>
+			<div ng-include="currentArticle.includeUrl" class="animateInclude" ng-show="articleLoaded"></div>
 
-			<div class="blogpost__meta blogpost__meta--bottom">
+			<div class="blogpost__meta blogpost__meta--bottom" ng-show="articleLoaded">
 				<a class="blogpost__share" ng-href="https://twitter.com/intent/tweet/?url={{currentUrl}}&via=fredericAerts" target="_blank" ng-click="trackShareArticleOnTwitter(currentArticle)">
 					<img class="blogpost__share__image" src="/web/img/twitter-logo.svg">
 				</a>

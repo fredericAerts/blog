@@ -9,8 +9,8 @@
 			<a class="title-flanked__flank title-flanked__flank--link" href="#/writing/series">See All Series &raquo;</a>
 		</div>
 		<blogpostintros></blogpostintros>
-		<p class="search-no-results" ng-hide="blogPostsFiltered.length">No articles found containing {{ query }}...</p>
+		<p class="search-no-results" ng-hide="blogPostsFiltered.length || !blogPostIntrosLoaded">No articles found containing {{ query }}...</p>
 	</div>
 </div>
 
-<contactbox></contactbox>
+<contactbox ng-show="blogPostIntrosLoaded"></contactbox>
