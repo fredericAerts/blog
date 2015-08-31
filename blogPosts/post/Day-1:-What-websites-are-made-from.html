@@ -7,7 +7,7 @@
 	</footer>
 </blockquote>
 <p class="blogpost__intro">
-	I don’t have to tell you that the ability to build websites is an incredibly empowering skill. The idea of building things - especially things of your own design - that could potentially reach millions of people is an exhilarating one. When you get started building your first website though, it’s easy to get overwhelmed by all the information out there. Before you get caught in tutorial paralysis though, let us get one thing straight: you don’t have to be a genius to build websites! What you do need, is to be determined. In the end, it’s all just a matter of breaking down problems into smaller problems, and then solving them one by one. So for this series, the problem we’ll solve is… how can we, without any prior knowledge in web development, build <a href="">this website</a> in 3 days time. We'll break this problem down into getting acquanted with the languages that make up any website (day 1), laying down the structure for our website and its styling along the way (day 2), and finally adding some interaction behavior to the mix before publishing it for the world to admire (day 3). When you’ve finished this series, you’re gonna look like you have magic powers compared to everyone else. So let’s get cracking..
+	I don’t have to tell you that the ability to build websites is an incredibly empowering skill. The idea of building things - especially things of your own design - that could potentially reach millions of people is an exhilarating one. When you get started building your first website though, it’s easy to get overwhelmed by all the information out there. Before you get caught in tutorial paralysis, let us get one thing straight: you don’t have to be a genius to build websites! What you do need, is to be determined. In the end, it’s all just a matter of breaking down problems into smaller problems, and then solving them one by one. So for this series, the problem we’ll solve is… how can we, without any prior knowledge in web development, build <a href="">this website</a> in 3 days time. We'll break this problem down into getting acquanted with the languages that make up any website (day 1), laying down the structure and style for our website (day 2), and finally adding interaction behavior and publishing it for the world to admire (day 3). When you’ve finished this series, you’re gonna look like you have magic powers compared to everyone else. So let’s get cracking..
 </p>
 <h2>Browsers talk HTML</h2>
 <p>
@@ -20,8 +20,7 @@
 	You might not realize it yet, but you’ve just written some HTML (HyperText Markup Language). HTML is a human readable language that tells the browser all about the <strong>content</strong> and <strong>structure</strong> of the web page. In the website you’ve just built, “Hello world. This is my first website” is the content of the web page. Now, with the help of some HTML tags, let’s give the browser some cues about the structure and meaning of this content;
 </p>
 <p class="blogpost__intructions blogpost__indented">
-	In your “index.html”, surround your existing text with HTML tags like so;
-	code: <code>&lt;h1&gt;Hello World&lt;/h1&gt;&lt;p&gt;This is my first website&lt;/p&gt;</code>
+	In your “index.html”, surround your existing text with HTML tags like so; <code>&lt;h1&gt;Hello World&lt;/h1&gt;&lt;p&gt;This is my first website&lt;/p&gt;</code>.
 	Be sure to get the specific HTML tag syntax correct! The closing HTML tags have an additional forward slash in them.
 	Now save your HTML file, refresh your browser and observe the transformation of the text in the browser.
 </p>
@@ -40,7 +39,7 @@
 	Note that we’re nesting HTML tags here. Eg. the <strong>title</strong> tag is nested within the <strong>head</strong> tag. We’re also using line-breaks and indentation to clean up our code, which is a crucial thing to do if you want to avoid spending hours on finding for example a missing closing HTML tag. This formatting of your code will not reflect in your web page. Line-breaks and indentations can only be enforced by HTML tags and their corresponding CSS rules.
 </p>
 <p>
-	After saving your HTML file and refreshing your browser (this is the last time I’ll tell you to save your HTML file an refresh your browser. You should do this with every update in your HTML file), you’ll notice that not a lot has changed in your web page. What are these extra tags for then? Let’s look at them one by one;
+	After saving your HTML file and refreshing your browser (this is the last time I’ll tell you to save your HTML file and refresh your browser. You should do this with every update in your HTML file), you’ll notice that not a lot has changed in your web page. What are these extra tags for then? Let’s look at them one by one;
 </p>
 <ul>
 	<li>
@@ -57,7 +56,7 @@
 	</li>
 	<li>
 		<code>&lt;title&gt;&lt;/title&gt;</code><br>
-		The title tag contains… wait for it… the title of your web page. It usually appears at the top of your browser window. It’s also important information for search engines like google.
+		The title tag unsuprisingly contains the title of your web page. It usually appears at the top of your browser window. It’s also important information for search engines like google.
 	</li>
 	<li>
 		<code>&lt;body&gt;&lt;/body&gt;</code><br>
@@ -142,7 +141,7 @@
 	<li>
 		<strong>Multiple selectors separated by a space</strong><br>
 		example: <code>body .highlighted {}</code><br>
-		Target elements with a class name “highlighted”, nested within the body tag 
+		Targets elements with a class name “highlighted”, nested within the body tag 
 	</li>
 	<li>
 		<strong>Multiple selectors without a space between them</strong><br>
@@ -173,13 +172,13 @@
 <h2>Adding behavior</h2>
 
 <p>
-	With HTML and CSS under your belt, you have everything at hand to build stunningly beautiful websites. If that suits your needs, well then you can go right ahead and skip this section. If you want you’re websites to come alive however, you’re gonna have to get acquainted with JavaScript. Where HTML and CSS are markup languages, JavaScript is a programming language, which is another ballgame entirely. In our website, we’re going to harness the power of Javascript to implement tab functionality and for prompting our bootstrap modal on clicking the “Show me some magic” button. 
+	With HTML and CSS under your belt, you have everything at hand to build stunningly beautiful websites. If that suits your needs, well then you can go right ahead and skip this section. If you want you’re websites to come alive however, you’re gonna have to get acquainted with JavaScript. Where HTML and CSS are markup languages, JavaScript is a programming language, which is another ballgame entirely. In our website, we’re going to harness the power of Javascript to implement tab functionality, and for prompting our bootstrap modal when the “Show me some magic” button is clicked.
 </p>
 <p>
 	The purpose of this series in respect to JavaScript is not to teach you the ins and outs of this programming language, but rather give you a feel for how JavaScript can add behavior to websites. This alone will enable you to do add a multitude of functionalities to your website. How’s that, I hear you asking? By incorporating ready-made code snippets from other developers into your website, you hear me answering. No need to reinvent the wheel right? If you’d like to eat a pie, you can either make one yourself or you can get it in a bakery. We’re gonna get our pie in a bakery. If you want to make your own pie, I’d suggest you open up a book on the subject.
 </p>
 <p>
-	One thing you need to understand is that, since we’re writing JavaScript that’s to be executed in a browser environment, we are able to interact with objects provided to us by this browser. This interaction enables us to control the behavior of our browser. Let’s create a JavaScript file that will prompt our browser to display a popup message box;
+	One thing you need to understand is that, since we’re writing JavaScript that’s to be executed in a browser environment, we are able to interact with objects provided to us by this browser. Interaction with these 'host objects' enables us to control the behavior of our browser. Let’s create a JavaScript file that will prompt our browser to display a popup message box;
 </p>
 <p class="blogpost__intructions blogpost__indented">
 	In your text editor, create a new file, type <code>window.alert(‘Hello, I’m a popup’);</code> and save it as “script.js” in the same directory as your “index.html” file. Be sure to save it in JavaScript format, which means it should have a .js extension and not the default .txt extension. Now, instruct the browser to fetch this file by adding a script tag in the head of your “index.html” like so;  
@@ -189,7 +188,7 @@
 	Now refresh your browser. A popup is prompted by the browser on pageload.
 </p>
 <p>
-	An extremely useful object that’s provided to us by the browser is the window object. In our example, we’re invoking the <code>alert()</code> method on it, thereby sending the message “Hello, I’m a popup” to the browser internals, which handles it by drawing and displaying the message box. Now unless you’re out to create an unfortunate game of whack-a-mole, we’d better dig deeper into the window object.
+	The main host object that’s provided to us by the browser is the window object. In our example, we’re invoking the <code>alert()</code> method on it, thereby sending the message “Hello, I’m a popup” to the browser internals, which handles it by drawing and displaying the message box. Now unless you’re out to create an unfortunate game of whack-a-mole, we’d better dig deeper into the window object.
 </p>
 <p>
 	The most commonly used property of the window object is the document object, which serves as an entry point into the web page's content, namely the Document Object Model (DOM) tree. The DOM tree for your current website should look familiar;
@@ -207,7 +206,7 @@
 	</span>
 </div>
 <p>
-	This DOM tree gets created by the browser on pageload, and is based on the HTML file we provided to it. Via the <code>window.document</code> object, we can now thus iterate over this DOM tree, access and manipulate our existing HTML elements, and even create or delete HTML elements on the fly. An important gotcha we have to take into account is that the browser is only able to construct the DOM after it has processed our HTML file in its entirety. Execution of our JavaScript file can thus start before DOM availability, resulting in errors when it’s trying to interact with our non-existing DOM. Luckily for us, the browser keeps us in the know on the myriad of events occurring in it, one of which is DOM content loading. DOM manipulating code should be wrapped in a function that’s executed only when this ‘DOMContentLoaded’ event is triggered. Let’s illustrate this;
+	This DOM tree gets created by the browser on pageload, and is based on the HTML file we provided to it. Via the <code>window.document</code> object, we can now thus iterate over this DOM tree, access and manipulate our existing HTML elements, and even create or delete HTML elements on the fly. An important gotcha we have to take into account is that the browser is only able to construct the DOM after it has processed our HTML file in its entirety. Execution of our JavaScript file can thus start before DOM availability, resulting in errors when it’s trying to interact with our yet inexistent DOM. Luckily for us, the browser keeps us in the know on the myriad of events occurring in it, one of which is DOM content loading. DOM manipulating code should be wrapped in a function that’s executed only when this ‘DOMContentLoaded’ event is triggered. Let’s illustrate this;
 </p>
 <p class="blogpost__intructions blogpost__indented">
 	Copy the following piece of code in our “script.js” file;
@@ -215,7 +214,7 @@
 	<gist id="b1f15a19c258320fe66c"></gist>
 </p>
 <p>
-	Read through this code line by line. Can you figure what will happen to your website when you refresh your browser? In the first three lines of code, we are creating a brand new paragraph element. Since we are not depending on our DOM tree for this, we don’t have to wait for the 'DOMContentLoaded' event to execute this code. Once the DOM is loaded, we’re selecting the body element from it, appending our new paragraph element to it. As a result, you’ll see a new paragraph added to the bottom of your website. This paragraph element was not declared statically in your HTML file, but added dynamically from your JavaScript file. Not impressed? Than imagine what you can achieve by tapping into click events to toggle classes (and thus CSS styling) on HTML elements. Coincidentally, that’s the approach we’ll use to implement tab functionality for the website we’re building in the coming days.
+	Read through this code line by line. Can you figure what will happen to your website when you refresh your browser? In the first three lines of code, we are creating a brand new paragraph element. Since we are not depending on our DOM tree for this, we don’t have to wait for the 'DOMContentLoaded' event to execute this code. Once the DOM is loaded, we’re selecting the body element from it, and appending our new paragraph element to it. As a result, you’ll see a new paragraph added to the bottom of your website. This paragraph element was not declared statically in your HTML file, but added dynamically from your JavaScript file. Not impressed? Than imagine what you can achieve by tapping into click events to toggle classes (and thus CSS styling) on HTML elements. Coincidentally, that’s the approach we’ll use to implement tab functionality for the website we’re building in the coming days.
 </p>
 
 <h2>The right tools for the job</h2>

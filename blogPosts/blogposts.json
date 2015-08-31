@@ -2,8 +2,9 @@
 	"series": [
 		{
 			"id": 0,
-			"title": "How to become a web developer in 3 days (to be continued)",
-			"intro": "In a 3 day tutorial, we'll be travelling back to the future of web development. That's right! Using only our brain and a simple text editor, we're going to concoct a beautiful website, leaving you with a strong foundation to build upon during your future web development adventures. No prior web development knowledge is required for completing this tutorial successfully."
+			"title": "How to become a web developer in 3 days",
+			"intro": "In a 3 day tutorial, we'll be travelling back to the future of web development. That's right! Using only our brain and a simple text editor, we're going to concoct a beautiful website, leaving you with a strong foundation to build upon during your future web development adventures. No prior web development knowledge is required for completing this tutorial successfully.",
+			"inProgress": true
 		}
 	],
 	"blogPosts": [
