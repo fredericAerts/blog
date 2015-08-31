@@ -3,6 +3,7 @@
 		<div ng-if="blogpost.partOfSeries" class="blogpost-intro__series">
 			Part of series:
 			<span class="blogpost-intro__series__title">{{ blogpost.series.title }}</span>
+			<span ng-show="blogpost.series.inProgress">(to be continued)</span>
 		</div>
 		<div>
 			<h2 class="blogpost-intro__title">{{ blogpost.title }}</h2>

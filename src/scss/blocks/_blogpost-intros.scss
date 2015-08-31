@@ -42,6 +42,10 @@
 
 .blogpost-intro__series__title {
 	font-weight: 400;
+
+	& + span {
+		font-weight: 400;
+	}
 }
 
 .blogpost-intro__title {
