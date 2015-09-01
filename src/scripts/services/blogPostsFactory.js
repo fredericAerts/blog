@@ -80,8 +80,8 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 		}
 		else { // return ajax request promise
 			return $q(function(resolve, reject) {
-				$http.get("http://localhost:8080/blogposts/blogposts.json")
-				// $http.get("http://www.fredericaerts.com/blogPosts/blogposts.json")
+				// $http.get("http://localhost:8080/blogposts/blogposts.json")
+				$http.get("http://www.fredericaerts.com/blogPosts/blogposts.json")
 				.success(function(data) {
 					processData(data);
 					resolve(data);
