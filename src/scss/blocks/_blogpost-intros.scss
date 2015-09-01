@@ -8,7 +8,7 @@
 
 	& p {
 		font-family: $secondaryFont;
-		font-size: 16px;
+		font-size: .9em;
 		line-height: 1.5em;
 		font-weight: 300;
 
@@ -19,13 +19,17 @@
 }
 
 .blogpost-intro {
-	padding: 2rem 2rem 3rem;
+	padding: 1.5rem 1.5rem 3rem;
 
 	background: $grey--lightest;
 
 	text-decoration: none;
 
 	@include transition(all .3s);
+
+	@media (min-width: $screen-xs-min) {
+		padding: 2rem 2rem 3rem;
+	}
 
 	&:hover {
 		background: $grey--lighter;

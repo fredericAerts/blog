@@ -12,9 +12,13 @@ body {
 }
 
 h1 {
-	margin: 4rem 0 1rem;
+	margin: 3rem 0 1rem;
 	font-size: 30px;
 	font-weight: 700;
+
+	@media (min-width: $screen-xs-min) {
+		margin-top: 4rem;
+	}
 }
 
 h2 {

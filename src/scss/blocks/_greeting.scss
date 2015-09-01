@@ -1,5 +1,9 @@
 .greeting {
-	margin: 4rem 0 1rem;
+	margin: 3rem 0 1rem;
+
+	@media (min-width: $screen-xs-min) {
+		margin-top: 4rem;
+	}
 }
 
 .greeting__image img{

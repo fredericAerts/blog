@@ -1,6 +1,6 @@
 .availability-list {
 	max-width: 1200px;
-	margin: .6rem auto 4rem;
+	margin: .6rem auto 3rem;
 
 	font-weight: 700;
 
@@ -40,7 +40,7 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 999;
+			z-index: 1;
 
 			display: block;
 			width: 100%;
@@ -72,5 +72,10 @@
 }
 
 .availability-list__status {
+	font-size: .9em;
 	font-weight: 400;
+
+	@media (min-width: $screen-xs-min) {
+		font-size: 1em;
+	}
 }
