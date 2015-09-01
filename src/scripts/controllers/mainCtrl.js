@@ -1,13 +1,10 @@
 blogApp.controller("mainCtrl", ["$scope", "Angularytics", "$anchorScroll", "$timeout", function mainCtrl($scope, Angularytics, $anchorScroll, $timeout) {
 	'use strict';
 
-	$scope.trackShareArticleOnTwitter = function(article) {
-		Angularytics.trackEvent("Social", "Share article: " + article.title);
+	/* ====== google analytics ====== */
+	$scope.trackEvent = function(category, action) {
+		Angularytics.trackEvent(category, action);
 	};
-
-    $scope.trackSeeSomecode = function() {
-        Angularytics.trackEvent("Contact", "See some code");
-    };
 
 	/* ====== progressive rendering ====== */
 	$scope.$on('$routeChangeSuccess', function() {
