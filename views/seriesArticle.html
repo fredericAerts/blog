@@ -4,7 +4,7 @@
 		<article class="blogpost">
 			<h1>{{ currentArticle.title }}</h1>
 			<div class="blogpost__meta blogpost__meta--top">
-				<a class="blogpost__share blogpost__share--series" ng-href="https://twitter.com/intent/tweet/?url={{currentUrl}}&via=fredericAerts" target="_blank" ng-click="trackShareArticleOnTwitter(currentArticle)">
+				<a class="blogpost__share blogpost__share--series" ng-href="https://twitter.com/intent/tweet/?text={{currentArticle.title}}&url={{currentUrl}}&via=fredericAerts" target="_blank" ng-click="trackShareArticleOnTwitter(currentArticle)">
 					<img class="blogpost__share__image" src="/web/img/twitter-logo.svg">
 				</a>
 				<div class="blogpost__meta__item">
@@ -31,7 +31,7 @@
 			<div ng-include="currentArticle.includeUrl" class="animateInclude" ng-show="articleLoaded"></div>
 
 			<div class="blogpost__meta blogpost__meta--bottom" ng-show="articleLoaded">
-				<a class="blogpost__share blogpost__share--series" ng-href="https://twitter.com/intent/tweet/?url={{currentUrl}}&via=fredericAerts" target="_blank" ng-click="trackShareArticleOnTwitter(currentArticle)">
+				<a class="blogpost__share blogpost__share--series" ng-href="https://twitter.com/intent/tweet/?text={{currentArticle.title}}&url={{currentUrl}}&via=fredericAerts" target="_blank" ng-click="trackShareArticleOnTwitter(currentArticle)">
 					<img class="blogpost__share__image" src="/web/img/twitter-logo.svg">
 				</a>
 				<div class="blogpost__navblock blogpost__navblock--bottom clearfix">

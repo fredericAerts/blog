@@ -13,7 +13,7 @@
 			"seriesId": 0,
 			"seriesIndex": 0,
 			"title": "Day 1: What websites are made from",
-			"intro": "We'll take a helicopter view on how websites are made. You'll learn that virtually all websites are built using three languages: HTML, CSS & JavaScript. We'll end the day by diving deep into HTML.",
+			"intro": "We'll take a helicopter view on how websites are made. You'll learn that virtually all websites are built using three languages: HTML, CSS & JavaScript. After we've set the broad strokes for what it takes to build a website, we'll introduce you to some indispensable tools for any professional web developer.",
 			"date": "2015/09/01"
 		},
 		{
@@ -21,7 +21,7 @@
 			"seriesId": 0,
 			"seriesIndex": 1,
 			"title": "Day 2: Structure and styling",
-			"intro": "Today you'll get acquainted with CSS. This language will enable you to transform the HTML skeleton we constructed on day 1, into a full blown website. You'll also learn how Bootstrap can turbo boost website development.",
+			"intro": "We'll setup the structure for our website with HTML, while styling it into a full blown website with CSS. You'll also learn how Bootstrap can turbo boost website development. This will be the day you'll be amazed about how much of a web development talent you actually are!",
 			"date": "2015/09/15"
 		}
 	]
