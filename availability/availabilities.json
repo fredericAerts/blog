@@ -1,15 +1,5 @@
 { "availabilities": [
 	{
-		"date": "2015/06/01",
-		"availability": "Partially Available*"
-	}
-	,
-	{
-		"date": "2015/07/01",
-		"availability": "Partially Available*"
-	}
-	,
-	{
 		"date": "2015/08/01",
 		"availability": "Partially Available*"
 	}
@@ -26,12 +16,12 @@
 	,
 	{
 		"date": "2015/11/01",
-		"availability": "Available"
+		"availability": "Partially Available*"
 	}
 	,
 	{
 		"date": "2015/12/01",
-		"availability": "Available"
+		"availability": "Partially Available*"
 	}
 	,
 	{
@@ -56,6 +46,16 @@
 	,
 	{
 		"date": "2016/05/01",
+		"availability": "Available"
+	}
+	,
+	{
+		"date": "2016/06/01",
+		"availability": "Available"
+	}
+	,
+	{
+		"date": "2016/07/01",
 		"availability": "Available"
 	}
 ]}
