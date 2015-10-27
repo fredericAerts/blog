@@ -68,7 +68,9 @@
 
 	& ul {
 		@extend .blogpost__indented;
+	}
 
+	& ul, ol {
 		margin-bottom: 2rem;
 
 		font-family: $secondaryFont;
