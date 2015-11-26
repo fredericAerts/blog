@@ -1,47 +1,37 @@
 { "availabilities": [
 	{
-		"date": "2015/08/01",
-		"availability": "Partially Available*"
-	}
-	,
-	{
-		"date": "2015/09/01",
-		"availability": "Partially Available*"
-	}
-	,
-	{
 		"date": "2015/10/01",
 		"availability": "Partially Available*"
 	}
 	,
 	{
 		"date": "2015/11/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	}
 	,
 	{
 		"date": "2015/12/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	}
 	,
 	{
 		"date": "2016/01/01",
-		"availability": "Available"
+		"availability": "Not Available"
 	}
 	,
 	{
 		"date": "2016/02/01",
-		"availability": "Available"
+		"availability": "Not Available"
 	}
 	,
 	{
 		"date": "2016/03/01",
-		"availability": "Available"
+		"availability": "Partially Available*"
 	}
 	,
 	{
 		"date": "2016/04/01",
-		"availability": "Available"
+		"availability": "Partially Available*"
 	}
 	,
 	{
@@ -56,6 +46,14 @@
 	,
 	{
 		"date": "2016/07/01",
+		"availability": "Available"
+	},
+	{
+		"date": "2016/08/01",
+		"availability": "Available"
+	},
+	{
+		"date": "2016/09/01",
 		"availability": "Available"
 	}
 ]}
