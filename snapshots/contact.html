@@ -1,0 +1,197 @@
+<html ng-app="blogApp" class="ng-scope"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="This is my online home, where you’ll find my articles and where you can get in touch via the contact page.">
+	<meta name="keywords" content="Frederic Aerts, web developer, blog, frontend">
+
+	<title>Frederic Aerts | Web developer</title>
+
+	<!-- favicons -->
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-194x194.png" sizes="194x194">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+
+	<!-- social media -->
+	<meta property="og:url" content="http://www.fredericaerts.com/">
+	<meta property="og:title" content="Frederic Aerts | Web developer">
+	<meta property="og:description" content="This is my online home, where you’ll find my articles and where you can get in touch via the contact page.">
+	<meta property="og:image" content="http://fredericaerts.com/web/img/frederic-aerts@2x.jpg">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="http://www.fredericaerts.com/">
+	<meta name="twitter:title" content="Frederic Aerts | Web developer">
+	<meta name="twitter:description" content="This is my online home, where you’ll find my articles and where you can get in touch via the contact page.">
+	<meta name="twitter:image" content="http://fredericaerts.com/web/img/frederic-aerts@2x.jpg">
+
+	<link href="http://fonts.googleapis.com/css?family=Josefin+Slab:400,700" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/web/styles/style.min.css">
+<script type="text/javascript" charset="utf-8" async="" src="https://platform.twitter.com/js/button.f7700c3fce2658c62dc19092bf2bae34.js"></script></head>
+<body data-status="ready" ng-controller="mainCtrl as mainCtrl" class="ng-scope">
+
+	<header class="header" ngcloak="">
+		<nav class="navbar clearfix" ng-controller="navbarCtrl as navbarCtrl">
+	<a class="navbar__brand" ng-href="#!/" href="#!/">Frederic Aerts</a>
+	<div class="navbar-toggle" ng-class="{ 'navbar-toggle--close': navOpen }" ng-click="navOpen = !navOpen">
+		<span class="navbar-toggle__cta">Menu</span>
+		<span class="navbar-toggle__lines"></span>
+	</div>
+	<div class="navbar__links">
+		<a class="navbar__link" ng-class="{ 'active': isActiveNav('/') }" ng-click="closeNav()" ng-href="#!/" href="#!/">Home</a>
+		<a class="navbar__link" ng-class="{ 'active': isActiveNav('/writing') }" ng-click="closeNav()" ng-href="#!/writing" href="#!/writing">Writing</a>
+		<a class="navbar__link active" ng-class="{ 'active': isActiveNav('/contact') }" ng-click="closeNav()" ng-href="#!/contact" href="#!/contact">Contact</a>
+	</div>
+</nav>
+	</header>
+
+	<!-- ngView: undefined --><div class="ngView ng-scope" autoscroll="true" ngcloak=""><div class="container container--padded ng-scope">
+	<h1>Front-End Development Work Inquiries</h1>
+	<ul class="availability-list clearfix ng-scope" ng-controller="availabilityCtrl as availabilityCtrl" ng-show="availabilitiesLoaded">
+		<!-- ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope past" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Oct
+				<span class="availability-list__year ng-binding">2015</span>
+				<span class="availability-list__status ng-binding">Partially Available*</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope past" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Nov
+				<span class="availability-list__year ng-binding">2015</span>
+				<span class="availability-list__status ng-binding">Not Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Dec
+				<span class="availability-list__year ng-binding">2015</span>
+				<span class="availability-list__status ng-binding">Not Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Jan
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Not Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Feb
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Not Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Mar
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Partially Available*</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Apr
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Partially Available*</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				May
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Jun
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Jul
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Aug
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 --><li class="availability-list__item ng-scope" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
+			<div class="availability-list__item__wrapper ng-binding">
+				Sept
+				<span class="availability-list__year ng-binding">2016</span>
+				<span class="availability-list__status ng-binding">Available</span>
+			</div>
+		</li><!-- end ngRepeat: availability in availabilities | limitTo: 12 -->
+	</ul>
+</div>
+<div class="container container--padded ng-scope" ng-show="availabilitiesLoaded">
+	<p>
+		For front-end development work inquiries, please feel free to send me an email at <a class="text--red" ng-href="mailto:info@fredericaerts.com" target="_top" href="mailto:info@fredericaerts.com">info@fredericaerts.com</a> and I’ll get back to you as soon as possible — usually within three working days.
+	</p>
+	<h1>References</h1>
+	<p>Here are some of the companies I work(ed) for;</p>
+	<ul class="references">
+		<li class="references__item references__item--wavecast">
+			<a class="block-link" ng-href="http://wavecast.co/" target="_blank" href="http://wavecast.co/">
+				<span picture-fill="" data-alt="logo Wavecast" class="references__logo" data-picture="">
+				  <span pf-src="/web/img/logo_wavecast.jpg" data-src="/web/img/logo_wavecast.jpg"><img alt="logo Wavecast" src="/web/img/logo_wavecast.jpg"></span>
+				  <span pf-src="/web/img/logo_wavecast@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)" data-src="/web/img/logo_wavecast@2x.jpg"></span>
+				</span>
+			</a>
+		</li>
+		<li class="references__item">
+			<a class="block-link" ng-href="https://www.thinkful.com/" target="_blank" href="https://www.thinkful.com/">
+				<span picture-fill="" data-alt="logo Thinkful" class="references__logo" data-picture="">
+				  <span pf-src="/web/img/logo_thinkful.jpg" data-src="/web/img/logo_thinkful.jpg"><img alt="logo Thinkful" src="/web/img/logo_thinkful.jpg"></span>
+				  <span pf-src="/web/img/logo_thinkful@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)" data-src="/web/img/logo_thinkful@2x.jpg"></span>
+				</span>
+			</a>
+		</li>
+		<li class="references__item references__item--kunstmaan">
+			<a class="block-link" ng-href="http://www.kunstmaan.be/" target="_blank" href="http://www.kunstmaan.be/">
+				<span picture-fill="" data-alt="logo Kunstmaan" class="references__logo" data-picture="">
+				  <span pf-src="/web/img/logo_kunstmaan.jpg" data-src="/web/img/logo_kunstmaan.jpg"><img alt="logo Kunstmaan" src="/web/img/logo_kunstmaan.jpg"></span>
+				  <span pf-src="/web/img/logo_kunstmaan@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)" data-src="/web/img/logo_kunstmaan@2x.jpg"></span>
+				</span>
+			</a>
+		</li>
+		<li class="references__item references__item--pwc">
+			<a class="block-link" ng-href="http://www.pwc.be/" target="_blank" href="http://www.pwc.be/">
+				<span picture-fill="" data-alt="logo PwC" class="references__logo" data-picture="">
+				  <span pf-src="/web/img/logo_pwc.jpg" data-src="/web/img/logo_pwc.jpg"><img alt="logo PwC" src="/web/img/logo_pwc.jpg"></span>
+				  <span pf-src="/web/img/logo_pwc@2x.jpg" data-media="only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (min--moz-device-pixel-ratio: 2),only screen and (-o-min-device-pixel-ratio: 2/1),only screen and (min-device-pixel-ratio: 2),only screen and (min-resolution: 192dpi),only screen and (min-resolution: 2dppx)" data-src="/web/img/logo_pwc@2x.jpg"></span>
+				</span>
+			</a>
+		</li>
+	</ul>
+	<p>
+		<strong>Wanna see some code?</strong><br> 
+		Take a peek at this website's code right <a ng-href="https://github.com/fredericJos/blog" target="_black" ng-click="trackEvent('Contact','See some code')" href="https://github.com/fredericJos/blog">here</a>.
+	</p>
+</div></div>
+
+	<!-- placeholder to push down footer until website content is rendered -->
+	<div class="placeholder ng-hide" style="height: 3000px;" ng-hide="footerVisible"></div>
+
+	<footer class="footer" ng-show="footerVisible" style="">
+		<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: absolute; visibility: hidden; width: 168px; height: 28px;" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.ab4ec33f73214445796a87ce54aee452.en.html#_=1450016354238&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=fredericAerts&amp;show_count=false&amp;show_screen_name=true&amp;size=l"></iframe><a href="https://twitter.com/fredericAerts" class="footer__twitter-button twitter-follow-button" data-show-count="false" data-size="large" data-twitter-extracted-i1450016354043386390="true">Follow @fredericAerts</a>
+		<p>
+			Copyright © Frederic Aerts 2015. All rights reserved.
+		</p>
+	</footer>
+
+	<script async="" src="//www.google-analytics.com/analytics.js"></script><script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script><script>
+		// follow on twitter 
+		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+
+		// google analytics
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-46279182-1', 'auto');
+			ga('send', 'pageview');
+	</script>
+	<script type="text/javascript" src="/web/scripts/script.min.js"></script>
+
+<script type="text/javascript">document.write('<script src="' + (location.protocol || 'http:') + '//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1" type="text/javascript"><\/script>')</script><script src="http://localhost:35729/livereload.js?snipver=1" type="text/javascript"></script>
+
+</body></html>
