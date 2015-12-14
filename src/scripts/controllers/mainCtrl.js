@@ -1,6 +1,8 @@
 blogApp.controller("mainCtrl", ["$scope", "Angularytics", "$anchorScroll", "$timeout", function mainCtrl($scope, Angularytics, $anchorScroll, $timeout) {
 	'use strict';
 
+	$scope.currentYear = new Date().getFullYear();
+
 	/* ====== google analytics ====== */
 	$scope.trackEvent = function(category, action) {
 		Angularytics.trackEvent(category, action);
