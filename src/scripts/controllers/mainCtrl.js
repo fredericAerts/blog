@@ -18,14 +18,12 @@ blogApp.controller("mainCtrl", ["$scope", "Angularytics", "$anchorScroll", "$tim
 	$scope.$on('blogPostIntrosLoaded', function() {
 		$scope.blogPostIntrosLoaded = true;
 		$scope.footerVisible = true;
-		$scope.status = 'ready';
 	});
 
 	// contact page
 	$scope.$on('availabilitiesLoaded', function() {
 		$scope.availabilitiesLoaded = true;
 		$scope.footerVisible = true;
-		$scope.status = 'ready';
 	});
 
 	// article page
@@ -37,6 +35,6 @@ blogApp.controller("mainCtrl", ["$scope", "Angularytics", "$anchorScroll", "$tim
 	$scope.$on('$includeContentLoaded', function () {
 	    $scope.articleLoaded = true;
 	    $scope.footerVisible = true;
-	    $scope.status = 'ready';
+	 
 	});
 }]);

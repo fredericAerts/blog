@@ -1,6 +1,4 @@
-blogApp.config(["$routeProvider", "$locationProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routeProvider, $locationProvider, VIEWS_ROOT, POSTS_ROOT) {
-
-	$locationProvider.hashPrefix('!');
+blogApp.config(["$routeProvider", "VIEWS_ROOT", "POSTS_ROOT", function($routeProvider, VIEWS_ROOT, POSTS_ROOT) {
 
 	$routeProvider
 	.when('/',

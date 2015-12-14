@@ -6,7 +6,7 @@
 		<div class="title-flanked">
 			<h1>All Series</h1>
 			<span class="search-subtitle" ng-show="query">Search results for {{ query }}...</span>
-			<a class="title-flanked__flank title-flanked__flank--link" href="#!/writing">See All Articles &raquo;</a>
+			<a class="title-flanked__flank title-flanked__flank--link" href="#/writing">See All Articles &raquo;</a>
 		</div>
 		<seriesintros orderBy="-id"></seriesintros>
 		<p class="search-no-results" ng-hide="seriesArrayFiltered.length || !blogPostIntrosLoaded">No series found containing {{ query }}...</p>
