@@ -1,10 +1,10 @@
-{ 
+{
 	"series": [
 		{
 			"id": 0,
 			"title": "How to become a web developer in 3 days",
 			"intro": "In a 3 day tutorial, we'll be travelling back to the future of web development. That's right! Using only our brain and a simple text editor, we're going to concoct a beautiful website, leaving you with a strong foundation to build upon during your future web development adventures. No prior web development knowledge is required for completing this tutorial successfully.",
-			"inProgress": true
+			"inProgress": false
 		}
 	],
 	"blogPosts": [
@@ -23,6 +23,14 @@
 			"title": "Day 2: Structure and styling",
 			"intro": "We'll setup the structure for our website with HTML, while styling it into a full blown website with CSS. You'll also learn how Bootstrap can turbo boost website development. This will be the day you'll be amazed about how much of a web development talent you actually are!",
 			"date": "2015/09/01"
+		},
+		{
+			"partOfSeries": true,
+			"seriesId": 0,
+			"seriesIndex": 2,
+			"title": "Day 3: Behavior",
+			"intro": "We'll get familiar with JavaScript, and use it to add tab functionality to our website. You'll also find out how jQuery can make your live easier when adding behavior to your website. Finally, you'll learn how to setup a domain name and how to put your website on a server. With everything set & done, we'll put that twitter bird to work introducing your website to the world...",
+			"date": "2016/01/24"
 		}
 	]
 }
