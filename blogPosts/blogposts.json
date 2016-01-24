@@ -28,8 +28,8 @@
 			"partOfSeries": true,
 			"seriesId": 0,
 			"seriesIndex": 2,
-			"title": "Day 3: Behavior",
-			"intro": "We'll get familiar with JavaScript, and use it to add tab functionality to our website. You'll also find out how jQuery can make your live easier when adding behavior to your website. Finally, you'll learn how to setup a domain name and how to put your website on a server. With everything set & done, we'll put that twitter bird to work introducing your website to the world...",
+			"title": "Day 3: Behavior and going live",
+			"intro": "We'll get familiar with JavaScript, and use it to add tab functionality to our website. You'll also find out how jQuery can make your live easier when adding behavior to your website. Finally, you'll learn how to setup a domain name and how to put your website on a server. With everything set and done, we'll put that twitter bird to work introducing your website to the world...",
 			"date": "2016/01/24"
 		}
 	]
