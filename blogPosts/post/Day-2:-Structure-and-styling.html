@@ -7,17 +7,17 @@
 	</footer>
 </blockquote>
 <p class="blogpost__intro">
-	Yesterday we set out to build <a href="http://www.fredericaerts.com/external/developer-in-3-days/" target="_blank">this website</a> in 3 days time. We already learned that websites are in essence made from three languages, namely HTML, CSS and JavaScript. Now that we’ve gotten familiar with the building blocks of a website, the time has come to build one of our own. Today we’ll focus on the HTML and CSS of our website. But before we go ahead and do that, let’s get ourselves organized…
+	Yesterday we set out to build <a href="http://www.fredericaerts.com/external/developer-in-3-days/" target="_blank">this website</a> in 3 days time. We already learned that websites are in essence made using three languages, namely HTML, CSS and JavaScript. Now that we’ve gotten familiar with the building blocks of a website, the time has come to build one of our own. Today we’ll focus on the HTML and CSS of our website. But before we go ahead and do that, let’s get ourselves organized…
 </p>
 <h2>Getting organized</h2>
 <p>
-	Getting organized is the first and most important part of building websites. Professional web developers do not succumb to the temptation of creating a mess in order to move more quickly. Instead, they start with the end-goal in mind and organize themselves accordingly. The advantages become clear when you start writing CSS for a decently sized website. Given the characteristics of the language, CSS files can get very bloated very fast. In order to keep our CSS code readable and maintainable, we thus have no choice but to think out an effective organization for it. The approach we’ll use is modular in nature. Much like a chef has his ingredients lined up ready to go, we’ll have our CSS file cut up into multiple files that are readily available to our website. When everything is in its designated place, then we are able to think and work efficiently. Here’s our mise en place:
+	Getting organized is the first and most important part of building websites. Professional web developers do not succumb to the temptation of creating a mess in order to move more quickly. Instead, they start with the end-goal in mind and organize themselves accordingly. The advantages become clear when you start writing CSS for a decently sized website. Given the characteristics of the language, CSS files can get very bloated very fast. In order to keep our CSS code easy to read and maintain, we thus have no choice but to think out an effective organization for it. The approach we’ll use is modular in nature. Much like a chef has his ingredients lined up ready to go, we’ll have our CSS file cut up into multiple files that are readily available to our website. When everything is in its designated place, then we are able to think and work efficiently. Here’s our mise en place:
 </p>
 <p class="blogpost__intructions blogpost__indented">
 	Create a folder on your computer named "my-first-website". This will be the workspace for your website. In this folder, create your "index.html" file and add the following content:
 	<!-- html: web developer in 3 days - v4 -->
 	<gist id="5211413b3624482c89af"></gist>
-	Now create your CSS files in accordance with the paths specified in the href attribute of your link tags. This means creating a subfolder named "styles" in you workspace, in which you place eight (empty) CSS files with names matching those in the link tags. Likewise, create an empty JavaScript file named "script.js" in a subfolder named "scripts". Finally, add an empty subfolder named "images" in your workspace. This is where you will house your images later on. Your workspace directory should thus look like this:
+	Now create your CSS files in accordance with the paths specified in the href attribute of your link tags. This means creating a subfolder named "styles" in your workspace, in which you place eight (empty) CSS files with names matching those in the link tags. Likewise, create an empty JavaScript file named "script.js" in a subfolder named "scripts". Finally, add an empty subfolder named "images" in your workspace. This is where you will house your images later on. Your workspace directory should thus look like this:
 </p>
 <style>
 	.blogpost__image--workspace img {
@@ -47,10 +47,10 @@
 	You can test your CSS reset by adding a h1 header and a paragraph to your "index.html". Both should have the same styling in your browser. If not, start debugging!
 </p>
 <p>
-	When you take a closer look at this CSS reset, you’ll notice there’s a couple of things we can learn from it. Firstly, there are a lot of HTML tags we haven’t seen before. Take a minute to glance through them. No need to memorize them all! Another thing to note is the use of comma’s in our CSS selectors. The comma in a CSS selector separates multiple selectors that have the same styles. In other words, all CSS declarations in between curly braces apply to each of the comma-separated HTML tags in front of them. Finally, note the presence of CSS comments. CSS comments are a handy way of adding helpful notes and hints to your CSS, thereby helping people that read your code to understand what’s going on. By using comments to make your stylesheets more readable, your CSS will be easier to maintain in the future. A CSS comment is added by enclosing it between /* and */ characters. Everything in our CSS that’s in between these opening and closing comment characters will be ignored by the browser, and so will the comment characters themselves.
+	When you take a closer look at this CSS reset, you’ll notice there are a couple of things we can learn from it. First, there are a lot of HTML tags we haven’t seen before. Take a minute to glance through them. No need to memorize them all! Another thing to note is the use of comma’s in our CSS selectors. The comma in a CSS selector separates multiple selectors that have the same style. In other words, all CSS declarations in between curly braces apply to each of the comma-separated HTML tags in front of them. Finally, note the presence of CSS comments. CSS comments are a handy way of adding helpful notes and hints to your CSS, thereby making sure that people who read your code understand what’s going on.. By using comments to make your stylesheets more readable, your CSS will be easier to maintain in the future. A CSS comment is added by enclosing it between /* and */ characters. Everything in our CSS that’s in between these opening and closing comment characters will be ignored by the browser, and so will the comment characters themselves.
 </p>
 <p>
-	Now that we have turned off browser default styles, we can start layering our own styles on our HTML elements. Lets make a rule for ourselves to use our "base.css" file for styling HTML tags only, and our remaining CSS files for targeting classes only. This way we get a logical development progression in the styling of our website. First, we reset browser default styling in our "reset.css". Subsequently, we layer on our own default styling for HTML tags in our "base.css", and then finally, we have the opportunity to layer on element specific styles by targeting element class attributes in the appropriate CSS files. Since the browser processes our CSS files one by one from top to bottom, it should be clear that the order in which we declare the link tags in the head of our "index.html" is of great importance (see CSS specificity on day 1).
+	Now that we have turned off browser default styles, we can start layering our own styles on our HTML elements. Let’s make a rule for ourselves to use our "base.css" file for styling HTML tags only, and our remaining CSS files for targeting classes only. This way we get a logical progression in the styling of our website. First, we reset browser default styling in our "reset.css". Subsequently, we layer on our own default styling for HTML tags in our "base.css", and then finally, we have the opportunity to layer on element-specific styles by targeting element class attributes in the appropriate CSS files. Since the browser processes our CSS files one by one from top to bottom, it should be clear that the order in which we declare the link tags in the head of our "index.html" is of great importance (see CSS specificity on day 1).
 </p>
 <h2>The CSS box model</h2>
 <p>
@@ -69,7 +69,7 @@
 	</span>
 </div>
 <p>
-	We’ve already seen that we can manipulate the margins of this box using CSS. Margins don’t affect the size of the box itself, but they affect the distance of the box in respect to the other boxes in our website, and thus they are an important part of the CSS box model. Evidently, we can also use CSS to adjust the padding and border properties of our HTML elements. Where it gets confusing is when we also declare specific height and/or width properties on those elements. If we would for example setup our CSS to give an element a padding of 20px and a width of 100px, then the perceived width of this element in our browser would be 120px. This is totally counter-intuitive since this perceived width does not match the width property in our CSS. There is, however, the CSS property <code>box-sizing</code> which conveniently allows us to change the box model to where an element's specified width and height aren't affected by its padding or borders. It’s common practice to apply this rule to all elements.
+	We’ve already seen that we can manipulate the margins of this box using CSS. Margins don’t affect the size of the box itself, but they affect the distance of the box in respect to the other boxes in our website, and thus they are an important part of the CSS box model. Evidently, we can also use CSS to adjust the padding and border properties of our HTML elements. Where it gets confusing is when we also declare specific height and/or width properties on those elements. If we would for example setup our CSS to give an element a padding of 20px and a width of 100px, then the perceived width of this element in our browser would be 120px. This is totally counter-intuitive since this perceived width does not match the width property in our CSS. There is, however, the CSS property <code>box-sizing</code> which conveniently allows us to change the box model so that an element's specified width and height aren't affected by its padding or borders. It’s common practice to apply this rule to all elements.
 </p>
 <p class="blogpost__intructions blogpost__indented">
 	Insert this piece of code in your "base.css" file;
@@ -78,10 +78,10 @@
 	It could be argued that this piece of code belongs in our "reset.css" rather than our "base.css" file. You say to-may-to, I say to-mah-to. Let’s move on…
 </p>
 <p>
-	Note that the asterisk is a special CSS selector that simply targets all elements. So from now on, the width and height properties in our CSS include content, padding, and border, but not the margin. Neat indeed! But don’t you start thinking that all boxes are created equal now… Because they’re not!
+	Note that the asterisk is a special CSS selector that simply targets all elements. So from now on, the width and height properties in our CSS include content, padding and border, but not the margin. Neat indeed! But don’t you start thinking that all boxes are created equal now… Because they’re not!
 </p>
 <p>
-	Based on their default behavior as a box in the browser, we can distinguish 3 types of HTML elements. There are <strong>block elements</strong>, which by default take up the full width of their parent element and enforce line breaks. The h1 header and paragraph elements we used yesterday are examples of block elements. Then there are <strong>inline elements</strong>. Consider you want a word in a paragraph marked up as a link to another website. We don’t want a line break to be enforced on that word right? The link tag is therefore an example of an inline element, which is by default just as wide as its content and doesn’t enforce a line break. Don’t try to set a top margin, bottom margin, height, or width on an inline element, cause it’s not going to work! Finally there are <strong>inline-block elements</strong>, which differ only in respect to inline elements in that their margins are all adjustable, just as their width and height. An example of such an element would be an image.
+	Based on their default behavior as a box in the browser, we can distinguish 3 types of HTML elements. There are <strong>block elements</strong>, which by default take up the full width of their parent element and enforce line breaks. The h1 header and paragraph elements we used yesterday are examples of block elements. Then there are <strong>inline elements</strong>. Consider you want a word in a paragraph marked up as a link to another website. We don’t want a line break to be enforced on that word right? The link tag is therefore an example of an inline element, which is by default just as wide as its content and doesn’t enforce a line break. Don’t try to set a top margin, bottom margin, height, or width on an inline element, ‘cause it’s not going to work! Finally there are <strong>inline-block elements</strong>, which differ only in respect to inline elements in that their margins are all adjustable, just as their width and height. An example of such an element would be an image.
 </p>
 
 <h2>Walking the walk</h2>
@@ -128,21 +128,21 @@
 	First notice that the header bar covers the full width of the page, but the content of the navigation bar is positioned in the middle. Since this same pattern of centered content is returning in other sections of the page, it would be wise to create a wrapper for this content that can be reused in the other sections. For this purpose, we’ll use a block element (any semantically meaningful block element will do) decorated with the class <code>content-wrapper</code>. We’ll then target this <code>content-wrapper</code> class from our CSS to position it in the middle of the page.
 </p>
 <p>
-	The HTML elements we’ll use to construct our header are <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;a&gt;</code>, which respectively define the boundaries of the header, the wrapper for our navigation links, and the links themselves (including the twitter icon). We’re going to decorate them all with meaningful classnames too, so that we can target them from our "header.css" Here’s the HTML for our header:
+	The HTML elements we’ll use to construct our header are <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code> and <code>&lt;a&gt;</code>, which respectively define the boundaries of the header, the wrapper for our navigation links and the links themselves (including the twitter icon). We’re going to decorate them all with meaningful classnames too, so that we can target them from our "header.css" Here’s the HTML for our header:
 </p>
 <p class="blogpost__intructions blogpost__indented">
-	Copy paste this HTML snippet into the body tag of your "index.html" file
+	Copy paste this HTML snippet into the body tag of your "index.html" file:
 	<!-- html: web developer in 3 days - v5 -->
 	<gist id="46b539514a2232c7e42c"></gist>
 </p>
 <p>
-	Now take a long, good look at this HTML snippet. Note that we have used the absolute minimum number of HTML tags necessary to describe the structure and meaning of the header content. If you know that the <code>&lt;header&gt;</code> and <code>&lt;nav&gt;</code> tags are block elements, and the <code>&lt;a&gt;</code> tag is an inline element, then try to imagine how their respective boxes will be positioned in the browser? Open your "index.html" in the browser and use its web development tools to inspect these elements! We already know what the <code>content-wrapper</code> class is for. How can we use the other classes to style our HTML elements in accordance with the design we’re after? Don’t worry about the absent twitter bird just yet, we’ll fix that in a minute.
+	Now take a long, good look at this HTML snippet. Note that we have used the absolute minimum number of HTML tags necessary to describe the structure and meaning of the header content. If you know that the <code>&lt;header&gt;</code> and <code>&lt;nav&gt;</code> tags are block elements, and the <code>&lt;a&gt;</code> tag is an inline element, then try to imagine how their respective boxes will be positioned in the browser. Open your "index.html" in the browser and use its web development tools to inspect these elements! We already know what the <code>content-wrapper</code> class is for. How can we use the other classes to style our HTML elements in accordance with the design we’re after? Don’t worry about the absent twitter bird just yet, we’ll fix that in a minute.
 </p>
 <p>
 	The first thing we’ll address is the content-wrapper. The content-wrapper is a block element and thus has a default width of 100%. We can easily make a block element smaller by setting a CSS width property for it, and then center it by setting its left and right margins to <code>auto</code>. The content-wrapper class will be used throughout multiple sections of our website, so it makes sense to put this code in the generic CSS file named "grid.css".
 </p>
 <p class="blogpost__intructions blogpost__indented">
-	Add this CSS code to your "grid.css" file
+	Add this CSS code to your "grid.css" file:
 	<!-- css: web developer in 3 days - v1 -->
 	<gist id="3fb2f809fa6a337e92b0"></gist>
 </p>
@@ -150,13 +150,13 @@
 	When you refresh your browser, you’ll see that the navigation links have moved away from the left side of your browser to a more centered position. When you inspect the <code>&lt;nav&gt;</code> element with your browser’s web development tools, you’ll see that it’s perfectly centered. All content within it will now be positioned in the middle of the page. Easy enough, right? Note that this code is not going to cut it on smaller (mobile) devices, but we’ll fix that later on.
 </p>
 <p>
-	Next up, the twitter bird! Did you notice the <code>fa</code>, <code>fa-twitter</code>, and <code>fa-2x</code> classes on our last link element? These classes will be used by our CSS to style that link element, so that it gets a twitter bird as its content. This will obviously require some advanced CSS trickery way beyond the scope of this series, so we’re going to use an external CSS file to do it for us. To import this CSS file, add the following line of code to the <code>&lt;head&gt;</code> of your "index.html": <code>&lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"&gt;</code>. Refresh your browser and the twitter bird is in place. Mind = blown! With special thanks to <a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>, the iconic font, and CSS toolkit…
+	Next up, the twitter bird! Did you notice the <code>fa</code>, <code>fa-twitter</code> and <code>fa-2x</code> classes on our last link element? These classes will be used by our CSS to style that link element, so that it gets a twitter bird as its content. This will obviously require some advanced CSS trickery way beyond the scope of this series, so we’re going to use an external CSS file to do it for us. To import this CSS file, add the following line of code to the <code>&lt;head&gt;</code> of your "index.html": <code>&lt;link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"&gt;</code>. Refresh your browser and the twitter bird is in place. Mind = blown! With special thanks to <a href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>, the iconic font, and CSS toolkit…
 </p>
 <p>
-	Still, the color of our twitter bird is off. And what’s that line on the bottom doing there? Well, these are default browser styles applied to link elements, which we’ll have to overwrite. Looking at other links throughout our <a href="http://www.fredericaerts.com/external/developer-in-3-days/" target="_blank">example website</a>, you’ll notice that most of them have a light blue color and none of them have an underline. It thus makes sense to style link elements this way in our "base.css" file:
+	Still, the color of our twitter bird is off. And what’s that line on the bottom doing there? Well, these are default browser styles applied to link elements, which we’ll have to overwrite. Looking at other links throughout our <a href="http://www.fredericaerts.com/external/developer-in-3-days/" target="_blank">example website</a>, you’ll notice that most of them have a light blue color and none of them are underlined. It thus makes sense to style link elements this way in our "base.css" file:
 </p>
 <p class="blogpost__intructions blogpost__indented">
-	Add this CSS code to your "base.css" file
+	Add this CSS code to your "base.css" file:
 	<!-- css: web developer in 3 days - v2 -->
 	<gist id="6c38aba51558522a105f"></gist>
 </p>
@@ -167,19 +167,19 @@
 	Now blow the trumpet and bang the drum, because our header… still looks like crap. So let’s bring out the big guns and fill up that "header.css" file with some header-specific CSS rules. Here’s the code:
 </p>
 <p class="blogpost__intructions blogpost__indented">
-	Fill up your "header.css" file with the following CSS;
+	Fill up your "header.css" file with the following CSS:
 	<!-- css: web developer in 3 days - v1 -->
 	<gist id="8795d2e02d09df049818"></gist>
 </p>
 <p>
-	Now that’s better! Can you figure out the purpose of each CSS rule by yourself? If you have doubts about the effect of a certain CSS property, just delete it and see what happens in the browser. If you have doubts about the syntax of a CSS property, just google it (I had to google the <code>box-shadow</code> syntax myself). Note that we’ve shown here that the default inline, inline-block, or block behavior of an element are interchangeable via the <code>dispIay</code> property. In our case, we’ve changed the inline nav-item link elements into inline-block elements, so as to enable us to specify their height. Note also that it’s good practice to give small clickable elements some padding (rather than margins), thereby increasing their clickable surface. With everything you’ve learned so far, I consider the rest of this CSS code to be self-evident. Let’s move on…
+	Now that’s better! Can you figure out the purpose of each CSS rule by yourself? If you have doubts about the effect of a certain CSS property, just delete it and see what happens in the browser. If you have doubts about the syntax of a CSS property, just google it (I had to google the <code>box-shadow</code> syntax myself). Note that we’ve shown here that the default inline, inline-block, or block behavior of an element are interchangeable via the <code>display</code> property. In our case, we’ve changed the inline nav-item link elements into inline-block elements, so as to enable us to specify their height. Note also that it’s good practice to give small clickable elements some padding (rather than margins), thereby increasing their clickable surface. With everything you’ve learned so far, I consider the rest of this CSS code to be self-evident. Let’s move on…
 </p>
 <h2>Hero</h2>
 <p>
 	Since all our hero content is centered horizontally, it’s tempting to think we need a content-wrapper in our hero like we did in our header. However, if you think about it, centering elements in respect to either a content-wrapper or a full-width element has exactly the same effect. We can thus omit the content-wrapper in our hero markup.
 </p>
 <p class="blogpost__intructions blogpost__indented">
-	Add this HTML snippet right after the header closing tag in your "index.html" file
+	Add this HTML snippet right after the header closing tag in your "index.html" file:
 	<!-- html: web developer in 3 days - v6 -->
 	<gist id="5d3e89c1e792b4fd9efc"></gist>
 	Note that the button in our hero is actually linking to another website, which is why an <code>&lt;a&gt;</code> tag is semantically more correct here than the perhaps more obvious <code>&lt;button&gt;</code> tag.
@@ -196,7 +196,7 @@
 	<gist id="3025d277260cde2e1eb3"></gist>
 </p>
 <p>
-	Now let’s focus on horizontally centering all hero content. We have already learned from our content-wrapper that we can center block elements by specifying their width and setting their left and right margins to <code>auto</code>, so our h1 element is covered. Since our image element (inline-block element) is supposed to enforce a line break, we might as well make it a block element too. Here are the hero specific CSS rules for our h1 header and image element:
+	Now let’s focus on horizontally centering all hero content. We have already learned from our content-wrapper that we can center block elements by specifying their width and setting their left and right margins to <code>auto</code>, so our h1 element is covered. Since our image element (inline-block element) is supposed to enforce a line break, we might as well make it a block element too. Here are the hero-specific CSS rules for our h1 header and image element:
 </p>
 <p class="blogpost__intructions blogpost__indented">
 	Add these CSS rules to your "hero.css" file:
@@ -245,7 +245,7 @@
 </p>
 <h2>Devices image</h2>
 <p>
-	Since we can follow exactly the same protocol here as we did for the hero image, we can be brief about this section. Download the image <a href="http://www.fredericaerts.com/external/developer-in-3-days/images/devices.jpg" target="_blank">here</a>, put it in your images folder under the name "devices.jpg", and add the following line to the <code>&lt;body&gt;</code> of your "index.html" file: <code>&lt;img class="image-wide" src="images/devices.jpg"&gt;</code>. The only question that remains is which CSS file to add the accompanying CSS rules to. Surely this section is not a component, since it consists of one HTML element only.  Neither is it generic enough to style on tag level in our "base.css". We’ll thus put its styling in "helper-classes.css", a file made especially for targeting specific component-independent classes. Hah! And in my opinion, we should also remove the <code>h2 + p { … }</code> CSS rule from our "base.css" file, and target an <code>intro-text</code> class in the "helper-classes.css" instead. Do you agree? Anyway, here’s the CSS for our "devices image" section:
+	Since we can follow exactly the same protocol here as we did for the hero image, we can be brief about this section. Download the image <a href="http://www.fredericaerts.com/external/developer-in-3-days/images/devices.jpg" target="_blank">here</a>, put it in your images folder under the name "devices.jpg", and add the following line to the <code>&lt;body&gt;</code> of your "index.html" file: <code>&lt;img class="image-wide" src="images/devices.jpg"&gt;</code>. The only question that remains is which CSS file to add the accompanying CSS rules to. Surely, this section is not a component, since it consists of one HTML element only.  Neither is it generic enough to style on tag level in our "base.css". We’ll thus put its styling in "helper-classes.css", a file made especially for targeting specific component-independent classes. Hah! And in my opinion, we should also remove the <code>h2 + p { … }</code> CSS rule from our "base.css" file, and target an <code>intro-text</code> class in the "helper-classes.css" instead. Do you agree? Anyway, here’s the CSS for our "devices image" section:
 </p>
 <p class="blogpost__intructions blogpost__indented">
 	Add the following CSS to your "helper-classes.css" file:
