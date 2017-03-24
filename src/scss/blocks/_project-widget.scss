@@ -1,0 +1,130 @@
+.project-widget {
+  margin-bottom: 30px;
+
+  @extend .z-depth-1;
+  @extend .bg-white;
+}
+
+.project-widget__rich-media {
+
+  img {
+    width: 100%;
+    border-bottom: 1px solid $grey--lighter;
+  }
+}
+
+.project-widget__body {
+  padding: 15px;
+}
+
+.project-widget__client-logo {
+  float: right;
+  height: 40px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.project-widget__title {
+  position: relative;
+  top: -2px;
+
+  font-weight: 500;
+  line-height: 28px;
+
+  .project-widget__client-logo ~ & {
+    max-width: calc(100% - 15px - 40px);
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.project-widget__client {
+  display: block;
+  margin-top: -2px;
+
+  line-height: 20px;
+
+  .project-widget__client-logo ~ & {
+    max-width: calc(100% - 15px - 40px);
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.project-widget__description {
+  margin-top: 15px;
+  padding-top: 15px;
+
+  border-top: 1px solid $grey--lighter;
+}
+
+.project-widget__technologies {
+  margin-bottom: 10px;
+  // border-top: 1px solid $grey--lighter;
+}
+
+.project-widget__technologies__label {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 5px;
+
+  // color: $grey--darker;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.project-widget__technologies__badges {
+  display: inline-block;
+
+  > li {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 0 15px;
+    border-radius: 8px;
+    background: $grey--lightest;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.project-widget__footer {
+  height: 50px;
+  padding: 0 15px;
+  border-top: 1px solid $grey--lighter;
+
+  > a {
+    display: block;
+    float: right;
+
+    margin: 5px 0;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+
+    // color: $red;
+    line-height: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include transition(background .3s ease);
+
+    &:hover {
+      background: $grey--lightest;
+    }
+  }
+}

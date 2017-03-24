@@ -1,11 +1,11 @@
-blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function seriesRouteCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
+blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", "HOST_URL", function seriesRouteCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll, HOST_URL) {
 	'use strict';
 
 	var getCurrentSeries, getCurrentArticle, getSeriesArticles, setupSeriesPagination;
 
 	var allArticles;
 
-	$scope.currentUrl = "http://www.fredericaerts.com/%23" + $location.url();
+	$scope.currentUrl = HOST_URL + "/%23" + $location.url();
 
 	blogPostsFactory().then(function(data) {
 		allArticles = data.blogPosts;
@@ -61,9 +61,9 @@ blogApp.controller("seriesRouteCtrl", ["$scope", "$routeParams", "$location", "b
 				seriesArticles.push(blogPosts[i]);
 			}
 		}
-		
-		seriesArticles.sort(function(a,b) { 
-			return (a.seriesIndex - b.seriesIndex); 
+
+		seriesArticles.sort(function(a,b) {
+			return (a.seriesIndex - b.seriesIndex);
 		});
 		return seriesArticles;
 	};

@@ -1,9 +1,9 @@
-blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", function postRouteCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll) {
+blogApp.controller("postRouteCtrl", ["$scope", "$routeParams", "$location", "blogPostsFactory", "$anchorScroll", "HOST_URL", function postRouteCtrl($scope, $routeParams, $location, blogPostsFactory, $anchorScroll, HOST_URL) {
 	'use strict';
 
 	var getCurrentArticle;
 
-	$scope.currentUrl = "http://www.fredericaerts.com/%23" + $location.url();
+	$scope.currentUrl = HOST_URL + "/%23" + $location.url();
 
 	var promise = blogPostsFactory().then(function(data) {
 		var currentArticle = getCurrentArticle(data.blogPosts, $routeParams.articleRouteParam);

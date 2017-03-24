@@ -10,6 +10,11 @@
 	  <priority>1.0</priority>
 	</url>
 	<url>
+	  <loc>http://www.fredericaerts.com/#!/portfolio</loc>
+	  <changefreq>daily</changefreq>
+	  <priority>1.0</priority>
+	</url>
+	<url>
 	  <loc>http://www.fredericaerts.com/#!/writing</loc>
 	  <changefreq>daily</changefreq>
 	  <priority>1.0</priority>
@@ -31,6 +36,11 @@
 	</url>
 	<url>
 	  <loc>http://www.fredericaerts.com/#!/writing/series/how-to-become-a-web-developer-in-3-days?article=day-2:-structure-and-styling</loc>
+	  <changefreq>daily</changefreq>
+	  <priority>1.0</priority>
+	</url>
+	<url>
+	  <loc>http://www.fredericaerts.com/#!/writing/series/how-to-become-a-web-developer-in-3-days?article=day-3:-behavior-and-going-live</loc>
 	  <changefreq>daily</changefreq>
 	  <priority>1.0</priority>
 	</url>

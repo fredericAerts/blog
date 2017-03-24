@@ -1,0 +1,309 @@
+{
+  "projects": [
+    {
+      "title": "Webinar",
+      "richMedia": {
+        "src": "marketforce-sign-in.jpg",
+        "srcRetina": "marketforce-sign-in@2x.jpg",
+        "alt": "webinar sign in"
+      },
+      "client": {
+        "name": "Wavecast",
+        "img": {
+          "src": "logo_wavecast.png",
+          "srcRetina": "logo_wavecast@2x.png",
+          "alt": "logo wavecast"
+        }
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "Materialize CSS"
+        },
+        {
+          "name": "Pattern Lab"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Explore",
+          "href": "http://www.fredericaerts.com/external/projects/webinar/html/sign-in/",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "Slideshow",
+      "richMedia": {
+        "src": "slide-show.jpg",
+        "srcRetina": "slide-show@2x.jpg",
+        "alt": "slide show"
+      },
+      "client": {
+        "name": "Wavecast",
+        "img": {
+          "src": "logo_wavecast.png",
+          "srcRetina": "logo_wavecast@2x.png",
+          "alt": "logo wavecast"
+        }
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "Angular Material"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Explore",
+          "href": "http://www.fredericaerts.com/external/projects/slideshow/hub/#/",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "Groeiradar",
+      "richMedia": {
+        "src": "groeiradar.png",
+        "srcRetina": "groeiradar@2x.png",
+        "alt": "transCent"
+      },
+      "client": {
+        "name": "Kunstmaan",
+        "img": {
+          "src": "logo_kunstmaan.png",
+          "srcRetina": "logo_kunstmaan.png",
+          "alt": "Kunstmaan"
+        }
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.</p><p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Visit",
+          "href": "http://groeiradar.be/",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "Ionic App (android & iOS)",
+      "richMedia": {
+        "src": "molkky-ionic.jpg",
+        "srcRetina": "molkky-ionic@2x.jpg",
+        "alt": "transCent"
+      },
+      "client": {
+        "name": "Mölkky World",
+        "img": {
+          "src": "logo_molkky-world.png",
+          "srcRetina": "logo_molkky-world@2x.png",
+          "alt": "logo molkky world"
+        }
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "Ionic"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Download",
+          "href": "#!",
+          "target": "_blank"
+        },
+        {
+          "text": "View Source",
+          "href": "https://github.com/fredericJos/molkkyScoreApp",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "Highlight Science Writing",
+      "richMedia": {
+        "src": "highlight-science-writing.png",
+        "srcRetina": "highlight-science-writing@2x.png",
+        "alt": "Highlight Science Writing"
+      },
+      "client": {
+        "name": "Highlight Science Writing",
+        "img": {
+          "src": "logo_highlight-science-writing.png",
+          "srcRetina": "logo_highlight-science-writing@2x.png",
+          "alt": "logo highlight science writing"
+        }
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "vanillaJS"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Explore",
+          "href": "http://www.fredericaerts.com/external/projects/highlight-science-writing",
+          "target": "_blank"
+        },
+        {
+          "text": "View Source",
+          "href": "https://github.com/fredericJos/highlight-science-writing",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "ANZ",
+      "richMedia": {
+        "src": "anz.jpg",
+        "srcRetina": "anz@2x.jpg",
+        "alt": "webinar sign in"
+      },
+      "client": {
+        "name": "Wavecast",
+        "img": {
+          "src": "logo_wavecast.png",
+          "srcRetina": "logo_wavecast@2x.png",
+          "alt": "logo wavecast"
+        }
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Explore",
+          "href": "http://www.fredericaerts.com/external/projects/anz/",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "TransCent",
+      "richMedia": {
+        "src": "transcent.png",
+        "srcRetina": "transcent@2x.png",
+        "alt": "transCent"
+      },
+      "client": {
+        "name": "TransCent Leuven",
+        "img": {
+          "src": "logo_transcent.png",
+          "srcRetina": "logo_transcent@2x.png",
+          "alt": "transCent"
+        }
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "AngularJS"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Explore",
+          "href": "http://www.fredericaerts.com/external/projects/transcent/",
+          "target": "_blank"
+        },
+        {
+          "text": "View Source",
+          "href": "https://github.com/fredericJos/transCent",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "Energym",
+      "richMedia": {
+        "src": "energym.png",
+        "srcRetina": "energym@2x.png",
+        "alt": "energym"
+      },
+      "client": {
+        "name": "Energym"
+      },
+      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "technologies": [
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "boostrap"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Explore",
+          "href": "http://www.fredericaerts.com/external/projects/energym",
+          "target": "_blank"
+        },
+        {
+          "text": "View Source",
+          "href": "https://github.com/fredericJos/energym",
+          "target": "_blank"
+        }
+      ]
+    }
+
+  ]
+}

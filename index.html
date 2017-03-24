@@ -25,20 +25,20 @@
 	<meta name="twitter:description" content="This is my online home, where you’ll find my articles and where you can get in touch via the contact page." />
 	<meta name="twitter:image" content="http://fredericaerts.com/web/img/frederic-aerts@2x.jpg" />
 
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Slab:400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/web/styles/style.min.css">
 </head>
 <body data-status="{{status}}" ng-controller="mainCtrl as mainCtrl">
+	<div class="page-wrapper bg-contrast">
+		<header class="header" ngCloak>
+			<navbar></navbar>
+		</header>
 
-	<header class="header" ngCloak>
-		<navbar></navbar>
-	</header>
+		<div class="ngView" autoscroll="true" ngCloak></div>
 
-	<div class="ngView" autoscroll="true" ngCloak></div>
-
-	<!-- placeholder to push down footer until website content is rendered -->
-	<div class="placeholder" style="height:3000px" ng-hide="footerVisible"></div>
+		<!-- placeholder to push down footer until website content is rendered -->
+		<div class="placeholder" style="height:3000px" ng-hide="footerVisible"></div>
+	</div>
 
 	<footer class="footer" ng-show="footerVisible">
 		<a href="https://twitter.com/fredericAerts" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @fredericAerts</a>
@@ -48,7 +48,7 @@
 	</footer>
 
 	<script>
-		// follow on twitter 
+		// follow on twitter
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
 
 		// google analytics

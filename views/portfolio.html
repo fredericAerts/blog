@@ -1,0 +1,17 @@
+<div ng-controller="portfolioCtrl as portfolioCtrl">
+  <div class="container container--wide">
+    <div class="title-flanked">
+      <h1>Featured Projects</h1>
+      <project-widgets projects="featuredProjects"></project-widgets>
+    </div>
+  </div>
+  <div class="bg-white row-margin-top row-padding-bottom">
+    <contactbox ng-show="portfolioIntrosLoaded"></contactbox>
+  </div>
+  <div class="container container--wide">
+    <div class="title-flanked">
+      <h1>Other Projects</h1>
+      <project-widgets projects="otherProjects"></project-widgets>
+    </div>
+  </div>
+</div>

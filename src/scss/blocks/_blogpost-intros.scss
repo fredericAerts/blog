@@ -1,6 +1,7 @@
 .blogpost-intros {
 	position: relative;
 	margin-bottom: 0.55555555555556rem;
+	@extend .z-depth-1;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -8,7 +9,7 @@
 
 	& p {
 		font-family: $secondaryFont;
-		font-size: .8em;
+		font-size: .9em;
 		line-height: 1.5em;
 		font-weight: 300;
 
@@ -21,38 +22,34 @@
 .blogpost-intro {
 	padding: 1.5rem 1.5rem 3rem;
 
-	background: $grey--lightest;
+	@extend .bg-white;
 
 	text-decoration: none;
 
-	@include transition(all .3s);
+	@extend .hoverable;
 
 	@media (min-width: $screen-xs-min) {
 		padding: 2rem 2rem 3rem;
-	}
-
-	&:hover {
-		background: $grey--lighter;
-		box-shadow: 0 2px 3px rgba(0,0,0,0.075);
 	}
 }
 
 .blogpost-intro__series {
 	margin-bottom: 1rem;
 
-	font-size: 16px;
-	font-weight: 700;
+	font-size: 15px;
+	font-weight: 500;
 }
 
 .blogpost-intro__series__title {
-	font-weight: 400;
+	font-weight: 300;
 
 	& + span {
-		font-weight: 400;
+		font-weight: 300;
 	}
 }
 
 .blogpost-intro__title {
+	font-weight: 500;
 	margin-top: .6rem;
 }
 
@@ -70,15 +67,15 @@
 .blogpost-intro__cta {
 	position: absolute;
 	bottom: 10px;
-	right: 10px;
+	right: 15px;
 	float: right;
 
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: 500;
 
 	@include user-select(none);
 
 	@media (min-width: $screen-xs-min) {
-		font-size: 18px;
+		font-size: 16px;
 	}
 }

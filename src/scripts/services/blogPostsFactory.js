@@ -1,4 +1,4 @@
-blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFactory", function($http, $q, POSTS_ROOT, monthNamesFactory) {
+blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFactory", "HOST_URL", function($http, $q, POSTS_ROOT, monthNamesFactory, HOST_URL) {
 
 	var processedData;
 
@@ -11,7 +11,7 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 		// parse and add properties to blogPosts
 		for (var i = 0; i < data.blogPosts.length; i++) {
 			data.blogPosts[i].date = new Date(data.blogPosts[i].date);
-			
+
 			var dayOfMonth = data.blogPosts[i].date.getDate();
 			var month = monthNames[data.blogPosts[i].date.getMonth()];
 			var year = data.blogPosts[i].date.getFullYear();
@@ -24,7 +24,7 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 			data.blogPosts[i].includeUrl = POSTS_ROOT + data.blogPosts[i].routeParam + '.html';
 
 			if(data.blogPosts[i].partOfSeries) {
-				data.blogPosts[i].series = getSeriesData(data, data.blogPosts[i]); 
+				data.blogPosts[i].series = getSeriesData(data, data.blogPosts[i]);
 			}
 		}
 
@@ -80,8 +80,8 @@ blogApp.factory("blogPostsFactory", ["$http", "$q", "POSTS_ROOT", "monthNamesFac
 		}
 		else { // return ajax request promise
 			return $q(function(resolve, reject) {
-				$http.get("http://localhost:8080/blogposts/blogposts.json")
-				// $http.get("http://www.fredericaerts.com/blogPosts/blogposts.json")
+				// $http.get("http://localhost:8080/blogposts/blogposts.json")
+				$http.get(HOST_URL + "/blogPosts/blogposts.json")
 				.success(function(data) {
 					processData(data);
 					resolve(data);

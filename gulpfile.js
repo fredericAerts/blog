@@ -22,6 +22,7 @@ var paths = {
         'src/scss/**/*.scss'
       ],
       js: [
+        'bower_components/underscore/underscore.js',
         'bower_components/angular/angular.js',
         'bower_components/angular-route/angular-route.js',
         'bower_components/angular-animate/angular-animate.js',
@@ -42,7 +43,7 @@ var paths = {
       ],
       img: [
         'src/img/**/*'
-      ]  
+      ]
     },
     vendor: {
       js: 'src/scripts/vendor/'
@@ -60,19 +61,17 @@ var paths = {
     ],
     views: [
       'views/**/*.html'
-    ],  
+    ],
   },
   livereload: [
-    'web/styles/*', 
-    'web/scripts/*',
-    'views/*', 
-    'blogposts/*', 
-    'web/img/*', 
-    '*.html'
+    'web/styles/*.css',
+    'views/*',
+    'blogposts/*',
+    'index.html'
   ],
   web: {
     images: 'web/img'
-  } 
+  }
 }
 
 /* Errorhandling
@@ -126,10 +125,10 @@ gulp.task('styles', function() {
     .pipe(plugins.plumber({
         handleError: errorHandler
     }))
-    .pipe(plugins.sass({ 
+    .pipe(plugins.sass({
       debugInfo   : true,
       lineNumbers : true,
-      style: 'expanded', 
+      style: 'expanded',
       sourceComments: 'normal',
       onError: function(err) {
          return plugins.notify().write(err);
@@ -143,7 +142,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('web/styles'));
 });
 
-// scripts 
+// scripts
 gulp.task('scripts', function() {
   return gulp.src( paths.src.all.js )
     .pipe(plugins.plumber({
@@ -171,9 +170,9 @@ gulp.task('jshint', function() {
 gulp.task('images', function() {
   return gulp.src( paths.src.all.img )
     .pipe(plugins.changed(paths.web.images))
-    .pipe(plugins.imagemin({ 
-      optimizationLevel: 5, 
-      progressive: true, 
+    .pipe(plugins.imagemin({
+      optimizationLevel: 5,
+      progressive: true,
       interlaced: true,
       svgoPlugins: [{removeViewBox: false}]
     }))
@@ -191,14 +190,14 @@ gulp.task('clean', function(cb) {
     del(['web'], cb)
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['webserver'], function() {
   // Watch .scss files
   gulp.watch(paths.src.all.scss, ['styles']);
   // Watch .js files
   gulp.watch(paths.src.all.js, ['scripts']);
   // Watch templates
   gulp.watch(paths.src.angularTemplates, ['moveTemplates']);
-  // jsHint 
+  // jsHint
   gulp.watch(paths.src.custom.js, ['jshint']);
   // Watch image files
   gulp.watch(paths.src.all.img, ['images']);
@@ -208,7 +207,7 @@ gulp.task('watch', function() {
 
 /* serves at http://localhost:8080 */
 gulp.task('default', ['build'], function() {
-    gulp.start('webserver','livereload','watch');
+    gulp.start('livereload', 'watch');
 });
 
 gulp.task('build', ['clean'], function() {

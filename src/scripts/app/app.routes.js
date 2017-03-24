@@ -9,6 +9,11 @@ blogApp.config(["$routeProvider", "$locationProvider", "VIEWS_ROOT", "POSTS_ROOT
 			templateUrl:VIEWS_ROOT + "home.html"
 		}
 	)
+	.when('/portfolio',
+		{
+			templateUrl:VIEWS_ROOT + "portfolio.html"
+		}
+	)
 	.when('/writing',
 		{
 			templateUrl:VIEWS_ROOT + "writing.html"

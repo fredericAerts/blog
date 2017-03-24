@@ -22,8 +22,56 @@
 }
 
 .text {
-	
+
 	&--red {
 		color: $red;
 	}
+}
+
+.bg-contrast {
+  background-color: $grey--lightest;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.z-depth-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.z-depth-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.row-margin-top {
+  margin-top: 3rem;
+
+  @media (min-width: $screen-xs-min) {
+    margin-top: 4rem;
+  }
+}
+
+.row-margin-bottom {
+  margin-bottom: 3rem;
+
+  @media (min-width: $screen-xs-min) {
+    margin-bottom: 4rem;
+  }
+}
+
+.row-padding-bottom {
+  padding-bottom: 3rem;
+
+  @media (min-width: $screen-xs-min) {
+    padding-bottom: 4rem;
+  }
+}
+
+.hoverable {
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
 }

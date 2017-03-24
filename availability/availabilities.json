@@ -1,50 +1,50 @@
 { "availabilities": [
 	{
-		"date": "2016/07/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2016/08/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2016/09/01",
-		"availability": "Partially Available*"
-	},
-	{
-		"date": "2016/10/01",
-		"availability": "Partially Available*"
-	},
-	{
-		"date": "2016/11/01",
-		"availability": "Partially Available*"
-	},
-	{
-		"date": "2016/12/01",
-		"availability": "Partially Available*"
-	},
-	{
 		"date": "2017/01/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	},
 	{
 		"date": "2017/02/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	},
 	{
 		"date": "2017/03/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	},
 	{
 		"date": "2017/04/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	},
 	{
 		"date": "2017/05/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	},
 	{
 		"date": "2017/06/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2017/07/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2017/08/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2017/09/01",
+		"availability": "Partially Available*"
+	},
+	{
+		"date": "2017/10/01",
+		"availability": "Partially Available*"
+	},
+	{
+		"date": "2017/11/01",
+		"availability": "Partially Available*"
+	},
+	{
+		"date": "2017/12/01",
 		"availability": "Partially Available*"
 	}
 ]}

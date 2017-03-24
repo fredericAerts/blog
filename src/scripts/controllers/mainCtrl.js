@@ -22,6 +22,12 @@ blogApp.controller("mainCtrl", ["$scope", "Angularytics", "$anchorScroll", "$tim
 		$scope.footerVisible = true;
 	});
 
+	// porfolio page
+	$scope.$on('portfolioIntrosLoaded', function() {
+		$scope.portfolioIntrosLoaded = true;
+		$scope.footerVisible = true;
+	});
+
 	// contact page
 	$scope.$on('availabilitiesLoaded', function() {
 		$scope.availabilitiesLoaded = true;
@@ -37,6 +43,6 @@ blogApp.controller("mainCtrl", ["$scope", "Angularytics", "$anchorScroll", "$tim
 	$scope.$on('$includeContentLoaded', function () {
 	    $scope.articleLoaded = true;
 	    $scope.footerVisible = true;
-	 
+
 	});
 }]);

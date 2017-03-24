@@ -1,6 +1,42 @@
-.container--padded {
+.container {
 
-	@media (min-width: $screen-lg-min) {
-		padding: 0 6em;
-	}
+  &--wide {
+
+    @media (min-width: $screen-lg-min) {
+      max-width: 100%;
+      width: 1340px;
+    }
+  }
+
+  &--padded {
+
+    @media (min-width: $screen-lg-min) {
+      padding: 0 6em;
+    }
+  }
+}
+
+.page-wrapper {
+  min-height: 100%;
+}
+
+.ngView {
+  overflow:auto;
+  padding-bottom: 105px; /* must be same height as the footer */
+}
+
+.footer {
+  position: relative;
+  margin-top: -105px; /* negative value of footer height */
+  height: 105px;
+  clear:both;
+}
+
+/*Opera Fix*/
+body:before {
+  content:"";
+  height:100%;
+  float:left;
+  width:0;
+  margin-top:-32767px;
 }

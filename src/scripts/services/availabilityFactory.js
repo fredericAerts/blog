@@ -1,4 +1,4 @@
-blogApp.factory("availabilityFactory", ["$http", "$q", "AVAILABILITY_ROOT", "monthNamesFactory", function($http, $q, AVAILABILITY_ROOT, monthNamesFactory) {
+blogApp.factory("availabilityFactory", ["$http", "$q", "AVAILABILITY_ROOT", "monthNamesFactory", "HOST_URL", function($http, $q, AVAILABILITY_ROOT, monthNamesFactory, HOST_URL) {
 
 	var processedData;
 
@@ -38,8 +38,8 @@ blogApp.factory("availabilityFactory", ["$http", "$q", "AVAILABILITY_ROOT", "mon
 		}
 		else { // return ajax request promise
 			return $q(function(resolve, reject) {
-				$http.get("http://localhost:8080/availability/availabilities.json")
-				// $http.get("http://www.fredericaerts.com/availability/availabilities.json")
+				// $http.get("http://localhost:8080/availability/availabilities.json")
+				$http.get(HOST_URL + "/availability/availabilities.json")
 				.success(function(data) {
 					processData(data);
 					resolve(data.availabilities);

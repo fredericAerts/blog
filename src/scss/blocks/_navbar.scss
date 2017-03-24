@@ -1,11 +1,11 @@
 .navbar {
 	position: relative;
 	margin: 0 auto;
-	max-width: 1300px;
 	padding: 0 .6em;
-}	
+}
 
 .navbar__brand, .navbar__link {
+	font-weight: 300;
 	text-decoration: none;
 }
 
@@ -17,7 +17,7 @@
 
 .navbar__link {
 	position: relative;
-	
+
 	display: block;
 	padding: 1em 1.6em .8em;
 
@@ -44,22 +44,21 @@
 
 		content: "";
 
-		@media (min-width: $screen-xs-min) {
+		@media (min-width: $screen-sm-min) {
 			display: none;
 		}
 	}
 
-	@media (min-width: $screen-xs-min) {
+	@media (min-width: $screen-sm-min) {
 		display: inline-block;
 
 		padding-right: .6em;
 		padding-left: .6em;
 	}
-	
+
 
 	&.active {
 		color: $red;
-		font-weight: 700;
 	}
 }
 
@@ -68,7 +67,7 @@
 	display: none;
 	float: right;
 
-	@media (min-width: $screen-xs-min) {
+	@media (min-width: $screen-sm-min) {
 		display: block;
 	}
 }
@@ -86,7 +85,7 @@
 
 	@include transition(.3s);
 
-	@media (min-width: $screen-xs-min) {
+	@media (min-width: $screen-sm-min) {
 		display: none;
 	}
 }
@@ -122,10 +121,10 @@
 
 		// rotate the lines to form the x shape
 		&:before{
-			@include transform(rotate3d(0,0,1,45deg)); 
+			@include transform(rotate3d(0,0,1,45deg));
 		}
 		&:after{
-			@include transform(rotate3d(0,0,1,-45deg)); 
+			@include transform(rotate3d(0,0,1,-45deg));
 		}
 	}
 }
@@ -135,8 +134,8 @@
 	margin-right: 5px;
 }
 
-.navbar-toggle__lines {  
-	position: relative; 
+.navbar-toggle__lines {
+	position: relative;
 	top: -1px;
 	vertical-align: middle;
 
@@ -145,7 +144,7 @@
 	width: 20px;
 	height: 1px;
 
-	border-radius: 2px; 
+	border-radius: 2px;
 
 	background: $black;
 
@@ -160,7 +159,7 @@
 		width: 20px;
 		height: 1px;
 
-		border-radius: 2px; 
+		border-radius: 2px;
 
 		background: $black;
 
@@ -170,10 +169,10 @@
 		@include transform-origin(2px center);
 	}
 
-	&:before { 
-		top: 5px; 
+	&:before {
+		top: 5px;
 	}
-	&:after { 
-		top: -5px; 
+	&:after {
+		top: -5px;
 	}
 }
