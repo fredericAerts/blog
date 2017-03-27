@@ -68,6 +68,14 @@
   }
 }
 
+.row-padding-top {
+  padding-top: 3rem;
+
+  @media (min-width: $screen-xs-min) {
+    padding-top: 4rem;
+  }
+}
+
 .hoverable {
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 

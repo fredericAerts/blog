@@ -15,14 +15,8 @@
           "alt": "logo wavecast"
         }
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>Frontend template for an enterprise grade open publishing and live broadcasting platform. The platform strives to deliver world class thought leadership campaigns in real time with high levels of engagement.</p>",
       "technologies": [
-        {
-          "name": "jQuery"
-        },
-        {
-          "name": "SCSS"
-        },
         {
           "name": "Materialize CSS"
         },
@@ -30,7 +24,13 @@
           "name": "Pattern Lab"
         },
         {
-          "name": "gulp"
+          "name": "jQuery"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "Gulp"
         }
       ],
       "actions": [
@@ -42,7 +42,7 @@
       ]
     },
     {
-      "title": "Slideshow",
+      "title": "Slide Deck",
       "richMedia": {
         "src": "slide-show.jpg",
         "srcRetina": "slide-show@2x.jpg",
@@ -56,16 +56,19 @@
           "alt": "logo wavecast"
         }
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>A place for creating, editing and presenting slide decks. It's part of a larger advanced publishing platform that provides event apps, live streams, networking, marketing and registration — all in one integrated system. Decks are viewable and functional on desktop, tablets and phones.</p>",
       "technologies": [
         {
           "name": "Angular Material"
         },
         {
+          "name": "SortableJS"
+        },
+        {
           "name": "SCSS"
         },
         {
-          "name": "gulp"
+          "name": "Gulp"
         }
       ],
       "actions": [
@@ -77,7 +80,7 @@
       ]
     },
     {
-      "title": "Groeiradar",
+      "title": "Groeiradar (Dutch)",
       "richMedia": {
         "src": "groeiradar.png",
         "srcRetina": "groeiradar@2x.png",
@@ -91,16 +94,16 @@
           "alt": "Kunstmaan"
         }
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.</p><p>Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>The International Growth Radar (Groeiradar) provides a quick insight in the growth potential of your company abroad. The International Growth Radar also detects the direct and indirect effects of the expansion of your company to one or more countries.</p>",
       "technologies": [
         {
-          "name": "jQuery"
+          "name": "AngularJS"
         },
         {
           "name": "SCSS"
         },
         {
-          "name": "gulp"
+          "name": "Gulp"
         }
       ],
       "actions": [
@@ -112,7 +115,7 @@
       ]
     },
     {
-      "title": "Ionic App (android & iOS)",
+      "title": "Ionic Mölkky App",
       "richMedia": {
         "src": "molkky-ionic.jpg",
         "srcRetina": "molkky-ionic@2x.jpg",
@@ -126,24 +129,25 @@
           "alt": "logo molkky world"
         }
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>An application (iOS and Android) that allows to keep score of Mölkky, the famous Finnish pin game. It was ordered by <a href=\"http://www.molkky.world\" target=\"blank\">Mölkky World</a>, an organisation that aims to provide a platform for a worldwide community of mölkky aficionados</p>",
       "technologies": [
         {
           "name": "Ionic"
         },
         {
+          "name": "AngularJS"
+        },
+        {
+          "name": "ngCordova"
+        },
+        {
           "name": "SCSS"
         },
         {
-          "name": "gulp"
+          "name": "Gulp"
         }
       ],
       "actions": [
-        {
-          "text": "Download",
-          "href": "#!",
-          "target": "_blank"
-        },
         {
           "text": "View Source",
           "href": "https://github.com/fredericJos/molkkyScoreApp",
@@ -166,7 +170,7 @@
           "alt": "logo highlight science writing"
         }
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>Online home for a company that is committed to give your scientific research the platform it deserves.</p><p>The website has some neat animations, and also an admin area that enables the site administrator to publish and edit blog posts.</p>",
       "technologies": [
         {
           "name": "vanillaJS"
@@ -175,7 +179,7 @@
           "name": "SCSS"
         },
         {
-          "name": "gulp"
+          "name": "Gulp"
         }
       ],
       "actions": [
@@ -206,16 +210,19 @@
           "alt": "logo wavecast"
         }
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>One of many fully responsive frontend templates I've built for Wavecast, aimed at making the most of the content provided by clients via Wavecast's advanced publishing platform.</p>",
       "technologies": [
         {
           "name": "jQuery"
         },
         {
+          "name": "Flexslider"
+        },
+        {
           "name": "SCSS"
         },
         {
-          "name": "gulp"
+          "name": "Gulp"
         }
       ],
       "actions": [
@@ -241,16 +248,22 @@
           "alt": "transCent"
         }
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>Pro bono project that delivered an online home for a platform aimed at streamlining transplant-related research at the University of Leuven. Unfortunately, the platform never saw the light of day.</p>",
       "technologies": [
         {
-          "name": "AngularJS"
+          "name": "Bootstrap"
+        },
+        {
+          "name": "jQuery"
+        },
+        {
+          "name": "particlesJS"
         },
         {
           "name": "SCSS"
         },
         {
-          "name": "gulp"
+          "name": "Gulp"
         }
       ],
       "actions": [
@@ -267,7 +280,7 @@
       ]
     },
     {
-      "title": "Energym",
+      "title": "Energym (Dutch)",
       "richMedia": {
         "src": "energym.png",
         "srcRetina": "energym@2x.png",
@@ -276,19 +289,25 @@
       "client": {
         "name": "Energym"
       },
-      "description": "<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>",
+      "description": "<p>Small website for a small gym located in Kessel-Lo, Leuven.",
       "technologies": [
+        {
+          "name": "Bootstrap"
+        },
         {
           "name": "jQuery"
         },
         {
-          "name": "boostrap"
+          "name": "parallaxJS"
+        },
+        {
+          "name": "Magnific Popup"
         },
         {
           "name": "SCSS"
         },
         {
-          "name": "gulp"
+          "name": "Gulp"
         }
       ],
       "actions": [

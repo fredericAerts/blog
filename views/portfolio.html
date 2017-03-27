@@ -1,9 +1,13 @@
-<div ng-controller="portfolioCtrl as portfolioCtrl">
-  <div class="container container--wide">
-    <div class="title-flanked">
-      <h1>Featured Projects</h1>
-      <project-widgets projects="featuredProjects"></project-widgets>
+<div ng-controller="portfolioCtrl">
+  <div class="bg-white">
+    <div class="container container--wide">
+      <div class="title-flanked">
+        <h1>Featured Projects</h1>
+      </div>
     </div>
+  </div>
+  <div class="container container--wide">
+    <project-widgets class="project-widgets" projects="featuredProjects"></project-widgets>
   </div>
   <div class="bg-white row-margin-top row-padding-bottom">
     <contactbox ng-show="portfolioIntrosLoaded"></contactbox>

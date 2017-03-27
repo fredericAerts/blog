@@ -10,6 +10,7 @@ blogApp.directive("projectWidgets", ["TEMPLATES_ROOT", "$timeout", "$window", fu
       scope.limitTo = attrs.limitto ? attrs.limitto : 999;
 
       var widgets = element[0].getElementsByTagName('article');
+
       $timeout(function () {
         matchHeight(widgets);
 
@@ -45,6 +46,10 @@ blogApp.directive("projectWidgets", ["TEMPLATES_ROOT", "$timeout", "$window", fu
     }
 
     function getMaxBodyHeight(widgets) {
+      if (!widgets || !widgets.length) {
+        return 0;
+      }
+
       return _.max(widgets, function(widget) {
         var widgetBody = widget.querySelector('.project-widget__body');
         widgetBody.removeAttribute('style');

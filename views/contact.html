@@ -1,5 +1,11 @@
+<div class="bg-white">
+  <div class="container container--padded">
+    <div class="title-flanked">
+      <h1>Front-End Development Work Inquiries</h1>
+    </div>
+  </div>
+</div>
 <div class="container container--padded">
-	<h1>Front-End Development Work Inquiries</h1>
 	<ul class="availability-list clearfix" ng-controller="availabilityCtrl as availabilityCtrl" ng-show="availabilitiesLoaded">
 		<li class="availability-list__item" ng-repeat="availability in availabilities | limitTo: 12" ng-class="{ 'past': availability.past }">
 			<div class="availability-list__item__wrapper">
@@ -55,7 +61,7 @@
 		</ul>
 		<p>
 			<strong>Wanna see some code?</strong><br>
-			Take a peek at this website's code right <a ng-href="https://github.com/fredericJos/blog" target="_black" ng-click="trackEvent('Contact','See some code')">here</a>.
+			Take a peek at some of my code right <a ng-href="https://github.com/fredericJos" target="_black" ng-click="trackEvent('Contact','See some code')">here</a>.
 		</p>
 	</div>
 </div>
