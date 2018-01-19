@@ -15,7 +15,8 @@
           </span>
         </div>
         <h2 class="project-widget__title">{{ project.title }}</h2>
-        <span class="project-widget__client">{{ project.client.name }}</span>
+        <span ng-if="!project.client.link" class="project-widget__client">{{ project.client.name }}</span>
+        <a ng-if="project.client.link" ng-href="{{ project.client.link }}" class="project-widget__client" target="_blank">{{ project.client.name }}</a>
         <div class="project-widget__description" ng-bind-html="project.description"></div>
         <div class="project-widget__technologies">
           <span class="project-widget__technologies__label">Technologies:</span>

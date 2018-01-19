@@ -17,7 +17,11 @@ blogApp.directive("projectWidgets", ["TEMPLATES_ROOT", "$timeout", "$window", fu
         angular.element($window).bind('resize', function() {
           matchHeight(widgets);
         });
-      });
+      }, 0);
+
+      $timeout(function () {
+        matchHeight(widgets); // for good measure
+      }, 1000);
     },
     templateUrl: TEMPLATES_ROOT + "projectWidgets.html"
   };

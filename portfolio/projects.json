@@ -8,6 +8,7 @@
         "alt": "webinar sign in"
       },
       "client": {
+        "link": "http://wavecast.co/",
         "name": "Wavecast",
         "img": {
           "src": "logo_wavecast.png",
@@ -42,6 +43,94 @@
       ]
     },
     {
+      "title": "Ionic Mölkky App",
+      "richMedia": {
+        "src": "molkky-ionic.jpg",
+        "srcRetina": "molkky-ionic@2x.jpg",
+        "alt": "mölkky app"
+      },
+      "client": {
+        "link": "http://www.molkky.world",
+        "name": "Mölkky World",
+        "img": {
+          "src": "logo_molkky-world.png",
+          "srcRetina": "logo_molkky-world@2x.png",
+          "alt": "logo molkky world"
+        }
+      },
+      "description": "<p>An application (iOS and Android) that allows to keep score of Mölkky, the famous Finnish pin game. It was ordered by <a href=\"http://www.molkky.world\" target=\"blank\">Mölkky World</a>, an organisation that aims to provide a platform for a worldwide community of mölkky aficionados.</p>",
+      "technologies": [
+        {
+          "name": "Ionic"
+        },
+        {
+          "name": "AngularJS"
+        },
+        {
+          "name": "ngCordova"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "Gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "iOS",
+          "href": "https://itunes.apple.com/be/app/mölkky-world-app/id1224557552?mt=8",
+          "target": "_blank"
+        },
+        {
+          "text": "Android",
+          "href": "https://play.google.com/store/apps/details?id=world.molkky.app",
+          "target": "_blank"
+        },
+        {
+          "text": "View Source",
+          "href": "https://github.com/fredericJos/molkkyScoreApp",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
+      "title": "Groeiradar (Dutch)",
+      "richMedia": {
+        "src": "groeiradar.png",
+        "srcRetina": "groeiradar@2x.png",
+        "alt": "Groeiradar"
+      },
+      "client": {
+        "link": "https://kunstmaan.be/",
+        "name": "Kunstmaan",
+        "img": {
+          "src": "logo_kunstmaan.png",
+          "srcRetina": "logo_kunstmaan.png",
+          "alt": "Kunstmaan"
+        }
+      },
+      "description": "<p>The International Growth Radar (Groeiradar) provides a quick insight in the growth potential of your company abroad. The International Growth Radar also detects the direct and indirect effects of the expansion of your company to one or more countries.</p>",
+      "technologies": [
+        {
+          "name": "AngularJS"
+        },
+        {
+          "name": "SCSS"
+        },
+        {
+          "name": "Gulp"
+        }
+      ],
+      "actions": [
+        {
+          "text": "Visit",
+          "href": "http://groeiradar.be/",
+          "target": "_blank"
+        }
+      ]
+    },
+    {
       "title": "Slide Deck",
       "richMedia": {
         "src": "slide-show.jpg",
@@ -49,6 +138,7 @@
         "alt": "slide show"
       },
       "client": {
+        "link": "http://wavecast.co/",
         "name": "Wavecast",
         "img": {
           "src": "logo_wavecast.png",
@@ -80,82 +170,6 @@
       ]
     },
     {
-      "title": "Groeiradar (Dutch)",
-      "richMedia": {
-        "src": "groeiradar.png",
-        "srcRetina": "groeiradar@2x.png",
-        "alt": "transCent"
-      },
-      "client": {
-        "name": "Kunstmaan",
-        "img": {
-          "src": "logo_kunstmaan.png",
-          "srcRetina": "logo_kunstmaan.png",
-          "alt": "Kunstmaan"
-        }
-      },
-      "description": "<p>The International Growth Radar (Groeiradar) provides a quick insight in the growth potential of your company abroad. The International Growth Radar also detects the direct and indirect effects of the expansion of your company to one or more countries.</p>",
-      "technologies": [
-        {
-          "name": "AngularJS"
-        },
-        {
-          "name": "SCSS"
-        },
-        {
-          "name": "Gulp"
-        }
-      ],
-      "actions": [
-        {
-          "text": "Visit",
-          "href": "http://groeiradar.be/",
-          "target": "_blank"
-        }
-      ]
-    },
-    {
-      "title": "Ionic Mölkky App",
-      "richMedia": {
-        "src": "molkky-ionic.jpg",
-        "srcRetina": "molkky-ionic@2x.jpg",
-        "alt": "transCent"
-      },
-      "client": {
-        "name": "Mölkky World",
-        "img": {
-          "src": "logo_molkky-world.png",
-          "srcRetina": "logo_molkky-world@2x.png",
-          "alt": "logo molkky world"
-        }
-      },
-      "description": "<p>An application (iOS and Android) that allows to keep score of Mölkky, the famous Finnish pin game. It was ordered by <a href=\"http://www.molkky.world\" target=\"blank\">Mölkky World</a>, an organisation that aims to provide a platform for a worldwide community of mölkky aficionados</p>",
-      "technologies": [
-        {
-          "name": "Ionic"
-        },
-        {
-          "name": "AngularJS"
-        },
-        {
-          "name": "ngCordova"
-        },
-        {
-          "name": "SCSS"
-        },
-        {
-          "name": "Gulp"
-        }
-      ],
-      "actions": [
-        {
-          "text": "View Source",
-          "href": "https://github.com/fredericJos/molkkyScoreApp",
-          "target": "_blank"
-        }
-      ]
-    },
-    {
       "title": "Highlight Science Writing",
       "richMedia": {
         "src": "highlight-science-writing.png",
@@ -163,6 +177,7 @@
         "alt": "Highlight Science Writing"
       },
       "client": {
+        "link": "http://www.highlight-science-writing.com/",
         "name": "Highlight Science Writing",
         "img": {
           "src": "logo_highlight-science-writing.png",
@@ -196,13 +211,14 @@
       ]
     },
     {
-      "title": "ANZ",
+      "title": "integrAsian",
       "richMedia": {
         "src": "anz.jpg",
         "srcRetina": "anz@2x.jpg",
         "alt": "webinar sign in"
       },
       "client": {
+        "link": "http://wavecast.co",
         "name": "Wavecast",
         "img": {
           "src": "logo_wavecast.png",
@@ -287,6 +303,7 @@
         "alt": "energym"
       },
       "client": {
+        "link": "http://www.ener-gym.be",
         "name": "Energym"
       },
       "description": "<p>Small website for a small gym located in Kessel-Lo, Leuven.",

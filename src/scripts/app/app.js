@@ -9,8 +9,8 @@ blogApp.paths = {
     imagesRoot: "/web/img/"
 };
 
-blogApp.constant("HOST_URL", "http://localhost:8080");
-// blogApp.constant("HOST_URL", "http://www.fredericaerts.com");
+// blogApp.constant("HOST_URL", "http://localhost:8080");
+blogApp.constant("HOST_URL", "http://www.fredericaerts.com");
 blogApp.constant("POSTS_ROOT", blogApp.paths.postsRoot);
 blogApp.constant("PORTFOLIO_ROOT", blogApp.paths.portfolioRoot);
 blogApp.constant("AVAILABILITY_ROOT", blogApp.paths.availabilityRoot);
