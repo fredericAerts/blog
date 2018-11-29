@@ -1,58 +1,58 @@
 { "availabilities": [
 	{
-		"date": "2018/01/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/02/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/03/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/04/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/05/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/06/01",
-		"availability": "Not Available"
-	},
-  {
-    "date": "2018/07/01",
-    "availability": "Not Available"
-  },
-  {
-    "date": "2018/08/01",
-    "availability": "Not Available"
-  },
-  {
-		"date": "2018/09/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/10/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/11/01",
-		"availability": "Not Available"
-	},
-	{
-		"date": "2018/12/01",
-		"availability": "Not Available"
-	},
-	{
 		"date": "2019/01/01",
-		"availability": "Partially Available*"
+		"availability": "Not Available"
 	},
 	{
 		"date": "2019/02/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2019/03/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2019/04/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2019/05/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2019/06/01",
+		"availability": "Not Available"
+	},
+  {
+    "date": "2019/07/01",
+    "availability": "Not Available"
+  },
+  {
+    "date": "2019/08/01",
+    "availability": "Not Available"
+  },
+  {
+		"date": "2019/09/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2019/10/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2019/11/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2019/12/01",
+		"availability": "Not Available"
+	},
+	{
+		"date": "2020/01/01",
+		"availability": "Partially Available*"
+	},
+	{
+		"date": "2020/02/01",
 		"availability": "Available"
 	}
 ]}
